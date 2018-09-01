@@ -18,13 +18,12 @@ a {
   color: #fff;
   text-decoration-line: none;
   font-size: 13px;
+  cursor: pointer;
 }
 #app {
-  font-family: system-ui,
-    -apple-system, BlinkMacSystemFont,
-    "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans","Microsoft YaHei","微软雅黑",
-    "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Microsoft YaHei",
+    "微软雅黑", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
@@ -32,5 +31,10 @@ a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+  display: flex;
+  justify-content: flex-end;
+}
+.main {
+  width: calc(100vw - 250px);
 }
 </style>

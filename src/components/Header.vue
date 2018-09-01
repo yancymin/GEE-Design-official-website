@@ -2,7 +2,7 @@
     <div class="header">
         <div class="text-box">
             <h1>{{ title }}</h1>
-            <p>{{ description }}</p>  
+            <p>{{ des }}</p>  
         </div>
         <img src="../assets/img_headerbg.png" alt="" class="bg">
     </div>
@@ -10,18 +10,16 @@
 
 <script>
 export default {
-  name: "Header",
+  name: 'Header',
   props: {
     title: String,
-    description: String
+    des: String
   }
 };
 </script>
 
 <style lang="scss" scoped>
 .header {
-  width: calc(100vw - 250px);
-  float: right;
   height: 250px;
   display: flex;
   align-content: center;
@@ -41,10 +39,10 @@ export default {
   }
 
   .text-box {
-    z-index: 2;
     width: 700px;
     height: 250px;
     text-align: left;
+    margin-top: 40px;
 
     & > h1 {
       color: #fff;
