@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-     <router-link to="/">Home</router-link>
     <router-view/>
   </div>
 </template>
@@ -9,16 +8,29 @@
 </script>
 
 <style lang="scss">
-  a {
-    color: #fff;
-    text-decoration-line: none;
-    font-size: 13px;
-  }
-  #app {
-    font-family: "Avenir", Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-  }
+html,
+body,
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #fff;
+  text-decoration-line: none;
+  font-size: 13px;
+}
+#app {
+  font-family: system-ui,
+    -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans","Microsoft YaHei","微软雅黑",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+}
 </style>
