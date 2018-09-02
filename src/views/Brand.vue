@@ -1,33 +1,26 @@
 <template>
    <div class="brand main">
-        <Header title='极验品牌' description='G－BRAND' />
+        <Header title='极验品牌' des='Geetest Brand VI' :style="bgc" :src="imgSrc"/>
    </div>
 </template>
 
 <script>
-import Header from '@/components/Header.vue'
-import url from '@/assets/img_headerbg.png'
+import Header from "@/components/Header.vue";
+import url from "@/assets/img_brand_header.png";
+
 export default {
-  name: 'brand',
+  name: "brand",
   data() {
-      return {
-          urlimg: url
-      }
-  },
-  mounted(){
-      this.urlimg = url
-    //   console.log(url)
-  },
-  created(){
-    //   console.log(this.urlimg)
+    return {
+      imgSrc: url,
+      bgc: "background-color: #5285E1;"
+    };
   },
   components: {
     Header
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
-
 </style>
-

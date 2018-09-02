@@ -3,9 +3,8 @@
         <div class="text-box">
             <h1>{{ title }}</h1>
             <p>{{ des }}</p>
-            <p>{{ imgSrc }}</p>
         </div>
-        <img alt="" class="bg" :src="src" />
+        <img alt="" class="bg" :src="src" :style="style"/>
     </div>
 </template>
 
@@ -15,7 +14,9 @@ export default {
   props: {
     title: String,
     des: String,
-  },
+    src: String,
+    style: String
+  }
 }
 </script>
 

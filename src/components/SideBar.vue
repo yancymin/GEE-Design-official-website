@@ -27,6 +27,7 @@
 <style lang="scss" scoped>
 $transition-normal: all 0.3s ease;
 .sidebar {
+  z-index: 99;
   position: fixed;
   top: 0;
   left: 0;

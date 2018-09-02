@@ -37,4 +37,8 @@ a {
 .main {
   width: calc(100vw - 250px);
 }
+::selection {
+    background: #3873ff;
+    color: #fff;
+}
 </style>
