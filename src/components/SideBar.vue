@@ -4,12 +4,12 @@
             <img src="../assets/logo.svg" alt="">
         </div>
         <div class="wrap">
-            <router-link to="/brand">极验品牌</router-link>
-            <router-link to="/make">极验制造</router-link>
-            <router-link to="/visual">视觉设计</router-link>
-            <router-link to="/product">安全矩阵</router-link>
-            <router-link to="/resource">资源下载</router-link>
-            <router-link to="/about">关于我们</router-link>
+            <router-link :class="{'router-link-active':active==1}" to="/brand">极验品牌</router-link>
+            <router-link :class="{'router-link-active':active==1}" to="/make">极验制造</router-link>
+            <router-link :class="{'router-link-active':active==1}" to="/visual">视觉设计</router-link>
+            <router-link :class="{'router-link-active':active==1}" to="/product">安全矩阵</router-link>
+            <router-link :class="{'router-link-active':active==1}" to="/resource">资源下载</router-link>
+            <router-link :class="{'router-link-active':active==1}" to="/about">关于我们</router-link>
             <div class="links">
                 <span></span>
                 <a href="https://geetest.com">极验官网</a>
@@ -24,8 +24,18 @@
     </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      active: 0,
+    }
+  }
+}
+</script>
+
 <style lang="scss" scoped>
-$transition-normal: all 0.3s ease;
+$transition-normal: all 0.2s ease;
 .sidebar {
   z-index: 99;
   position: fixed;
@@ -37,6 +47,7 @@ $transition-normal: all 0.3s ease;
   align-items: center;
   flex-direction: column;
   background-color: #3873ff;
+
   .logo {
     margin-top: 40px;
   }
@@ -59,6 +70,12 @@ $transition-normal: all 0.3s ease;
 
       &:hover {
         background-color: #3965ef;
+      }
+
+      &.router-link-active {
+        background-color: #ffffff;
+        color: #3973ff;
+        font-weight: 500;
       }
     }
 
