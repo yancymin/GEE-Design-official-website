@@ -2,9 +2,10 @@
     <div class="header">
         <div class="text-box">
             <h1>{{ title }}</h1>
-            <p>{{ des }}</p>  
+            <p>{{ des }}</p>
+            <p>{{ imgSrc }}</p>
         </div>
-        <img src="../assets/img_headerbg.png" alt="" class="bg">
+        <img alt="" class="bg" :src="src" />
     </div>
 </template>
 
@@ -13,13 +14,14 @@ export default {
   name: 'Header',
   props: {
     title: String,
-    des: String
-  }
-};
+    des: String,
+  },
+}
 </script>
 
 <style lang="scss" scoped>
 .header {
+  width: 100%;
   height: 250px;
   display: flex;
   align-content: center;
@@ -39,6 +41,7 @@ export default {
   }
 
   .text-box {
+    z-index: 2;
     width: 700px;
     height: 250px;
     text-align: left;
