@@ -43,6 +43,10 @@ a {
     color: #fff;
 }
 
+img {
+  display: block;
+}
+
 
 // content style
 

@@ -1,8 +1,17 @@
 <template>
    <div class="make main">
-        <Header title="极验制造" des="G-MAKE" :src="imgSrc"/>
+        <Header title="极验制造" des="G-MAKE" :src="imgSrc" :bgc="bgc"/>
+        <div class="anchor-wrap">
+               <div> 
+                    <Scroll title="title-gift" href="#anchor-overview" des="品牌概述"/>
+                    <Scroll title="title-gift" href="#anchor-logo" des="品牌标识"/>
+                    <Scroll title="title-gift" href="#anchor-geetee" des="Gee Tee"/>
+                    <Scroll title="title-gift" href="#anchor-others" des="其他产品"/>
+                </div>
+        </div>
         <div class="container">
-            <div class="overview bottom-68">
+           
+            <div class="overview bottom-68"  id="anchor-overview">
                 <h3>
                     属于极验小伙伴的礼物
                 </h3>
@@ -10,7 +19,7 @@
                     极验制造 G－MAKE 是极验内部孵化的全新品牌，由极验用户体验设计中心的设计部负责。G－MAKE 在极验统一的品牌视觉识别系统下，衍生出更具创新、新颖、个性的一个有趣形象。在“极验制造”这个品牌下，我们输出了一系列文化周边产品，发放给公司员工、合作伙伴、活动嘉宾以及特邀访客，希望给他们传递出我们充满活力、创造力的形象。
                 </p>
             </div>
-            <div class="brand-logo bottom-68">
+            <div class="brand-logo bottom-68" id="anchor-logo">
                 <h3>
                     品牌标识
                 </h3>
@@ -100,12 +109,12 @@
                 <img class="box-border bottom-20" src="../assets/Make/content_make6.png" alt="">
                 <img class="box-border bottom-20" src="../assets/Make/content_make7.png" alt="">
             </div>
-            <div class="gee-tee bottom-68">
+            <div class="gee-tee bottom-68" id="anchor-geetee">
                 <h3>GEE Tee</h3>
                 <p class="bottom-30">GEE Tee 是极验制造的文化服装系列产品。极验每年都会制作主题衫、节日衫和卫衣，用于发放给公司员工或赠送给合作伙伴等。GEE Tee 是极验的一个窗口，希望能传递给穿着者和周围人充满活力、富有创造力的形象。</p>
                 <img class="bottom-20" src="../assets/Make/content_make8.png" alt="">
             </div>
-            <div class="others">
+            <div class="others" id="anchor-others">
                 <h3>其它产品</h3>
                 <p class="bottom-30">极验制造除了 GEE Tee 外，还有更多周边产品。</p>
                 <div>
@@ -118,142 +127,162 @@
                 </div>
             </div>
             <span>更新于 2018.9.1</span>
+            <Back-top />
         </div>
    </div>
 </template>
 
 <script>
 import Header from "@/components/Header.vue";
+import Scroll from "@/components/Scroll.vue";
+import BackTop from "@/components/BackTop.vue";
 import imgUrl from "@/assets/img_make_header.png";
 
 export default {
   name: "Make",
   data() {
     return {
-      imgSrc: imgUrl
+      imgSrc: imgUrl,
+      bgc: '#fff'
     };
   },
   components: {
-    Header
+    Header,
+    Scroll,
+    BackTop
   }
 };
 </script>
 
 <style lang="scss" scoped>
 .make {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-    .brand-logo {
-      width: 700px;
+  .anchor-wrap {
+    position: fixed;
+    width: 200px;
+    top: 40vh;
 
-      div {
-        width: 700px;
-        height: 230px;
-        display: flex;
-        justify-content: space-between;
-
-        & > img {
-          width: 220px;
-        }
-      }
-    }
-
-    .brand-color {
-      .color-wrap {
-        width: 700px;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-
-        .color-box {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          width: 198px;
-          height: 122px;
-          background-color: #fff;
-          padding: 12px;
-
-          & > figure {
-            width: 175px;
-            font-size: 13px;
-            font-weight: 500;
-            line-height: 18px;
-            color: #fff;
-          }
-
-          & > h4 {
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 25px;
-            color: #fff;
-          }
-
-          &:nth-of-type(1) {
-            background-color: #3873ff;
-          }
-          &:nth-of-type(2) {
-            background-color: #fff;
-
-            h4 {
-              color: #002059;
-            }
-
-            figure {
-              color: #002059;
-            }
-          }
-          &:nth-of-type(3) {
-            background-color: #292f3a;
-          }
-          &:nth-of-type(4) {
-            background-color: #566d97;
-          }
-          &:nth-of-type(5) {
-            background-color: #2fc4ff;
-          }
-          &:nth-of-type(6) {
-            background-color: #ffca55;
-          }
-        }
-      }
-    }
-
-    .brand-application {
+    & > div {
+      position: absolute;
       width: 100%;
+      left: 500px;
     }
   }
 
-  .others {
-    width: 100%;
+  .brand-logo {
+    width: 700px;
 
     div {
+      width: 700px;
+      height: 230px;
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
 
-      .box-row {
-        width: 700px;
+      & > img {
+        width: 220px;
+      }
+    }
+  }
+
+  .brand-color {
+    .color-wrap {
+      width: 700px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .color-box {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
-        flex-direction: row;
+        width: 198px;
+        height: 122px;
+        background-color: #fff;
+        padding: 12px;
 
-        img {
-          width: 340px;
-          height: 100%;
+        & > figure {
+          width: 175px;
+          font-size: 13px;
+          font-weight: 500;
+          line-height: 18px;
+          color: #fff;
+        }
+
+        & > h4 {
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 25px;
+          color: #fff;
+        }
+
+        &:nth-of-type(1) {
+          background-color: #3873ff;
+        }
+        &:nth-of-type(2) {
+          background-color: #fff;
+
+          h4 {
+            color: #002059;
+          }
+
+          figure {
+            color: #002059;
+          }
+        }
+        &:nth-of-type(3) {
+          background-color: #292f3a;
+        }
+        &:nth-of-type(4) {
+          background-color: #566d97;
+        }
+        &:nth-of-type(5) {
+          background-color: #2fc4ff;
+        }
+        &:nth-of-type(6) {
+          background-color: #ffca55; 
         }
       }
     }
   }
 
-  span {
-    position: relative;
-    bottom: -76px;
-    left: -308px;
-    color: #bcc2de;
-    font-size: 12px;
-    line-height: 17px;
+  .brand-application {
+    width: 100%;
   }
+}
 
+.others {
+  width: 100%;
+
+  div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .box-row {
+      width: 700px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+
+      img {
+        width: 340px;
+        height: 100%;
+      }
+    }
+  }
+}
+
+span {
+  position: relative;
+  bottom: -76px;
+  left: -308px;
+  color: #bcc2de;
+  font-size: 12px;
+  line-height: 17px;
+}
 </style>

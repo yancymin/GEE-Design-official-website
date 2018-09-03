@@ -4,7 +4,7 @@
             <h1>{{ title }}</h1>
             <p>{{ des }}</p>
         </div>
-        <img alt="" class="bg" :src="src" :style="style"/>
+        <img alt="" class="bg" :src="src" :style="{'background-color': bgc}"/>
     </div>
 </template>
 
@@ -15,7 +15,7 @@ export default {
     title: String,
     des: String,
     src: String,
-    style: String
+    bgc: String
   }
 }
 </script>
