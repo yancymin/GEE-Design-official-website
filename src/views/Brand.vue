@@ -6,14 +6,14 @@
 
 <script>
 import Header from "@/components/Header.vue";
-import url from "@/assets/img_brand_header.png";
+import url from "@/assets/img_visual_header.png";
 
 export default {
   name: "brand",
   data() {
     return {
       imgSrc: url,
-      bgc: "background-color: #5285E1;"
+      bgc: "background-color: #4B85FF;"
     };
   },
   components: {

@@ -4,7 +4,7 @@
             <h1>{{ title }}</h1>
             <p>{{ des }}</p>
         </div>
-        <img alt="" class="bg" :src="src" :style="{'background-color': bgc}"/>
+        <img alt="" class="bg" :src="src" :style="{'background-color': 'bgc'}"/>
     </div>
 </template>
 

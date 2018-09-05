@@ -120,6 +120,8 @@ $transition-normal: all 0.2s ease;
     position: fixed;
     bottom: 24px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 
     & > img {
       margin-bottom: 4px;
