@@ -19,7 +19,7 @@
                 </p>
                 <p class="bottom-10">GEE Desgin 的遵循以下三点设计原则：以人为本；整体性；多元化。</p>
                 <p  class="bottom-30">极验一直致力于消灭扰人的验证码，用先进的技术来解决互联网中的交互安全问题。在与网络黑产的安全拉锯战中，我们不断提升用户在互联网中的交互体验，并保证产品体验与安全的平衡；极验给 B 端客户提供安全保障的同时也需要给 C 端用户创造更好的交互体验，让 B 端更好的连接 C 端。极验的安全产品须保持设计的一致性，提高客户的工作效率，降低用户的学习成本；极验作为互联网的毛细血管，必须不断创新、打破束缚，勇于使用新技术解决问题，在设计上不断探索、升级。</p>
-                <img class="box-border bottom-20" src="../assets/Visual/content_visual1.png" alt="">
+                <img class="bottom-20" src="../assets/Visual/content_visual1.png" alt="">
 
             </div>
             <div class="brand-logo bottom-68" id="anchor-uibase">

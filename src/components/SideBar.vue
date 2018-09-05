@@ -12,9 +12,9 @@
             <router-link :class="{'router-link-active':active==1}" to="/about">关于我们</router-link>
             <div class="links">
                 <span></span>
-                <a href="https://geetest.com">极验官网</a>
-                <a href="https://dribbble.com/geetest">Dribbble</a>
-                <a href="https://github.com/GeeTeam">Github</a>
+                <a  target="_blank"  href="https://geetest.com">极验官网</a>
+                <a  target="_blank"  href="https://dribbble.com/geetest">Dribbble</a>
+                <a  target="_blank"  href="https://github.com/GeeTeam">Github</a>
             </div>
         </div>
         <div class="footer">

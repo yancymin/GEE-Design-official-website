@@ -8,6 +8,11 @@
                     <Scroll title="title-gift" href="#anchor-geetee" des="Gee Tee"/>
                     <Scroll title="title-gift" href="#anchor-others" des="其他产品"/>
                 </div>
+                <ul class="ul">
+                    <li v-for="(subItem, subIndex) in jsonData" :key="subIndex">
+                        <a href="javascript:void(0)" @click="goAnchor('#anchor-' + subItem.english, subIndex)" :class="{active: subIndex === nowSubIndex}">{{ subItem.chinese }}</a>
+                    </li>
+                </ul>
         </div>
         <div class="container">
            
@@ -19,7 +24,7 @@
                     极验制造 G－MAKE 是极验内部孵化的全新品牌，由极验用户体验设计中心的设计部负责。G－MAKE 在极验统一的品牌视觉识别系统下，衍生出更具创新、新颖、个性的一个有趣形象。在“极验制造”这个品牌下，我们输出了一系列文化周边产品，发放给公司员工、合作伙伴、活动嘉宾以及特邀访客，希望给他们传递出我们充满活力、创造力的形象。
                 </p>
             </div>
-            <div class="brand-logo bottom-68" id="anchor-logo">
+            <div class="brand-logo bottom-68 " id="anchor-logo">
                 <h3>
                     品牌标识
                 </h3>
@@ -143,13 +148,88 @@ export default {
   data() {
     return {
       imgSrc: imgUrl,
-      bgc: '#fff'
+      bgc: "#333",
+      jsonData: [
+        {
+          english: "overview",
+          chinese: "品牌概述"
+        },
+        {
+          english: "logo",
+          chinese: "品牌标识"
+        },
+        {
+          english: "geetee",
+          chinese: "品牌标识"
+        },
+        {
+          english: "others",
+          chinese: "品牌标识"
+        },
+      ],
+      nowSubIndex: "品牌概述"
     };
   },
   components: {
     Header,
     Scroll,
     BackTop
+  },
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll); // 监听 scroll 事件
+  },
+  methods: {
+    handleScroll() {
+      let _scrollTop =
+          document.documentElement.scrollTop || document.body.scrollTop,
+        // _innerHeight = window.innerHeight / 5,
+        _article = document.querySelectorAll("h3");
+
+      _article.forEach((item, index) => {
+        if (_scrollTop >= item.offsetTop) {
+          this.nowSubIndex = index;
+        }
+      });
+    },
+    goAnchor(selector, index) {
+      this.nowSubIndex = index; // 把当前点击时获取的 index 赋值给 nowSubIndex；如果两者相等，则显示高亮
+      console.log(selector);
+      let anchor = this.$el.querySelector(selector),
+        _offsetTop = anchor.offsetTop,
+        _scrollTop =
+          document.documentElement.scrollTop || document.body.scrollTop,
+        step = (_offsetTop / 50) >> 0; // 平滑滚动平均分成 50 份，取整
+
+      if (_offsetTop > _scrollTop) {
+        anchorDown();
+      } else {
+        let newOffsetTop = _scrollTop - _offsetTop;
+        step = (newOffsetTop / 50) >> 0;
+        anchorUp();
+      }
+
+      function anchorDown() {
+        if (_scrollTop < _offsetTop) {
+          _scrollTop += step;
+          document.body.scrollTop = document.documentElement.scrollTop = _scrollTop;
+          setTimeout(anchorDown, 10);
+        } else {
+          document.body.scrollTop = document.documentElement.scrollTop = _offsetTop;
+        }
+      }
+      function anchorUp() {
+        if (_scrollTop > _offsetTop) {
+          _scrollTop -= step;
+          document.body.scrollTop = document.documentElement.scrollTop = _scrollTop;
+          setTimeout(anchorUp, 10);
+        } else {
+          document.body.scrollTop = document.documentElement.scrollTop = _offsetTop;
+        }
+      }
+    }
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.handleScroll); // 销毁 scroll 事件
   }
 };
 </script>
@@ -160,7 +240,15 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  .ul {
+    a {
+      color: #000;
+    }
+    a.active {
+      background-color: #3873ff;
+    }
+    z-index: 9999;
+  }
   .anchor-wrap {
     position: fixed;
     width: 200px;
@@ -243,7 +331,7 @@ export default {
           background-color: #2fc4ff;
         }
         &:nth-of-type(6) {
-          background-color: #ffca55; 
+          background-color: #ffca55;
         }
       }
     }

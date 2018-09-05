@@ -34,6 +34,7 @@ a {
   color: #002059;
   display: flex;
   justify-content: flex-end;
+  background-color: #FCFDFE;
 }
 .main {
   width: calc(100vw - 250px);
