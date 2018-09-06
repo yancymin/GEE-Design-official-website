@@ -5,16 +5,16 @@
         </div>
         <div class="wrap">
             <router-link :class="{'router-link-active':active==1}" to="/brand">极验品牌</router-link>
-            <router-link :class="{'router-link-active':active==1}" to="/make">极验制造</router-link>
-            <router-link :class="{'router-link-active':active==1}" to="/visual">视觉设计</router-link>
-            <router-link :class="{'router-link-active':active==1}" to="/product">安全矩阵</router-link>
-            <router-link :class="{'router-link-active':active==1}" to="/resource">资源下载</router-link>
-            <router-link :class="{'router-link-active':active==1}" to="/about">关于我们</router-link>
+            <router-link :class="{'router-link-active':active==2}" to="/make">极验制造</router-link>
+            <router-link :class="{'router-link-active':active==3}" to="/visual">视觉设计</router-link>
+            <router-link :class="{'router-link-active':active==4}" to="/product">安全矩阵</router-link>
+            <router-link :class="{'router-link-active':active==5}" to="/resource">资源下载</router-link>
+            <router-link :class="{'router-link-active':active==6}" to="/about">关于我们</router-link>
             <div class="links">
                 <span></span>
-                <a  target="_blank"  href="https://geetest.com">极验官网</a>
-                <a  target="_blank"  href="https://dribbble.com/geetest">Dribbble</a>
-                <a  target="_blank"  href="https://github.com/GeeTeam">Github</a>
+                <a target="_blank" href="https://geetest.com">极验官网</a>
+                <a target="_blank" href="https://dribbble.com/geetest">Dribbble</a>
+                <a target="_blank" href="https://github.com/GeeTeam">Github</a>
             </div>
         </div>
         <div class="footer">
@@ -28,10 +28,10 @@
 export default {
   data() {
     return {
-      active: 0,
-    }
+      active: 0
+    };
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -47,7 +47,6 @@ $transition-normal: all 0.2s ease;
   align-items: center;
   flex-direction: column;
   background-color: #3873ff;
-
   .logo {
     margin-top: 40px;
   }
@@ -59,7 +58,6 @@ $transition-normal: all 0.2s ease;
     margin-top: 88px;
     text-align: center;
     line-height: 40px;
-
     & > a {
       width: 230px;
       height: 40px;
@@ -67,25 +65,21 @@ $transition-normal: all 0.2s ease;
       margin-bottom: 2px;
       border-radius: 3px;
       transition: $transition-normal;
-
       &:hover {
         background-color: #3965ef;
       }
-
       &.router-link-active {
         background-color: #ffffff;
         color: #3973ff;
         font-weight: 500;
       }
     }
-
     .links {
       display: flex;
       align-items: flex-start;
       flex-direction: column;
       margin-top: 40px;
       margin-left: 8px;
-
       span {
         width: 28px;
         height: 1px;
@@ -93,11 +87,9 @@ $transition-normal: all 0.2s ease;
         background-color: #fff;
         margin-bottom: 40px;
       }
-
       & > a:hover {
         text-decoration-line: underline;
       }
-
       & > a::after {
         content: "";
         opacity: 0;
@@ -122,11 +114,9 @@ $transition-normal: all 0.2s ease;
     text-align: center;
     display: flex;
     flex-direction: column;
-
     & > img {
       margin-bottom: 4px;
     }
-
     & > p {
       font-size: 12px;
       color: #ffffff;

@@ -5,6 +5,7 @@
 </template>
 
 <script>
+export default {};
 </script>
 
 <style lang="scss">
@@ -31,10 +32,10 @@ a {
   height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #002059;
+  color: #5f6591;
   display: flex;
   justify-content: flex-end;
-  background-color: #FCFDFE;
+  background-color: #fcfdfe;
 }
 .main {
   width: calc(100vw - 250px);
@@ -86,11 +87,13 @@ img {
     font-weight: 500;
     line-height: 29px;
     margin-bottom: 8px;
+    color: #3b426b;
   }
 
   p {
     font-size: 15px;
     line-height: 25px;
+    color: #5f6591;
   }
 
   img {

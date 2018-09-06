@@ -2,7 +2,6 @@
     <div class="Scroll">
         <a class="Scroll-link" :title="title" :href="href">{{ des }}</a>
     </div>
-    
 </template>
 
 <script>
@@ -27,7 +26,6 @@ export default {
     padding: 6px 8px;
     border-radius: 3px;
     transition: all 0.2s ease;
-
     &:hover {
       opacity: 0.9;
       background-color: #3873ff;

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import Brand from './views/Brand.vue'
 
 Vue.use(Router)
 
@@ -9,9 +10,9 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
+      path: '',
       name: 'home',
-      redirect: Home,
+      redirect: Brand,
       component: Home,
       children: [
         {
@@ -20,7 +21,7 @@ export default new Router({
           // route level code-splitting
           // this generates a separate chunk (about.[hash].js) for this route
           // which is lazy-loaded when the route is visited.
-          component: () => import('./views/Brand.vue')
+          component: Brand
         },
         {
           path: '/make',
