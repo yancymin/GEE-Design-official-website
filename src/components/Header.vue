@@ -1,23 +1,23 @@
 <template>
-    <div class="header">
-        <div class="text-box">
-            <h1>{{ title }}</h1>
-            <p>{{ des }}</p>
-        </div>
-        <img alt="" class="bg" :src="src" :style="{'background-color': 'bgc'}"/>
+  <div class="header">
+    <div class="text-box">
+      <h1>{{ title }}</h1>
+      <p>{{ des }}</p>
     </div>
+    <img alt="" class="bg" :src="src" :style="{'background-color': 'bgc'}" />
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'Header',
+  name: "Header",
   props: {
     title: String,
     des: String,
     src: String,
     bgc: String
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

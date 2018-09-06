@@ -55,7 +55,7 @@ export default {
   name: "Visual",
   data() {
     return {
-      imgSrc: imgUrl,
+      // imgSrc: imgUrl,
       bgc: "background-color: #4B85FF;"
     };
   },

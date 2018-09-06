@@ -43,54 +43,13 @@
         <h3>品牌标准色</h3>
         <p class="bottom-30">极验制造的标准色延续了极验品牌，由极验蓝和极验蓝黑作为标识配色、极验白和极验铬黄等作为视觉延展。以下颜色可以运用在任何有关衍生物料中。极验制造品牌的极验蓝作为品牌主色，搭配极验白一起应用，保持干净、干练的形象。极验蓝黑和极验金作为辅色进行品牌的视觉延展。Web 色以 RGB 色值为准，平面物料以四色印刷 CMYK 色值为准。</p>
         <div class="color-wrap">
-          <div class="color-box bottom-20 box-border">
-            <h4>
-              极验蓝
-            </h4>
-            <figure>
-              R: 56 / G: 115 / B: 255 <br> C: 100 / M: 23 / Y: 10 / K: 0 <br> #3873FF
-            </figure>
-          </div>
-          <div class="color-box bottom-20 box-border">
-            <h4>
-              极验白
-            </h4>
-            <figure>
-              R: 255 / G: 255 / B: 255 <br> C: 0 / M: 0 / Y: 0 / K: 0 <br> #FFFFFF
-            </figure>
-          </div>
-          <div class="color-box bottom-20 box-border">
-            <h4>
-              极验蓝黑
-            </h4>
-            <figure>
-              R: 41 / G: 115 / B: 255 <br> C: 100 / M: 23 / Y: 10 / K: 0 <br> #3873FF
-            </figure>
-          </div>
-          <div class="color-box box-border">
-            <h4>
-              极验蓝灰
-            </h4>
-            <figure>
-              R: 86 / G: 109 / B: 151 <br> C: 60 / M: 15 / Y: 10 / K: 30 <br> #566D97
-            </figure>
-          </div>
-          <div class="color-box box-border">
-            <h4>
-              极验水蓝
-            </h4>
-            <figure>
-              R: 47 / G: 196 / B: 255 <br> C: 60 / M: 0 / Y: 10 / K: 0 <br> #2FC4FF
-            </figure>
-          </div>
-          <div class="color-box box-border">
-            <h4>
-              极验铬黄
-            </h4>
-            <figure>
-              R: 255 / G: 202 / B: 85 <br> C: 0 / M: 20 / Y: 100 / K: 0 <br> #FFCA55
-            </figure>
-          </div>
+          <ColorPanel :color='color.blue' colorName='极验蓝' hexVal='#3873FF' rgbVal='56, 115, 255' cmykVal='100, 23, 10, 0' />
+          <ColorPanel :color='color.white' colorName='极验白' hexVal='#FFFFFF' rgbVal='255, 255, 255' cmykVal='0, 0, 0, 0' />
+          <ColorPanel :color='color.black' colorName='极验蓝黑' hexVal='#292F3A' rgbVal='41, 47, 58' cmykVal='85, 79, 65, 42' />
+          <ColorPanel :color='color.gray' colorName='极验蓝灰' hexVal='#566D97' rgbVal='89, 109, 151' cmykVal='60, 15, 10, 30' />
+          <ColorPanel :color='color.blueLight' colorName='极验水蓝' hexVal='#26B9FF' rgbVal='38, 185, 255' cmykVal='67, 13, 0, 0' />
+          <ColorPanel :color='color.yellow' colorName='极验铬黄' hexVal='#FFCA55' rgbVal='255, 202, 85' cmykVal='0, 20, 100, 0' />
+
         </div>
 
       </div>
@@ -128,13 +87,22 @@ import Header from "@/components/Header.vue";
 import Scroll from "@/components/Scroll.vue";
 import BackTop from "@/components/BackTop.vue";
 import imgUrl from "@/assets/img_make_header.png";
+import ColorPanel from "@/components/ColorPanel.vue";
 
 export default {
   name: "Make",
   data() {
     return {
-      imgSrc: imgUrl,
+      // imgSrc: imgUrl,
       bgc: "#333",
+      color: {
+        blue: "background-color: #3873FF;",
+        white: "background-color: #fff; border: 1px solid #F1F3F4;",
+        black: "background-color: #292F3A;",
+        gray: "background-color: #566D97;",
+        blueLight: "background-color: #26B9FF;",
+        yellow: "background-color: #FFCA55;"
+      },
       jsonData: [
         {
           english: "overview",
@@ -159,7 +127,8 @@ export default {
   components: {
     Header,
     Scroll,
-    BackTop
+    BackTop,
+    ColorPanel
   },
   mounted() {
     window.addEventListener("scroll", this.handleScroll); // 监听 scroll 事件

@@ -83,10 +83,10 @@ img {
     background-color: #ffffff;
   }
   h3 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
     line-height: 29px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     color: #3b426b;
   }
 
