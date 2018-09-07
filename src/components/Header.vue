@@ -28,11 +28,16 @@ export default {
   align-content: center;
   justify-content: center;
   background-color: #292f3a;
+
   //   background-image: url(../assets/img_headerbg.png);
   //   background-position: 50% 50%;
   //   background-size: auto 250px;
   //   background-repeat: no-repeat;
   //   margin-left: 250px;
+
+  @media screen and (max-width: 1220px) {
+      margin-left: 60px;
+   }
 
   .bg {
     width: auto;

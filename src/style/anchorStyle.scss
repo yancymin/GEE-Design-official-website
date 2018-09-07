@@ -2,37 +2,37 @@
     position: fixed;
     width: 200px;
     top: 40vh;
-
+    
+    @media screen and (max-width: 1220px) {
+        display: none;
+    }
     .ul {
-      .active {
-        background-color: #3873ff;
-        color: #fff;
-      }
-      z-index: 99;
-    }
-
-    .scroll {
-      position: absolute;
-      width: 100%;
-      left: 500px;
-      margin-bottom: 4px;
-      z-index: 99;
-
-      li a {
-        font-size: 13px;
-        font-weight: 400;
-        line-height: 30px;
-        color: rgba(0, 31, 86, 0.6);
-        padding: 6px 8px;
-        border-radius: 3px;
-        transition: all 0.2s ease;
-
-        &:hover {
-          opacity: 1;
-          background-color: #3873ff;
-          color: #fff;
-          font-weight: 500;
+        .active {
+            background-color: #3873ff;
+            color: #fff;
         }
-      }
+        z-index: 99;
     }
-  }
+    .scroll {
+        position: absolute;
+        width: 100%;
+        left: 500px;
+        margin-bottom: 4px;
+        z-index: 99;
+        li a {
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 30px;
+            color: rgba(0, 31, 86, 0.6);
+            padding: 6px 8px;
+            border-radius: 3px;
+            transition: all 0.2s ease;
+            &:hover {
+                opacity: 1;
+                background-color: #3873ff;
+                color: #fff;
+                font-weight: 500;
+            }
+        }
+    }
+}

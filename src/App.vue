@@ -46,6 +46,7 @@ a {
 }
 .main {
   width: calc(100vw - 250px);
+  transition: all 0.3s ease;
 }
 ::selection {
   background: #3873ff;
@@ -54,5 +55,14 @@ a {
 
 img {
   display: block;
+}
+
+@media screen and (max-width: 1220px) {
+  #app {
+    justify-content: center;
+  }
+  .main {
+    width: 100vw;
+  }
 }
 </style>
