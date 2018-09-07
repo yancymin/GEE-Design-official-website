@@ -1,27 +1,28 @@
 <template>
     <div class="colorpanel">
         <div class="color-wrap">
-            <div class="colorpanel-color" :style="color"></div>
+            <div class="colorpanel-color" :style="'background-color:' + color"></div>
             <p>{{ colorName }}</p>
         </div>
         <div class="tag-wrap">
             <div class="color-tag">
                 <span>HEX</span>
-                <p class="color-val">{{ hexVal }}</p>
+                <p class="color-val copy">{{ hexVal }}</p>
             </div>
             <div class="color-tag">
                 <span>RGB</span>
-                <p class="color-val">{{ rgbVal }}</p>
+                <p class="color-val copy">{{ rgbVal }}</p>
             </div>
             <div class="color-tag">
                 <span>CMYK</span>
-                <p class="color-val">{{ cmykVal }}</p>
+                <p class="color-val copy">{{ cmykVal }}</p>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+
 export default {
   name: "ColorPanel",
   props: {
@@ -39,7 +40,7 @@ export default {
   width: 604px;
   height: 56px;
   border-radius: 3px;
-  background-color: #f7f9fc;
+  background-color: #f6f8fb;
   display: flex;
   align-items: center;
   justify-content: space-between;

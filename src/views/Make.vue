@@ -1,21 +1,15 @@
 <template>
   <div class="make main">
-    <Header title="极验制造" des="G-MAKE" :src="imgSrc" :bgc="bgc" />
-    <div class="anchor-wrap">
-      <div>
-        <Scroll title="title-gift" href="#anchor-overview" des="品牌概述" />
-        <Scroll title="title-gift" href="#anchor-logo" des="品牌标识" />
-        <Scroll title="title-gift" href="#anchor-geetee" des="Gee Tee" />
-        <Scroll title="title-gift" href="#anchor-others" des="其他产品" />
-      </div>
-      <ul class="ul">
+    <Header title="极验制造" des="G-MAKE" :bgc="bgc" />
+    <!-- <div class="anchor-wrap">
+      <ul class="ul scroll">
         <li v-for="(subItem, subIndex) in jsonData" :key="subIndex">
           <a href="javascript:void(0)" @click="goAnchor('#anchor-' + subItem.english, subIndex)" :class="{active: subIndex === nowSubIndex}">{{ subItem.chinese }}</a>
         </li>
       </ul>
-    </div>
+    </div> -->
+    <AnchorScroll :jsonData='jsonData' :nowSubIndex='nowSubIndex'/>
     <div class="container">
-
       <div class="overview bottom-68" id="anchor-overview">
         <h3>
           属于极验小伙伴的礼物
@@ -28,20 +22,20 @@
         <h3>
           品牌标识
         </h3>
-        <p class="bottom-30">
+        <p class="bottom-40">
           极验制造的标识由图形“g”和文字标志“MAKE”组成，其元素间的相对大小和位置是固定的，不能重新绘制或者擅自组合。文字标志不能单独使用，但图形标志可以单独使用。
         </p>
-        <img class="box-border bottom-20" src="../assets/Make/content_make1.png" alt="">
-        <img class="box-border bottom-20" src="../assets/Make/content_make2.png" alt="">
+        <img class="box-shadow bottom-20" src="../assets/Make/content_make1.png" alt="">
+        <img class="bottom-20" src="../assets/Make/content_make2.png" alt="">
         <div>
-          <img class="box-border" src="../assets/Make/content_make3.png" alt="">
-          <img class="box-border" src="../assets/Make/content_make4.png" alt="">
-          <img class="box-border" src="../assets/Make/content_make5.png" alt="">
+          <img class="box-shadow" src="../assets/Make/content_make3.png" alt="">
+          <img class="box-shadow" src="../assets/Make/content_make4.png" alt="">
+          <img class="box-shadow" src="../assets/Make/content_make5.png" alt="">
         </div>
       </div>
       <div class="brand-color bottom-68">
         <h3>品牌标准色</h3>
-        <p class="bottom-30">极验制造的标准色延续了极验品牌，由极验蓝和极验蓝黑作为标识配色、极验白和极验铬黄等作为视觉延展。以下颜色可以运用在任何有关衍生物料中。极验制造品牌的极验蓝作为品牌主色，搭配极验白一起应用，保持干净、干练的形象。极验蓝黑和极验金作为辅色进行品牌的视觉延展。Web 色以 RGB 色值为准，平面物料以四色印刷 CMYK 色值为准。</p>
+        <p class="bottom-40">极验制造的标准色延续了极验品牌，由极验蓝和极验蓝黑作为标识配色、极验白和极验铬黄等作为视觉延展。以下颜色可以运用在任何有关衍生物料中。极验制造品牌的极验蓝作为品牌主色，搭配极验白一起应用，保持干净、干练的形象。极验蓝黑和极验金作为辅色进行品牌的视觉延展。Web 色以 RGB 色值为准，平面物料以四色印刷 CMYK 色值为准。</p>
         <div class="color-wrap">
           <ColorPanel :color='color.blue' colorName='极验蓝' hexVal='#3873FF' rgbVal='56, 115, 255' cmykVal='100, 23, 10, 0' />
           <ColorPanel :color='color.white' colorName='极验白' hexVal='#FFFFFF' rgbVal='255, 255, 255' cmykVal='0, 0, 0, 0' />
@@ -49,24 +43,23 @@
           <ColorPanel :color='color.gray' colorName='极验蓝灰' hexVal='#566D97' rgbVal='89, 109, 151' cmykVal='60, 15, 10, 30' />
           <ColorPanel :color='color.blueLight' colorName='极验水蓝' hexVal='#26B9FF' rgbVal='38, 185, 255' cmykVal='67, 13, 0, 0' />
           <ColorPanel :color='color.yellow' colorName='极验铬黄' hexVal='#FFCA55' rgbVal='255, 202, 85' cmykVal='0, 20, 100, 0' />
-
         </div>
 
       </div>
       <div class="brand-application bottom-68">
         <h3>品牌应用</h3>
-        <p class="bottom-30">将极验制造的视觉品牌形象应用在各产品中，以统一的设计方式建立完整的一套系统。</p>
-        <img class="box-border bottom-20" src="../assets/Make/content_make6.png" alt="">
-        <img class="box-border bottom-20" src="../assets/Make/content_make7.png" alt="">
+        <p class="bottom-40">将极验制造的视觉品牌形象应用在各产品中，以统一的设计方式建立完整的一套系统。</p>
+        <img class="bottom-20" src="../assets/Make/content_make6.png" alt="">
+        <img class="box-shadow bottom-20" src="../assets/Make/content_make7.png" alt="">
       </div>
       <div class="gee-tee bottom-68" id="anchor-geetee">
         <h3>GEE Tee</h3>
-        <p class="bottom-30">GEE Tee 是极验制造的文化服装系列产品。极验每年都会制作主题衫、节日衫和卫衣，用于发放给公司员工或赠送给合作伙伴等。GEE Tee 是极验的一个窗口，希望能传递给穿着者和周围人充满活力、富有创造力的形象。</p>
+        <p class="bottom-40">GEE Tee 是极验制造的文化服装系列产品。极验每年都会制作主题衫、节日衫和卫衣，用于发放给公司员工或赠送给合作伙伴等。GEE Tee 是极验的一个窗口，希望能传递给穿着者和周围人充满活力、富有创造力的形象。</p>
         <img class="bottom-20" src="../assets/Make/content_make8.png" alt="">
       </div>
       <div class="others" id="anchor-others">
         <h3>其它产品</h3>
-        <p class="bottom-30">极验制造除了 GEE Tee 外，还有更多周边产品。</p>
+        <p class="bottom-40">极验制造除了 GEE Tee 外，还有更多周边产品。</p>
         <div>
           <div class="bottom-20"><img src="../assets/Make/content_make9.png" alt=""></div>
           <div class="box-row bottom-20"><img src="../assets/Make/content_make10.png" alt=""><img src="../assets/Make/content_make11.png" alt=""></div>
@@ -86,22 +79,23 @@
 import Header from "@/components/Header.vue";
 import Scroll from "@/components/Scroll.vue";
 import BackTop from "@/components/BackTop.vue";
-import imgUrl from "@/assets/img_make_header.png";
+// import imgUrl from "@/assets/img_make_header.png";
 import ColorPanel from "@/components/ColorPanel.vue";
+import AnchorScroll from "@/components/AnchorScroll.vue";
 
 export default {
   name: "Make",
   data() {
     return {
       // imgSrc: imgUrl,
-      bgc: "#333",
+      bgc: "#292F3A",
       color: {
-        blue: "background-color: #3873FF;",
-        white: "background-color: #fff; border: 1px solid #F1F3F4;",
-        black: "background-color: #292F3A;",
-        gray: "background-color: #566D97;",
-        blueLight: "background-color: #26B9FF;",
-        yellow: "background-color: #FFCA55;"
+        blue: "#3873FF;",
+        white: "#fff; border: 1px solid #F1F3F4;",
+        black: "#292F3A;",
+        gray: "#566D97;",
+        blueLight: "#26B9FF;",
+        yellow: "#FFCA55;"
       },
       jsonData: [
         {
@@ -114,79 +108,80 @@ export default {
         },
         {
           english: "geetee",
-          chinese: "品牌标识"
+          chinese: "Gee Tee"
         },
         {
           english: "others",
-          chinese: "品牌标识"
+          chinese: "其他产品"
         }
       ],
-      nowSubIndex: "品牌概述"
+      nowSubIndex: 0
     };
   },
   components: {
     Header,
     Scroll,
     BackTop,
-    ColorPanel
+    ColorPanel,
+    AnchorScroll
   },
-  mounted() {
-    window.addEventListener("scroll", this.handleScroll); // 监听 scroll 事件
-  },
-  methods: {
-    handleScroll() {
-      let _scrollTop =
-          document.documentElement.scrollTop || document.body.scrollTop,
-        // _innerHeight = window.innerHeight / 5,
-        _article = document.querySelectorAll("h3");
+  // mounted() {
+  //   window.addEventListener("scroll", this.handleScroll); // 监听 scroll 事件
+  // },
+  // methods: {
+  //   handleScroll() {
+  //     let _scrollTop =
+  //         document.documentElement.scrollTop || document.body.scrollTop,
+  //       // _innerHeight = window.innerHeight / 5,
+  //       _article = document.querySelectorAll("h3");
 
-      _article.forEach((item, index) => {
-        if (_scrollTop >= item.offsetTop) {
-          this.nowSubIndex = index;
-        }
-      });
-    },
-    goAnchor(selector, index) {
-      this.nowSubIndex = index; // 把当前点击时获取的 index 赋值给 nowSubIndex；如果两者相等，则显示高亮
-      console.log(selector);
-      let anchor = this.$el.querySelector(selector),
-        _offsetTop = anchor.offsetTop,
-        _scrollTop =
-          document.documentElement.scrollTop || document.body.scrollTop,
-        step = (_offsetTop / 50) >> 0; // 平滑滚动平均分成 50 份，取整
+  //     _article.forEach((item, index) => {
+  //       if (_scrollTop >= item.offsetTop) {
+  //         this.nowSubIndex = index;
+  //       }
+  //     });
+  //   },
+  //   goAnchor(selector, index) {
+  //     this.nowSubIndex = index; // 把当前点击时获取的 index 赋值给 nowSubIndex；如果两者相等，则显示高亮
+  //     console.log(selector);
+  //     let anchor = this.$el.querySelector(selector),
+  //       _offsetTop = anchor.offsetTop,
+  //       _scrollTop =
+  //         document.documentElement.scrollTop || document.body.scrollTop,
+  //       step = (_offsetTop / 50) >> 0; // 平滑滚动平均分成 50 份，取整
 
-      if (_offsetTop > _scrollTop) {
-        anchorDown();
-      } else {
-        let newOffsetTop = _scrollTop - _offsetTop;
-        step = (newOffsetTop / 50) >> 0;
-        anchorUp();
-      }
+  //     if (_offsetTop > _scrollTop) {
+  //       anchorDown();
+  //     } else {
+  //       let newOffsetTop = _scrollTop - _offsetTop;
+  //       step = (newOffsetTop / 50) >> 0;
+  //       anchorUp();
+  //     }
 
-      function anchorDown() {
-        if (_scrollTop < _offsetTop) {
-          _scrollTop += step;
-          document.body.scrollTop = document.documentElement.scrollTop = _scrollTop;
-          setTimeout(anchorDown, 10);
-        } else {
-          document.body.scrollTop = document.documentElement.scrollTop = _offsetTop;
-        }
-      }
+  //     function anchorDown() {
+  //       if (_scrollTop < _offsetTop) {
+  //         _scrollTop += step;
+  //         document.body.scrollTop = document.documentElement.scrollTop = _scrollTop;
+  //         setTimeout(anchorDown, 10);
+  //       } else {
+  //         document.body.scrollTop = document.documentElement.scrollTop = _offsetTop;
+  //       }
+  //     }
 
-      function anchorUp() {
-        if (_scrollTop > _offsetTop) {
-          _scrollTop -= step;
-          document.body.scrollTop = document.documentElement.scrollTop = _scrollTop;
-          setTimeout(anchorUp, 10);
-        } else {
-          document.body.scrollTop = document.documentElement.scrollTop = _offsetTop;
-        }
-      }
-    }
-  },
-  destroyed() {
-    window.removeEventListener("scroll", this.handleScroll); // 销毁 scroll 事件
-  }
+  //     function anchorUp() {
+  //       if (_scrollTop > _offsetTop) {
+  //         _scrollTop -= step;
+  //         document.body.scrollTop = document.documentElement.scrollTop = _scrollTop;
+  //         setTimeout(anchorUp, 10);
+  //       } else {
+  //         document.body.scrollTop = document.documentElement.scrollTop = _offsetTop;
+  //       }
+  //     }
+  //   }
+  // },
+  // destroyed() {
+  //   window.removeEventListener("scroll", this.handleScroll); // 销毁 scroll 事件
+  // }
 };
 </script>
 
@@ -196,25 +191,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  .ul {
-    a {
-      color: #000;
-    }
-    a.active {
-      background-color: #3873ff;
-    }
-    z-index: 9999;
-  }
-  .anchor-wrap {
-    position: fixed;
-    width: 200px;
-    top: 40vh;
-    & > div {
-      position: absolute;
-      width: 100%;
-      left: 500px;
-    }
-  }
+
   .brand-logo {
     width: 700px;
     div {

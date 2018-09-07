@@ -29,9 +29,9 @@ export default new Router({
           component: () => import('./views/Make.vue')
         },
         {
-          path: '/visual',
-          name: 'visual',
-          component: () => import('./views/Visual.vue')
+          path: '/interface',
+          name: 'interface',
+          component: () => import('./views/Interface.vue')
         },
         {
           path: '/product',

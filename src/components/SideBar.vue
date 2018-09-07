@@ -4,12 +4,12 @@
             <img src="../assets/logo.svg" alt="">
         </div>
         <div class="wrap">
-            <router-link :class="{'router-link-active':active==1}" to="/brand">极验品牌</router-link>
-            <router-link :class="{'router-link-active':active==2}" to="/make">极验制造</router-link>
-            <router-link :class="{'router-link-active':active==3}" to="/visual">视觉设计</router-link>
-            <router-link :class="{'router-link-active':active==4}" to="/product">安全矩阵</router-link>
-            <router-link :class="{'router-link-active':active==5}" to="/resource">资源下载</router-link>
-            <router-link :class="{'router-link-active':active==6}" to="/about">关于我们</router-link>
+            <router-link to="/brand">极验品牌</router-link>
+            <router-link to="/make">极验制造</router-link>
+            <router-link to="/interface">视觉设计</router-link>
+            <router-link to="/product">安全矩阵</router-link>
+            <router-link to="/resource">资源下载</router-link>
+            <router-link to="/about">关于我们</router-link>
             <div class="links">
                 <span></span>
                 <a target="_blank" href="https://geetest.com">极验官网</a>

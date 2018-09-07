@@ -2,10 +2,11 @@
   <div class="brand main">
     <Header title='极验品牌' des='Geetest Brand VI' :style="bgc" />
     <div class="anchor-wrap">
-      <div>
-        <Scroll title="title-gift" href="#anchor-overview" des="品牌概述" />
-        <Scroll title="title-gift" href="#anchor-logo" des="品牌标识" />
-      </div>
+      <ul class="ul scroll">
+        <li v-for="(subItem, subIndex) in jsonData" :key="subIndex">
+          <a href="javascript:void(0)" @click="goAnchor('#anchor-' + subItem.english, subIndex)" :class="{active: subIndex === nowSubIndex}">{{ subItem.chinese }}</a>
+        </li>
+      </ul>
     </div>
     <div class="container">
 
@@ -36,7 +37,6 @@
 
 <script>
 import Header from "@/components/Header.vue";
-import url from "@/assets/img_visual_header.png";
 import Scroll from "@/components/Scroll.vue";
 import BackTop from "@/components/BackTop.vue";
 import ColorPanel from "@/components/ColorPanel.vue";
@@ -45,15 +45,15 @@ export default {
   name: "brand",
   data() {
     return {
-      bgc: "background-color: #313131;",
+      bgc: "background-color: #292F3A;",
       color: {
-        blue: "background-color: #3873FF;",
-        blueLight: "background-color: #26B9FF;",
-        green: "background-color: #35D2A2;",
-        purpel: "background-color: #9B5CF5;",
-        orange: "background-color: #FD6F2A;",
-        black: "background-color: #292F3A;",
-        gray: "background-color: #D8DDE6;",
+        blue: "#3873FF;",
+        blueLight: "#26B9FF;",
+        green: "#35D2A2;",
+        purpel: "#9B5CF5;",
+        orange: "#FD6F2A;",
+        black: "#292F3A;",
+        gray: "#D8DDE6;",
       }
     };
   },
@@ -72,16 +72,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  .anchor-wrap {
-    position: fixed;
-    width: 200px;
-    top: 40vh;
-    & > div {
-      position: absolute;
-      width: 100%;
-      left: 500px;
-    }
-  }
+
   .brand-logo {
     width: 700px;
     div {
