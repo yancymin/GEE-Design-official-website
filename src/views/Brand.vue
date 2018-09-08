@@ -80,6 +80,7 @@ export default {
   }
 }
 
+
 span {
   position: relative;
   bottom: -76px;
