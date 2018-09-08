@@ -27,9 +27,9 @@
         </p>
         <img class="box-shadow bottom-30" src="../assets/Make/content_make1.png" alt="">
         <img class="bottom-30" src="../assets/Make/content_make2.png" alt="">
-        <div>
+        <div class="img-list-box">
           <div><img class="box-shadow" src="../assets/Make/content_make3.png" alt=""></div>
-          <div><img class="box-shadow" src="../assets/Make/content_make4.png" alt=""></div>
+          <div class="center-pic"><img class="box-shadow" src="../assets/Make/content_make4.png" alt=""></div>
           <div><img class="box-shadow" src="../assets/Make/content_make5.png" alt=""></div>
         </div>
       </div>
@@ -194,20 +194,26 @@ export default {
 
   .brand-logo {
     width: 100%;
-    div {
+    .img-list-box {
+      .center-pic{
+        margin: 0 30px;
+      }
       width: 100%;
-      height: 230px;
+      // height: 230px;
       display: flex;
       justify-content: space-between;
+      align-items: center;
 
       & > div {
-        flex: 0 0 33%;
+        // flex: 0 0 30%;
+        width: calc(100% - 60px);
       }
 
-      & > img {
-        width: 220px;
-      }
+      // & > img {
+      //   width: 220px;
+      // }
     }
+
   }
   .brand-color {
     width: 100%;
@@ -304,6 +310,9 @@ span {
     .brand-logo {
       div {
         div {
+          .center-pic {
+            
+          }
           & > img {
             width: 100%;
           }
