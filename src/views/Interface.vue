@@ -1,5 +1,5 @@
 <template>
-  <div class="interface main">
+  <div class="interface main" id="main">
     <Header title="用户界面设计" des="User Interface Design" :style="bgc" />
     <AnchorScroll :jsonData='jsonData' :nowSubIndex='nowSubIndex' />
     <div class="container">
@@ -94,6 +94,7 @@ export default {
   align-items: center;
 
   .overview {
+    width: 100%;
     display: flex;
     flex-direction: column;
 
@@ -120,5 +121,11 @@ span {
   color: #bcc2de;
   font-size: 12px;
   line-height: 17px;
+}
+
+@media screen and (max-width: 414px) {
+  .interface .overview img {
+    width: 100%;
+  }
 }
 </style>

@@ -22,7 +22,6 @@
 </template>
 
 <script>
-
 export default {
   name: "ColorPanel",
   props: {
@@ -99,6 +98,21 @@ export default {
       color: #3b426b;
       text-align: left;
       margin-top: 8px;
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .colorpanel {
+    width: auto;
+    height: 140px;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .tag-wrap {
+      .color-tag {
+        margin-right: 8px;
+      }
     }
   }
 }

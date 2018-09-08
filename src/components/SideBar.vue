@@ -76,7 +76,7 @@ $transition-normal: all 0.2s ease;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: 88px;
+    margin-top: 50px;
     text-align: center;
     line-height: 40px;
     & > a {
