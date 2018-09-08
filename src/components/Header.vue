@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="header" id="header">
     <div class="text-box">
       <h1>{{ title }}</h1>
       <p>{{ des }}</p>
@@ -29,16 +29,6 @@ export default {
   justify-content: center;
   background-color: #292f3a;
 
-  //   background-image: url(../assets/img_headerbg.png);
-  //   background-position: 50% 50%;
-  //   background-size: auto 250px;
-  //   background-repeat: no-repeat;
-  //   margin-left: 250px;
-
-  @media screen and (max-width: 1220px) {
-      margin-left: 60px;
-   }
-
   .bg {
     width: auto;
     height: 250px;
@@ -66,4 +56,9 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 1220px) {
+  
+}
 </style>
+

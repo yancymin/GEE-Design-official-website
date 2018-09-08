@@ -4,7 +4,7 @@
     <AnchorScroll :jsonData='jsonData' :nowSubIndex='nowSubIndex' />
     <div class="container">
 
-      <div class="overview bottom-68" id="anchor-overview">
+      <div class="overview bottom-80" id="anchor-overview">
         <h3>
           行为验证产品概述
         </h3>
@@ -12,10 +12,10 @@
           行为验证是基于生物的行为特征，结合人工智能技术的验证安全解决方案，帮助全球 26 万家网站和 APP 智能区分人机，杜绝恶意程序带来的业务损失，每日在用户察觉不到的地方用 AI 抵挡饿了上亿机器脚本攻击。
         </p>
         <p class="bottom-40">行为验证让安全性有了质的飞跃，同时让用户通过验证平均时长降到 1.82 秒，极大的提高了用户的体验。从 2012 年正式推出行为验证产品以来，目前已经有超过 26 万家网站和 APP 使用极验的交互安全服务，每天提供超过 8 亿次的交互安全服务，为上亿网民节约近 30 万小时的宝贵时间。</p>
-        <img class="bottom-20" src="../assets/Interface/interface1.png" alt="">
+        <img class="bottom-30" src="../assets/Interface/interface1.png" alt="">
       </div>
 
-      <div class="ui-base bottom-68">
+      <div class="ui-base bottom-80">
         <h3>UI 基础</h3>
         <p class="bottom-40">
           “行为验证”验证产品的 UI 基础：验证按钮(Test-Button)、验证面板(Test-Card)
@@ -36,16 +36,16 @@
         <img src="../assets/Interface/interface5.png" alt="" class="box-shadow">
       </div>
 
-      <div class="ui-element bottom-68">
+      <div class="ui-element bottom-80">
         <h3>UI 元素</h3>
         <p class="bottom-40">“行为验证”验证产品的 UI 元素：
           <strong>验证控件(Controls)、功能组件(Insert Group)、反馈条(Check Bar)</strong>
         </p>
-        <img src="../assets/Interface/interface6.png" alt="" class="bottom-20 box-shadow">
-        <img src="../assets/Interface/interface7.png" alt="" class="bottom-20 box-shadow">
+        <img src="../assets/Interface/interface6.png" alt="" class="bottom-30 box-shadow">
+        <img src="../assets/Interface/interface7.png" alt="" class="bottom-30 box-shadow">
         <img src="../assets/Interface/interface8.png" alt="" class="bottom-40 box-shadow">
         <p class="bottom-40">“行为验证”验证产品的 UI 元素是统一的，可以快捷的变改主题色，满足客户的定制化要求。</p>
-        <div class="color-wrap bottom-20">
+        <div class="color-wrap bottom-30">
           <ColorPanel :color='color.bilibili' colorName='bilibili' hexVal='#FFCA55' rgbVal='255, 202, 85'  />
         </div>
         <img src="../assets/Interface/interface9.png" alt="" class="bottom-40 box-shadow">

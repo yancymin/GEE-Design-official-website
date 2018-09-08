@@ -10,7 +10,7 @@
     </div>
     <div class="container">
 
-      <div class="overview bottom-68" id="anchor-overview">
+      <div class="overview bottom-80" id="anchor-overview">
         <h3>
           品牌概述
         </h3>

@@ -11,6 +11,7 @@ export default {};
 <style lang="scss">
 @import "./style/contentStyle.scss";
 @import "./style/anchorStyle.scss";
+@import "./style/mainStyle.scss";
 
 html,
 body,
@@ -29,6 +30,7 @@ a {
   font-size: 13px;
   cursor: pointer;
 }
+
 #app {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Microsoft YaHei",
@@ -40,14 +42,12 @@ a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #5f6591;
-  display: flex;
-  justify-content: flex-end;
+  // display: flex;
+  // justify-content: flex-end;
   background-color: #fcfdfe;
 }
-.main {
-  width: calc(100vw - 250px);
-  transition: all 0.3s ease;
-}
+
+
 ::selection {
   background: #3873ff;
   color: #fff;
@@ -57,12 +57,7 @@ img {
   display: block;
 }
 
-@media screen and (max-width: 1220px) {
-  #app {
-    justify-content: center;
-  }
-  .main {
-    width: 100vw;
-  }
-}
+
+
 </style>
+

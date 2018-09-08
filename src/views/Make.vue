@@ -1,5 +1,5 @@
 <template>
-  <div class="make main">
+  <div class="make main" id="main">
     <Header title="极验制造" des="G-MAKE" :bgc="bgc" />
     <!-- <div class="anchor-wrap">
       <ul class="ul scroll">
@@ -8,9 +8,9 @@
         </li>
       </ul>
     </div> -->
-    <AnchorScroll :jsonData='jsonData' :nowSubIndex='nowSubIndex'/>
+    <AnchorScroll :jsonData='jsonData' :nowSubIndex='nowSubIndex' />
     <div class="container">
-      <div class="overview bottom-68" id="anchor-overview">
+      <div class="overview bottom-80" id="anchor-overview">
         <h3>
           属于极验小伙伴的礼物
         </h3>
@@ -18,22 +18,22 @@
           极验制造 G－MAKE 是极验内部孵化的全新品牌，由极验用户体验设计中心的设计部负责。G－MAKE 在极验统一的品牌视觉识别系统下，衍生出更具创新、新颖、个性的一个有趣形象。在“极验制造”这个品牌下，我们输出了一系列文化周边产品，发放给公司员工、合作伙伴、活动嘉宾以及特邀访客，希望给他们传递出我们充满活力、创造力的形象。
         </p>
       </div>
-      <div class="brand-logo bottom-68 " id="anchor-logo">
+      <div class="brand-logo bottom-80 " id="anchor-logo">
         <h3>
           品牌标识
         </h3>
         <p class="bottom-40">
           极验制造的标识由图形“g”和文字标志“MAKE”组成，其元素间的相对大小和位置是固定的，不能重新绘制或者擅自组合。文字标志不能单独使用，但图形标志可以单独使用。
         </p>
-        <img class="box-shadow bottom-20" src="../assets/Make/content_make1.png" alt="">
-        <img class="bottom-20" src="../assets/Make/content_make2.png" alt="">
+        <img class="box-shadow bottom-30" src="../assets/Make/content_make1.png" alt="">
+        <img class="bottom-30" src="../assets/Make/content_make2.png" alt="">
         <div>
-          <img class="box-shadow" src="../assets/Make/content_make3.png" alt="">
-          <img class="box-shadow" src="../assets/Make/content_make4.png" alt="">
-          <img class="box-shadow" src="../assets/Make/content_make5.png" alt="">
+          <div><img class="box-shadow" src="../assets/Make/content_make3.png" alt=""></div>
+          <div><img class="box-shadow" src="../assets/Make/content_make4.png" alt=""></div>
+          <div><img class="box-shadow" src="../assets/Make/content_make5.png" alt=""></div>
         </div>
       </div>
-      <div class="brand-color bottom-68">
+      <div class="brand-color bottom-80">
         <h3>品牌标准色</h3>
         <p class="bottom-40">极验制造的标准色延续了极验品牌，由极验蓝和极验蓝黑作为标识配色、极验白和极验铬黄等作为视觉延展。以下颜色可以运用在任何有关衍生物料中。极验制造品牌的极验蓝作为品牌主色，搭配极验白一起应用，保持干净、干练的形象。极验蓝黑和极验金作为辅色进行品牌的视觉延展。Web 色以 RGB 色值为准，平面物料以四色印刷 CMYK 色值为准。</p>
         <div class="color-wrap">
@@ -46,26 +46,26 @@
         </div>
 
       </div>
-      <div class="brand-application bottom-68">
+      <div class="brand-application bottom-80">
         <h3>品牌应用</h3>
         <p class="bottom-40">将极验制造的视觉品牌形象应用在各产品中，以统一的设计方式建立完整的一套系统。</p>
-        <img class="bottom-20" src="../assets/Make/content_make6.png" alt="">
-        <img class="box-shadow bottom-20" src="../assets/Make/content_make7.png" alt="">
+        <img class="bottom-30" src="../assets/Make/content_make6.png" alt="">
+        <img class="box-shadow bottom-30" src="../assets/Make/content_make7.png" alt="">
       </div>
-      <div class="gee-tee bottom-68" id="anchor-geetee">
+      <div class="gee-tee bottom-80" id="anchor-geetee">
         <h3>GEE Tee</h3>
         <p class="bottom-40">GEE Tee 是极验制造的文化服装系列产品。极验每年都会制作主题衫、节日衫和卫衣，用于发放给公司员工或赠送给合作伙伴等。GEE Tee 是极验的一个窗口，希望能传递给穿着者和周围人充满活力、富有创造力的形象。</p>
-        <img class="bottom-20" src="../assets/Make/content_make8.png" alt="">
+        <img class="bottom-30" src="../assets/Make/content_make8.png" alt="">
       </div>
       <div class="others" id="anchor-others">
         <h3>其它产品</h3>
         <p class="bottom-40">极验制造除了 GEE Tee 外，还有更多周边产品。</p>
         <div>
-          <div class="bottom-20"><img src="../assets/Make/content_make9.png" alt=""></div>
-          <div class="box-row bottom-20"><img src="../assets/Make/content_make10.png" alt=""><img src="../assets/Make/content_make11.png" alt=""></div>
-          <div class="bottom-20"><img src="../assets/Make/content_make12.png" alt=""></div>
-          <div class="box-row bottom-20"><img src="../assets/Make/content_make13.png" alt=""><img src="../assets/Make/content_make14.png" alt=""></div>
-          <div class="bottom-20"><img src="../assets/Make/content_make15.png" alt=""></div>
+          <div class="bottom-30"><img src="../assets/Make/content_make9.png" alt=""></div>
+          <div class="box-row bottom-30"><img src="../assets/Make/content_make10.png" alt=""><img src="../assets/Make/content_make11.png" alt=""></div>
+          <div class="bottom-30"><img src="../assets/Make/content_make12.png" alt=""></div>
+          <div class="box-row bottom-30"><img src="../assets/Make/content_make13.png" alt=""><img src="../assets/Make/content_make14.png" alt=""></div>
+          <div class="bottom-30"><img src="../assets/Make/content_make15.png" alt=""></div>
           <div class="box-row"><img src="../assets/Make/content_make16.png" alt=""><img src="../assets/Make/content_make17.png" alt=""></div>
         </div>
       </div>
@@ -124,7 +124,7 @@ export default {
     BackTop,
     ColorPanel,
     AnchorScroll
-  },
+  }
   // mounted() {
   //   window.addEventListener("scroll", this.handleScroll); // 监听 scroll 事件
   // },
@@ -193,20 +193,27 @@ export default {
   align-items: center;
 
   .brand-logo {
-    width: 700px;
+    width: 100%;
     div {
-      width: 700px;
+      width: 100%;
       height: 230px;
       display: flex;
       justify-content: space-between;
+
+      & > div {
+        flex: 0 0 33%;
+      }
+
       & > img {
         width: 220px;
       }
     }
   }
   .brand-color {
+    width: 100%;
+
     .color-wrap {
-      width: 700px;
+      width: 100%;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
@@ -290,5 +297,19 @@ span {
   color: #bcc2de;
   font-size: 12px;
   line-height: 17px;
+}
+
+@media screen and (max-width: 414px) {
+  #main {
+    .brand-logo {
+      div {
+        div {
+          & > img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 }
 </style>

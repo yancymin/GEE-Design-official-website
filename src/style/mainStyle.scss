@@ -1,0 +1,26 @@
+.main {
+    width: calc(100vw - 250px);
+    transition: all 0.3s ease;
+    margin-left: 250px;
+  }
+
+
+@media screen and (max-width: 1220px) {
+    #main {
+        width: calc(100vw - 100px);
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    #main {
+        width: 100%;
+        margin-left: 0;
+        margin: 0 20px;
+
+        .container {
+            width: 100%;
+        }
+    }
+}
+

@@ -223,11 +223,9 @@ $transition-normal: all 0.2s ease;
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 414px) {
   #sidebar {
-    @media screen and (max-width: 320px) {
       display: none;
-    }
   }
 }
 </style>
