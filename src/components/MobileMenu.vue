@@ -236,8 +236,12 @@ $transition-normal: all 0.2s ease;
   }
 }
 
-@media screen and (max-width: 1220px) {
+@media screen and (min-width: 414px) {
   .mobile-menu {
+    display: none;
+  }
+
+  .mobile-header {
     display: none;
   }
 }

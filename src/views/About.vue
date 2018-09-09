@@ -39,13 +39,13 @@ import Baoxiaohan from "@/assets/About/avatarPic4.png";
 
 export default {
   name: "about",
-  data () {
+  data() {
     return {
       imgSrc: {
         york: York,
         yancy: Yancy,
         liuchang: Liuchang,
-        baoxiaohan: Baoxiaohan,
+        baoxiaohan: Baoxiaohan
       }
     };
   },
@@ -53,7 +53,7 @@ export default {
     Header,
     Scroll,
     BackTop,
-    Avatar,
+    Avatar
   }
 };
 </script>
@@ -75,6 +75,22 @@ export default {
       .avatar {
         &:nth-of-type(4) {
           padding: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .about {
+    .avatar-team {
+      .avatar-wrap {
+        justify-content: center;
+        .avatar {
+          padding: 0 44px 0 0;
+          &:nth-of-type(4) {
+            padding-right: 44px;
+          }
         }
       }
     }
