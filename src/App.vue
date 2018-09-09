@@ -47,7 +47,6 @@ a {
   background-color: #fcfdfe;
 }
 
-
 ::selection {
   background: #3873ff;
   color: #fff;
@@ -56,8 +55,6 @@ a {
 img {
   display: block;
 }
-
-
 
 </style>
 

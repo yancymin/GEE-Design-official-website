@@ -88,10 +88,6 @@ export default {
 
 <style lang="scss" scoped>
 .interface {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
   .overview {
     width: 100%;

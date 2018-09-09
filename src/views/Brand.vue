@@ -70,10 +70,6 @@ export default {
 
 <style lang="scss" scoped>
 .brand {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
   .color-wrap {
     width: 100%;

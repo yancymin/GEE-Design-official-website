@@ -187,10 +187,6 @@ export default {
 
 <style lang="scss" scoped>
 .make {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
   .brand-logo {
     width: 100%;
