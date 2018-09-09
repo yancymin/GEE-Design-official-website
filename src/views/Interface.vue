@@ -82,13 +82,17 @@ export default {
     BackTop,
     ColorPanel,
     AnchorScroll
+  },
+  mounted: function() {
+    let cmyk = document.querySelector("#cmyk");
+    cmyk.style.display = "none";
   }
+
 };
 </script>
 
 <style lang="scss" scoped>
 .interface {
-
   .overview {
     width: 100%;
     display: flex;

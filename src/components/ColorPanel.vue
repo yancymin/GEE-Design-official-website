@@ -13,7 +13,7 @@
                 <span>RGB</span>
                 <p class="color-val copy">{{ rgbVal }}</p>
             </div>
-            <div class="color-tag">
+            <div class="color-tag" id="cmyk">
                 <span>CMYK</span>
                 <p class="color-val copy">{{ cmykVal }}</p>
             </div>
