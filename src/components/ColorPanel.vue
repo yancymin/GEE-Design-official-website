@@ -108,6 +108,8 @@ export default {
     height: 140px;
     flex-direction: column;
     align-items: flex-start;
+    padding: 22px 32px 22px 32px;
+    white-space: nowrap;
 
     .tag-wrap {
       .color-tag {

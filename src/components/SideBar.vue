@@ -129,14 +129,14 @@ $transition-normal: all 0.2s ease;
       display: flex;
       align-items: flex-start;
       flex-direction: column;
-      margin-top: 40px;
+      margin-top: 30px;
       margin-left: 8px;
       span {
         width: 28px;
         height: 1px;
         opacity: 0.4;
         background-color: #fff;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
       }
       & > a:hover {
         text-decoration-line: underline;

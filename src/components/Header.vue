@@ -60,5 +60,16 @@ export default {
 @media screen and (max-width: 1220px) {
   
 }
+
+@media screen and (max-width: 414px) {
+  .header {
+    width: calc(100% + 40px);
+    height: 200px;
+
+    .text-box {
+      margin-left: 20px;
+    }
+  }
+}
 </style>
 

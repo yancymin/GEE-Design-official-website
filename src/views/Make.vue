@@ -195,7 +195,7 @@ export default {
   .brand-logo {
     width: 100%;
     .img-list-box {
-      .center-pic{
+      .center-pic {
         margin: 0 30px;
       }
       width: 100%;
@@ -213,7 +213,6 @@ export default {
       //   width: 220px;
       // }
     }
-
   }
   .brand-color {
     width: 100%;
@@ -306,15 +305,22 @@ span {
 }
 
 @media screen and (max-width: 414px) {
-  #main {
-    .brand-logo {
-      div {
-        div {
-          .center-pic {
-            
-          }
-          & > img {
-            width: 100%;
+  .color-wrap {
+    .colorpanel {
+      width: 100%;
+    }
+  }
+  .others {
+    div {
+      .box-row {
+        width: 100%;
+        flex-direction: column;
+
+        img {
+          width: 100%;
+
+          &:first-of-type {
+            margin-bottom: 30px;
           }
         }
       }
