@@ -53,7 +53,7 @@ export default {
     Header,
     Scroll,
     BackTop,
-    Avatar
+    Avatar,
   }
 };
 </script>
