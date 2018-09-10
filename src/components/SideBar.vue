@@ -131,6 +131,7 @@ $transition-normal: all 0.2s ease;
       flex-direction: column;
       margin-top: 30px;
       margin-left: 8px;
+      
       span {
         width: 28px;
         height: 1px;
@@ -139,7 +140,7 @@ $transition-normal: all 0.2s ease;
         margin-bottom: 30px;
       }
       & > a:hover {
-        text-decoration-line: underline;
+        // text-decoration-line: underline;
       }
       & > a::after {
         content: "";

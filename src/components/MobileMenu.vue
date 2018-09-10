@@ -178,9 +178,9 @@ $transition-normal: all 0.2s ease;
         opacity: 0.8;
         margin: 0 20px;
       }
-      & > a:hover {
-        // text-decoration-line: underline;
-      }
+      //   & > a:hover {
+      //     text-decoration-line: underline;
+      //   }
     }
   }
   .footer {
@@ -219,13 +219,13 @@ $transition-normal: all 0.2s ease;
   padding: 18px 20px;
   box-shadow: 0 2px 4px #0e2b7063;
 
-
   .icon-menu {
     position: fixed;
     right: 20px;
     top: 25px;
     width: 24px;
     height: 24px;
+    cursor: pointer;
   }
 
   .logo {
@@ -249,6 +249,10 @@ $transition-normal: all 0.2s ease;
 @media screen and (max-width: 414px) {
   .mobile-menu {
     display: none;
+  }
+
+  .mobile-header {
+    display: flex;
   }
 }
 </style>

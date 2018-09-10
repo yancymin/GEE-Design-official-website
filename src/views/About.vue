@@ -32,13 +32,15 @@ import Header from "@/components/Header.vue";
 import Scroll from "@/components/Scroll.vue";
 import BackTop from "@/components/BackTop.vue";
 import Avatar from "@/components/Avatar.vue";
+
+
 import York from "@/assets/About/avatarPic1.png";
 import Yancy from "@/assets/About/avatarPic2.png";
 import Liuchang from "@/assets/About/avatarPic3.png";
 import Baoxiaohan from "@/assets/About/avatarPic4.png";
 
-import Website from "@/assets/About/codepen.svg";
-import Dribbble from "@/assets/About/ball.png";
+import Website from "@/assets/About/website.svg";
+import Dribbble from "@/assets/About/dribbble.svg";
 
 
 export default {
