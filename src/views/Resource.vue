@@ -71,6 +71,7 @@
                     </div>
                 </div>
             </div>
+            <Back-top />
         </div>
     </div>
 </template>

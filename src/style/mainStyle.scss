@@ -25,7 +25,12 @@
 
         .container {
             width: 100%;
+
+            .timestamp {
+                left: 0;
+            }
         }
+
     }
 }
 

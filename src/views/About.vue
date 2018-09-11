@@ -14,16 +14,17 @@
         <h3>关于我们</h3>
         <p class="bottom-40">我们关注用户体验的各个层面，功能、安全、交互、视觉…</p>
         <div class="avatar-wrap">
-          <Avatar jobName="Designer" name="Yorkun" :imgSrc="imgSrc.york" :href1="href.york" :iconSrc1="iconSrc.website" :href2="href.york" :iconSrc2="iconSrc.dribbble"/>
-          <Avatar jobName="Designer" name="Yancy Min" :imgSrc="imgSrc.yancy"/>
-          <Avatar jobName="Designer" name="刘畅" :imgSrc="imgSrc.liuchang"/>
-          <Avatar jobName="Designer" name="包小唅" :imgSrc="imgSrc.baoxiaohan"/>
-          <Avatar jobName="Designer" name="Yorkun" :imgSrc="imgSrc.york"/>
-          <Avatar jobName="Designer" name="Yorkun" :imgSrc="imgSrc.york"/>
+          <Avatar jobName="Designer" name="Yorkun" :imgSrc="imgSrc.york" :href1="href.york" :iconSrc1="iconSrc.website" :href2="href.york" :iconSrc2="iconSrc.dribbble" />
+          <Avatar jobName="Designer" name="Yancy Min" :imgSrc="imgSrc.yancy" />
+          <Avatar jobName="Designer" name="刘畅" :imgSrc="imgSrc.liuchang" />
+          <Avatar jobName="Designer" name="包小唅" :imgSrc="imgSrc.baoxiaohan" />
+          <Avatar jobName="Designer" name="Yorkun" :imgSrc="imgSrc.york" />
+          <Avatar jobName="Designer" name="Yorkun" :imgSrc="imgSrc.york" />
         </div>
       </div>
-    </div>
+      <Back-top />
 
+    </div>
   </div>
 </template>
 
@@ -33,7 +34,6 @@ import Scroll from "@/components/Scroll.vue";
 import BackTop from "@/components/BackTop.vue";
 import Avatar from "@/components/Avatar.vue";
 
-
 import York from "@/assets/About/avatarPic1.png";
 import Yancy from "@/assets/About/avatarPic2.png";
 import Liuchang from "@/assets/About/avatarPic3.png";
@@ -41,7 +41,6 @@ import Baoxiaohan from "@/assets/About/avatarPic4.png";
 
 import Website from "@/assets/About/website.svg";
 import Dribbble from "@/assets/About/dribbble.svg";
-
 
 export default {
   name: "about",
@@ -54,11 +53,11 @@ export default {
         baoxiaohan: Baoxiaohan
       },
       href: {
-        york: "https://dribbble.com",
+        york: "https://dribbble.com"
       },
       iconSrc: {
         website: Website,
-        dribbble: Dribbble,
+        dribbble: Dribbble
       }
     };
   },

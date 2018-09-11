@@ -25,12 +25,12 @@
         <p class="bottom-40">
           极验制造的标识由图形“g”和文字标志“MAKE”组成，其元素间的相对大小和位置是固定的，不能重新绘制或者擅自组合。文字标志不能单独使用，但图形标志可以单独使用。
         </p>
-        <img class="box-shadow bottom-30" src="../assets/Make/content_make1.png" alt="">
+        <img class="box-border bottom-30" src="../assets/Make/content_make1.png" alt="">
         <img class="bottom-30" src="../assets/Make/content_make2.png" alt="">
         <div class="img-list-box">
-          <div><img class="box-shadow" src="../assets/Make/content_make3.png" alt=""></div>
-          <div class="center-pic"><img class="box-shadow" src="../assets/Make/content_make4.png" alt=""></div>
-          <div><img class="box-shadow" src="../assets/Make/content_make5.png" alt=""></div>
+          <div><img class="box-border" src="../assets/Make/content_make3.png" alt=""></div>
+          <div class="center-pic"><img src="../assets/Make/content_make4.png" alt=""></div>
+          <div><img src="../assets/Make/content_make5.png" alt=""></div>
         </div>
       </div>
       <div class="brand-color bottom-80">
@@ -50,7 +50,7 @@
         <h3>品牌应用</h3>
         <p class="bottom-40">将极验制造的视觉品牌形象应用在各产品中，以统一的设计方式建立完整的一套系统。</p>
         <img class="bottom-30" src="../assets/Make/content_make6.png" alt="">
-        <img class="box-shadow bottom-30" src="../assets/Make/content_make7.png" alt="">
+        <img class="box-border bottom-30" src="../assets/Make/content_make7.png" alt="">
       </div>
       <div class="gee-tee bottom-80" id="anchor-geetee">
         <h3>GEE Tee</h3>
@@ -69,7 +69,7 @@
           <div class="box-row"><img src="../assets/Make/content_make16.png" alt=""><img src="../assets/Make/content_make17.png" alt=""></div>
         </div>
       </div>
-      <span>更新于 2018.9.1</span>
+      <span class="timestamp">更新于 2018.9.1</span>
       <Back-top />
     </div>
   </div>

@@ -31,7 +31,7 @@
       </div>
 
 
-      <span>更新于 2018.9.1</span>
+      <span class="timestamp">更新于 2018.9.1</span>
       <Back-top />
     </div>
   </div> 
