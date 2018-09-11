@@ -187,6 +187,9 @@ export default {
 
 <style lang="scss" scoped>
 .make {
+   .overview {
+     width: 100%;
+   } 
 
   .brand-logo {
     width: 100%;
@@ -267,6 +270,10 @@ export default {
     }
   }
   .brand-application {
+    width: 100%;
+  }
+
+  .gee-tee {
     width: 100%;
   }
 }

@@ -94,6 +94,8 @@ export default {
 <style lang="scss" scoped>
 .resource {
   .container {
+      border: 0;
+
     .card {
       display: flex;
       justify-content: space-between;

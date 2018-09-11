@@ -4,7 +4,6 @@
       <h1>{{ title }}</h1>
       <p>{{ des }}</p>
     </div>
-    <img alt="" class="bg" :src="src" :style="{'background-color': 'bgc'}" />
   </div>
 </template>
 
@@ -14,8 +13,6 @@ export default {
   props: {
     title: String,
     des: String,
-    src: String,
-    bgc: String
   }
 };
 </script>
@@ -28,13 +25,10 @@ export default {
   align-content: center;
   justify-content: center;
   background-color: #292f3a;
-
-  .bg {
-    width: auto;
-    height: 250px;
-    position: absolute;
-    top: 0;
-  }
+  background-image: url(../assets/header_bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   .text-box {
     z-index: 2;
@@ -58,7 +52,6 @@ export default {
 }
 
 @media screen and (max-width: 1220px) {
-  
 }
 
 @media screen and (max-width: 414px) {

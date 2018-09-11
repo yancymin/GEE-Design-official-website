@@ -166,7 +166,11 @@ $transition-normal: all 0.2s ease;
     text-align: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
+
     & > img {
+      width: 77px;
+      height: 21px;
       margin-bottom: 4px;
     }
     & > p {
@@ -226,7 +230,7 @@ $transition-normal: all 0.2s ease;
 
 @media screen and (max-width: 414px) {
   #sidebar {
-      display: none;
+    display: none;
   }
 }
 </style>

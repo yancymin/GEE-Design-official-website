@@ -22,14 +22,14 @@
         </p>
         <img src="../assets/Interface/interface2.gif" alt="" class="bottom-40">
         <p class="bottom-40">我们设计了一个全新而独特的验证按钮，它作为网站与用户的交互控件，提供了安全检验的触发和状态的显示作用。通过前端个性化样式的设置，验证按钮可以很好的放置在客户网站表单中，用户可以清楚的了解到目前的验证状态。相比传统的字符验证码，验证按钮在视觉和交互体验上都要更友好。</p>
-        <img src="../assets/Interface/interface3.png" alt="" class="bottom-40 box-border">
+        <img src="../assets/Interface/interface3.png" alt="" class="bottom-40">
         <p class="bottom-10">
           在按钮的整个交互流程中，我们设计一套符合逻辑、感知流畅的“小球”动效：按钮上的“雷达”会跟随着用户的鼠标而移动，这是极验服务端收集全页面数据的视觉体现；点击按钮后，扫描动画表示极验正在智能检测当前用户和设备的风险等级；在快速的检测之后，按钮会给出检测结果动画，普通用户便能轻松的“一点即过”，整个验证过程不到 1 秒钟。
         </p>
         <p class="bottom-40">
           由于用户风险等级、群体架构、语言、以及交互习惯的不同，我们精心设计了多种验证形式，在保证网站安全的同时，提供给 C 端用户较好的验证体验。
         </p>
-        <img src="../assets/Interface/interface4.png" alt="" class="bottom-40 box-border">
+        <img src="../assets/Interface/interface4.png" alt="" class="bottom-40">
         <p class="bottom-40">为了保证验证形式视觉和交互的一致性，我们设计了一套通用的验证面板，实现了
           <strong>（这里谈一下方便调用、灵活、适应性高的文案）</strong>
         </p>
@@ -41,9 +41,9 @@
         <p class="bottom-40">“行为验证”验证产品的 UI 元素：
           <strong>验证控件(Controls)、功能组件(Insert Group)、反馈条(Check Bar)</strong>
         </p>
-        <img src="../assets/Interface/interface6.png" alt="" class="bottom-30 box-border">
-        <img src="../assets/Interface/interface7.png" alt="" class="bottom-30 box-border">
-        <img src="../assets/Interface/interface8.png" alt="" class="bottom-40 box-border">
+        <img src="../assets/Interface/interface6.png" alt="" class="bottom-30">
+        <img src="../assets/Interface/interface7.png" alt="" class="bottom-30">
+        <img src="../assets/Interface/interface8.png" alt="" class="bottom-40">
         <p class="bottom-40">“行为验证”验证产品的 UI 元素是统一的，可以快捷的变改主题色，满足客户的定制化要求。</p>
         <div class="color-wrap bottom-30">
           <ColorPanel :color='color.bilibili' colorName='bilibili' hexVal='#FFCA55' rgbVal='255, 202, 85' />
@@ -92,13 +92,14 @@ export default {
 .interface {
   .overview {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
 
     img {
-      align-self: center;
       width: 440px;
       margin-top: 20px;
+      align-self: center;
     }
   }
 

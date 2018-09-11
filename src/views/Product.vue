@@ -24,10 +24,16 @@
                 </div>
             </div>
 
+            <div class="typeface bottom-80">
+                <h3>产品标志字体</h3>
+                <p class="bottom-40">品牌专用字体是品牌视觉识别的重要部分。品牌专用字体风格有助于建立品 牌独特的美感。方正兰亭黑做为腾讯云的中文品牌专用字体，被用于品牌产 品及品牌视觉传达中。我们需要遵循右页所述的品牌字体运用示例，以确保 品牌视觉传达的一致性。</p>
+                <img class="box-border" src="../assets/Product/product8.png" alt="">
+            </div>
+
             <div class="size-arrangement bottom-80">
                 <h3>尺寸排列</h3>
                 <p class="bottom-80">目前产品标志的主要应用场景为官网，配合官网设计标志尺寸定为两种，24px 和 20px，与文字间隔尺寸 统一为 10px；后续会有印刷尺寸的规范持续更新。</p>
-                <div class="bottom-40 pic-box">
+                <div class="pic-box">
                     <div>
                         <img src="../assets/Product/product4.png" alt="">
                     </div>
@@ -39,7 +45,7 @@
 
             <div class="logo-alignment">
                 <h3>徽标对齐</h3>
-                <p class="bottom-20">在水平行中使用完整徽标时，底部对齐到徽标中文本的基线。在堆叠的垂直列中，左对齐标识中最左侧的文 字，徽标采用中轴对齐。</p>
+                <p class="bottom-30">在水平行中使用完整徽标时，底部对齐到徽标中文本的基线。在堆叠的垂直列中，左对齐标识中最左侧的文 字，徽标采用中轴对齐。</p>
                 <img class="bottom-40" src="../assets/Product/product6.png" alt="">
             </div>
 
@@ -161,8 +167,8 @@ span {
 }
 
 @media screen and (max-width: 414px) {
-    .colorpanel {
-        width: 100%;
-    }
+  .colorpanel {
+    width: 100%;
+  }
 }
 </style>
