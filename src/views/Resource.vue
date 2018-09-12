@@ -94,7 +94,7 @@ export default {
 <style lang="scss" scoped>
 .resource {
   .container {
-      border: 0;
+    border: 0;
 
     .card {
       display: flex;
@@ -186,6 +186,29 @@ export default {
       #sketch {
         &::before {
           width: 99px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #main {
+    .container {
+      margin: 20px 0 40px 0;
+      .card {
+        width: 90%;
+        height: 100%;
+        flex-direction: column;
+        padding: 10px;
+
+        img {
+          width: 100%;
+        }
+
+        .card-content {
+          width: auto;
+          padding: 40px 20px 20px 20px;
         }
       }
     }

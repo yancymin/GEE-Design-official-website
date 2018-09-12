@@ -14,12 +14,17 @@
         <h3>关于我们</h3>
         <p class="bottom-40">我们关注用户体验的各个层面，功能、安全、交互、视觉…</p>
         <div class="avatar-wrap">
-          <Avatar jobName="Designer" name="Yorkun" :imgSrc="imgSrc.york" :href1="href.york" :iconSrc1="iconSrc.website" :href2="href.york" :iconSrc2="iconSrc.dribbble" />
+          <Avatar jobName="Designer" name="YorKun" :imgSrc="imgSrc.york" :href1="href.york" :iconSrc1="iconSrc.website" :href2="href.york" :iconSrc2="iconSrc.dribbble" />
           <Avatar jobName="Designer" name="Yancy Min" :imgSrc="imgSrc.yancy" />
           <Avatar jobName="Designer" name="刘畅" :imgSrc="imgSrc.liuchang" />
           <Avatar jobName="Designer" name="包小唅" :imgSrc="imgSrc.baoxiaohan" />
-          <Avatar jobName="Designer" name="Yorkun" :imgSrc="imgSrc.york" />
-          <Avatar jobName="Designer" name="Yorkun" :imgSrc="imgSrc.york" />
+          <Avatar jobName="Designer" name="陈国庆" :imgSrc="imgSrc.chenguoqing" />
+          <Avatar jobName="Designer" name="汪智勇" :imgSrc="imgSrc.wangzhiyong" />
+          <Avatar jobName="Designer" name="任华翔" :imgSrc="imgSrc.renhuaxiang" />
+          <Avatar jobName="Designer" name="许伟" :imgSrc="imgSrc.xuwei" />
+          <Avatar jobName="Designer" name="陈禹" :imgSrc="imgSrc.chenyu" />
+          <Avatar jobName="Designer" name="刘忠雨" :imgSrc="imgSrc.liuzhongyu" />
+          <Avatar jobName="Designer" name="石琪" :imgSrc="imgSrc.shiqi" />
         </div>
       </div>
       <Back-top />
@@ -27,7 +32,6 @@
     </div>
   </div>
 </template>
-
 <script>
 import Header from "@/components/Header.vue";
 import Scroll from "@/components/Scroll.vue";
@@ -38,6 +42,13 @@ import York from "@/assets/About/avatarPic1.png";
 import Yancy from "@/assets/About/avatarPic2.png";
 import Liuchang from "@/assets/About/avatarPic3.png";
 import Baoxiaohan from "@/assets/About/avatarPic4.png";
+import Chenguoqing from "@/assets/About/avatarPic5.png";
+import Wangzhiyong from "@/assets/About/avatarPic6.png";
+import Renhuaxiang from "@/assets/About/avatarPic7.png";
+import Xuwei from "@/assets/About/avatarPic8.png";
+import Chenyu from "@/assets/About/avatarPic9.png";
+import Liuzhongyu from "@/assets/About/avatarPic10.png";
+import Shiqi from "@/assets/About/avatarPic11.png";
 
 import Website from "@/assets/About/website.svg";
 import Dribbble from "@/assets/About/dribbble.svg";
@@ -50,7 +61,14 @@ export default {
         york: York,
         yancy: Yancy,
         liuchang: Liuchang,
-        baoxiaohan: Baoxiaohan
+        baoxiaohan: Baoxiaohan,
+        chenguoqing: Chenguoqing,
+        wangzhiyong: Wangzhiyong,
+        renhuaxiang: Renhuaxiang,
+        xuwei: Xuwei,
+        chenyu: Chenyu,
+        liuzhongyu: Liuzhongyu,
+        shiqi: Shiqi,
       },
       href: {
         york: "https://dribbble.com"
@@ -88,6 +106,9 @@ export default {
         &:nth-of-type(4) {
           padding: 0;
         }
+        &:nth-of-type(8) {
+          padding: 0;
+        }
       }
     }
   }
@@ -101,6 +122,9 @@ export default {
         .avatar {
           padding: 0 44px 0 0;
           &:nth-of-type(4) {
+            padding-right: 44px;
+          }
+          &:nth-of-type(8) {
             padding-right: 44px;
           }
         }

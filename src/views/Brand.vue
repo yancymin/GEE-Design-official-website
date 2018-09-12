@@ -104,57 +104,43 @@ export default {
 
 <style lang="scss" scoped>
 .brand {
-  .overview {
-    width: 100%;
-  }
-
-  .logo {
-    width: 100%;
-
-    .pic-wrap {
+  .container {
+    .overview {
       width: 100%;
-      display: flex;
-      justify-content: space-between;
+    }
 
-      & > div {
-        width: calc(50% - 10px);
-        height: calc(50% - 10px);
-        img {
-          width: 100%;
+    .logo {
+      width: 100%;
+
+      .pic-wrap {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        & > div {
+          width: calc(50% - 10px);
+          height: calc(50% - 10px);
+          img {
+            width: 100%;
+          }
         }
       }
     }
-  }
-  .color {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-
-    .colorpanel-wrap {
+    .color {
       width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .colorpanel-wrap {
+        width: 100%;
+      }
+
+      img {
+        width: 480px;
+        align-self: center;
+      }
     }
-
-    img {
-      width: 480px;
-      align-self: center;
-    }
-
-    // .text-pic {
-    //   width: 100%;
-    //   display: flex;
-    //   justify-content: space-between;
-    //   // align-items: center;
-
-    //   p {
-    //       margin-right: 60px;
-    //   }
-
-    //   img {
-    //     width: 300px;
-    //     // flex-grow: 2;
-    //   }
-    // }
   }
 }
 
@@ -167,14 +153,13 @@ span {
   line-height: 17px;
 }
 
-
 @media screen and (max-width: 414px) {
-#main {
-  .color {
-    img {
-      width: 100%;
+  #main {
+    .color {
+      img {
+        width: 100%;
+      }
     }
   }
-}
 }
 </style>
