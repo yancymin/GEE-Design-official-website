@@ -14,17 +14,17 @@
         <h3>关于我们</h3>
         <p class="bottom-40">我们关注用户体验的各个层面，功能、安全、交互、视觉…</p>
         <div class="avatar-wrap">
-          <Avatar jobName="Designer" name="YorKun" :imgSrc="imgSrc.york" :href1="href.york" :iconSrc1="iconSrc.website" :href2="href.york" :iconSrc2="iconSrc.dribbble" />
-          <Avatar jobName="Designer" name="Yancy Min" :imgSrc="imgSrc.yancy" />
-          <Avatar jobName="Designer" name="刘畅" :imgSrc="imgSrc.liuchang" />
-          <Avatar jobName="Designer" name="包小唅" :imgSrc="imgSrc.baoxiaohan" />
-          <Avatar jobName="Designer" name="陈国庆" :imgSrc="imgSrc.chenguoqing" />
-          <Avatar jobName="Designer" name="汪智勇" :imgSrc="imgSrc.wangzhiyong" />
-          <Avatar jobName="Designer" name="任华翔" :imgSrc="imgSrc.renhuaxiang" />
-          <Avatar jobName="Designer" name="许伟" :imgSrc="imgSrc.xuwei" />
-          <Avatar jobName="Designer" name="陈禹" :imgSrc="imgSrc.chenyu" />
-          <Avatar jobName="Designer" name="刘忠雨" :imgSrc="imgSrc.liuzhongyu" />
-          <Avatar jobName="Designer" name="石琪" :imgSrc="imgSrc.shiqi" />
+          <Avatar jobName="Designer" name="YorKun" :imgSrc="imgSrc.york" :href1="href.york.website" :iconSrc1="iconSrc.website" :href2="href.york.dribbble" :iconSrc2="iconSrc.dribbble" />
+          <Avatar jobName="Designer" name="Yancy Min" :imgSrc="imgSrc.yancy" :href1="href.york.website" :iconSrc1="iconSrc.website" :href2="href.york.dribbble" :iconSrc2="iconSrc.dribbble" />
+          <Avatar jobName="Designer" name="Charlie Liu" :imgSrc="imgSrc.liuchang" :href1="href.york.website" :iconSrc1="iconSrc.website" :href2="href.york.dribbble" :iconSrc2="iconSrc.dribbble" />
+          <Avatar jobName="Designer" name="河马" :imgSrc="imgSrc.baoxiaohan" :href1="href.york.website" :href2="href.york.dribbble" :iconSrc2="iconSrc.dribbble" />
+          <Avatar jobName="Product manager" name="陈国庆" :imgSrc="imgSrc.chenguoqing" />
+          <Avatar jobName="Product manager" name="汪智勇" :imgSrc="imgSrc.wangzhiyong" />
+          <Avatar jobName="Front-end engineer" name="任华翔" :imgSrc="imgSrc.renhuaxiang" />
+          <Avatar jobName="IOS engineer" name="许伟" :imgSrc="imgSrc.xuwei" />
+          <Avatar jobName="Python engineer" name="陈禹" :imgSrc="imgSrc.chenyu" />
+          <Avatar jobName="Machine Learning" name="刘忠雨" :imgSrc="imgSrc.liuzhongyu" />
+          <Avatar jobName="Central China business" name="石琪" :imgSrc="imgSrc.shiqi" />
         </div>
       </div>
       <Back-top />
@@ -68,10 +68,24 @@ export default {
         xuwei: Xuwei,
         chenyu: Chenyu,
         liuzhongyu: Liuzhongyu,
-        shiqi: Shiqi,
+        shiqi: Shiqi
       },
       href: {
-        york: "https://dribbble.com"
+        york: {
+          website: "http://yorkun.com",
+          dribbble: "https://dribbble.com/yorkun"
+        },
+        yancy: {
+          website: "https://yancymin.design",
+          dribbble: "https://dribbble.com/YancyMin"
+        },
+        liuchang: {
+          website: "http://yorkun.com",
+          dribbble: "https://dribbble.com/DCharlie"
+        },
+        baoxiaohan: {
+          dribbble: "https://dribbble.com/Bhippo"
+        }
       },
       iconSrc: {
         website: Website,
@@ -103,9 +117,36 @@ export default {
       flex-wrap: wrap;
 
       .avatar {
+        &:nth-of-type(-n + 4) /deep/ p {
+          top: -26px;
+          left: 5px;
+        }
+
+        &:nth-of-type(n + 5) /deep/ .pic::before {
+          display: none;
+        }
+
+        &:nth-of-type(n + 5) /deep/ a {
+          display: none;
+        }
+
+        &:nth-of-type(11) /deep/ p {
+          top: -34px;
+          line-height: 10px;
+        }
+
         &:nth-of-type(4) {
           padding: 0;
         }
+
+        &:nth-of-type(4) /deep/ .social-icons a:nth-child(1) {
+            display: none;
+        }
+
+        &:nth-of-type(7) /deep/ p {
+          left: 0;
+        }
+
         &:nth-of-type(8) {
           padding: 0;
         }

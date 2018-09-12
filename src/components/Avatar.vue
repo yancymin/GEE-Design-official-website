@@ -46,9 +46,6 @@ export default {
   &:hover .pic-wrap .social-icons > a {
     opacity: 1;
   }
-  //   &:hover .pic-wrap .pic {
-  //     transform: scale(1.1);
-  //   }
 
   .pic-wrap {
     .social-icons {
@@ -64,7 +61,6 @@ export default {
         opacity: 0;
         width: 20px;
         height: 20px;
-        // background-color: rgb(181, 22, 22);
         transition: all 0.3s;
         background-position: center;
         background-repeat: no-repeat;
@@ -119,7 +115,7 @@ export default {
 
     span {
       display: block;
-      width: 100%;
+      width: 96px;
       height: 100%;
       mix-blend-mode: multiply;
       background-color: #46d7ff;
@@ -127,14 +123,20 @@ export default {
     }
 
     p {
+      width: 86px;
       position: relative;
       top: -32px;
+      left: 3px;
+      font-size: 12px;
       color: #fff;
       margin: 0 12px;
+      line-height: 12px;
+      text-align: left;
     }
   }
 
   .name {
+      font-size: 15px;
     align-self: center;
     margin-top: 20px;
     cursor: default;

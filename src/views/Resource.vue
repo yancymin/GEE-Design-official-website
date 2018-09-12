@@ -137,6 +137,10 @@ export default {
           a {
             display: block;
 
+            &:hover p{
+                color: #464E73;
+            }
+
             &:nth-of-type(2)::before {
               margin-left: -15px;
             }
