@@ -83,13 +83,22 @@ $transition-normal: all 0.2s ease;
       width: 230px;
       height: 40px;
       display: block;
-      margin-bottom: 2px;
+      margin-bottom: 8px;
       border-radius: 3px;
+      font-size: 14px;
       transition: $transition-normal;
-      will-change: all;
+      will-change: transform;
+
+      span {
+        opacity: 0.85;
+      }
 
       &:hover {
         font-weight: 500;
+
+        span {
+          opacity: 1;
+        }
       }
 
       &::before {
@@ -113,16 +122,16 @@ $transition-normal: all 0.2s ease;
         opacity: 1;
       }
 
-      // &:active::before {
-      //   transform: scale(0.95);
-      // }
-
       &.router-link-active {
         background-color: #ffffff;
         color: #3973ff;
         font-weight: 600;
         animation: sidebarActive 0.2s ease-in;
         will-change: animation;
+
+        span {
+          opacity: 1 !important;
+        }
       }
     }
     .links {
@@ -139,9 +148,16 @@ $transition-normal: all 0.2s ease;
         background-color: #fff;
         margin-bottom: 30px;
       }
-      // & > a:hover {
-      //   // text-decoration-line: underline;
-      // }
+
+      a {
+        font-size: 14px;
+        opacity: 0.85;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
       & > a::after {
         content: "";
         opacity: 0;
@@ -199,6 +215,7 @@ $transition-normal: all 0.2s ease;
         width: 80px;
         overflow: hidden;
         margin-bottom: 8px;
+        font-size: 13px;
 
         &::before {
           content: "";
@@ -217,6 +234,11 @@ $transition-normal: all 0.2s ease;
       }
 
       .links {
+
+        a {
+        font-size: 13px;
+        }
+
         span {
           margin-left: 12px;
         }
