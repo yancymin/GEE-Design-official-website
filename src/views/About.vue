@@ -104,51 +104,54 @@ export default {
 
 <style lang="scss" scoped>
 .about {
-  .about-us {
-    width: 100%;
-  }
+  .container {
+    border: 0;
+    .about-us {
+      width: 100%;
+    }
 
-  .avatar-team {
-    width: 100%;
+    .avatar-team {
+      width: 100%;
 
-    .avatar-wrap {
-      display: flex;
-      justify-content: flex-start;
-      flex-wrap: wrap;
+      .avatar-wrap {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
 
-      .avatar {
-        &:nth-of-type(-n + 4) /deep/ p {
-          top: -26px;
-          left: 5px;
-        }
+        .avatar {
+          &:nth-of-type(-n + 4) /deep/ p {
+            top: -26px;
+            left: 5px;
+          }
 
-        &:nth-of-type(n + 5) /deep/ .pic::before {
-          display: none;
-        }
-
-        &:nth-of-type(n + 5) /deep/ a {
-          display: none;
-        }
-
-        &:nth-of-type(11) /deep/ p {
-          top: -34px;
-          line-height: 10px;
-        }
-
-        &:nth-of-type(4) {
-          padding: 0;
-        }
-
-        &:nth-of-type(4) /deep/ .social-icons a:nth-child(1) {
+          &:nth-of-type(n + 5) /deep/ .pic::before {
             display: none;
-        }
+          }
 
-        &:nth-of-type(7) /deep/ p {
-          left: 0;
-        }
+          &:nth-of-type(n + 5) /deep/ a {
+            display: none;
+          }
 
-        &:nth-of-type(8) {
-          padding: 0;
+          &:nth-of-type(11) /deep/ p {
+            top: -34px;
+            line-height: 10px;
+          }
+
+          &:nth-of-type(4) {
+            padding: 0;
+          }
+
+          &:nth-of-type(4) /deep/ .social-icons a:nth-child(1) {
+            display: none;
+          }
+
+          &:nth-of-type(7) /deep/ p {
+            left: 0;
+          }
+
+          &:nth-of-type(8) {
+            padding: 0;
+          }
         }
       }
     }
@@ -156,10 +159,12 @@ export default {
 }
 
 @media screen and (max-width: 414px) {
-  .about {
+  #main {
     .avatar-team {
       .avatar-wrap {
         justify-content: center;
+        margin-left: 13px;
+
         .avatar {
           padding: 0 44px 0 0;
           &:nth-of-type(4) {
@@ -167,6 +172,9 @@ export default {
           }
           &:nth-of-type(8) {
             padding-right: 44px;
+          }
+          &:nth-of-type(11) {
+            left: -76px;
           }
         }
       }
