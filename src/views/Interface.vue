@@ -1,7 +1,6 @@
 <template>
   <div class="interface main" id="main">
     <Header title="用户界面设计" des="User Interface Design" :style="bgc" />
-    <AnchorScroll :jsonData='jsonData' :nowSubIndex='nowSubIndex' />
     <div class="container">
 
       <div class="overview bottom-80" id="anchor-overview">
@@ -30,21 +29,23 @@
           由于用户风险等级、群体架构、语言、以及交互习惯的不同，我们精心设计了多种验证形式，在保证网站安全的同时，提供给 C 端用户较好的验证体验。
         </p>
         <img src="../assets/Interface/interface4.png" alt="" class="bottom-40">
-        <p class="bottom-40">为了保证验证形式视觉和交互的一致性，我们设计了一套通用的验证面板，实现了
+        <p>为了保证验证形式视觉和交互的一致性，我们设计了一套通用的验证面板，实现了
           <strong>（这里谈一下方便调用、灵活、适应性高的文案）</strong>
         </p>
-        <img src="../assets/Interface/interface5.png" alt="" class="box-border">
       </div>
 
       <div class="ui-element">
         <h3>UI 元素</h3>
-        <p class="bottom-40">“行为验证”验证产品的 UI 元素：
+        <p class="bottom-30">“行为验证”验证产品的 UI 元素：
           <strong>验证控件(Controls)、功能组件(Insert Group)、反馈条(Check Bar)</strong>
         </p>
-        <img src="../assets/Interface/interface6.png" alt="" class="bottom-30">
-        <img src="../assets/Interface/interface7.png" alt="" class="bottom-30">
+        <p class="bottom-40">我们设计了一套直观的、符合自然映射的 UI 控件。我们将滑块控件设计得能更好的引导用户去操作，至 2012 年以来，“滑块拼图行为验证”慢慢改变了用户的使用习惯，将难认、难用的“字符验证码”推下历史舞台。在验证的状态指示上，我们也进行了精心的设计，尽量用图像、动效来替代文字，引导用户的操作，让一切变得“自然”。</p>
+        <img src="../assets/Interface/interface6.png" alt="" class="bottom-40">
+        <p class="bottom-40">我们设计了能灵活调用的功能条，可以高效率的进行调整，满足各种需求。</p>
+        <img src="../assets/Interface/interface7.png" alt="" class="bottom-40">
+        <p class="bottom-40">反馈条能直观的向用户展示结果，给予用户一定的成就感和指导用户操作。</p>
         <img src="../assets/Interface/interface8.png" alt="" class="bottom-40">
-        <p class="bottom-40">“行为验证”验证产品的 UI 元素是统一的，可以快捷的变改主题色，满足客户的定制化要求。</p>
+        <p class="bottom-40">“行为验证”验证产品的 UI 元素能统一更改主题色的，甚至进行个性化的定制，满足客户在业务上的需求。</p>
         <div class="color-wrap bottom-30">
           <ColorPanel :color='color.bilibili' colorName='bilibili' hexVal='#FFCA55' rgbVal='255, 202, 85' />
         </div>
@@ -61,13 +62,11 @@ import Header from "@/components/Header.vue";
 import Scroll from "@/components/Scroll.vue";
 import BackTop from "@/components/BackTop.vue";
 import ColorPanel from "@/components/ColorPanel.vue";
-import AnchorScroll from "@/components/AnchorScroll.vue";
 
 export default {
   name: "interface",
   data() {
     return {
-      // imgSrc: imgUrl,
       bgc: "background-color: #292F3A;",
       color: {
         bilibili: "#EF5C8C;"
@@ -78,8 +77,7 @@ export default {
     Header,
     Scroll,
     BackTop,
-    ColorPanel,
-    AnchorScroll
+    ColorPanel
   },
   mounted: function() {
     let cmyk = document.querySelector("#cmyk");

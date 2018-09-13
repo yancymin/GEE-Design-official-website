@@ -8,7 +8,7 @@
         </li>
       </ul>
     </div> -->
-    <AnchorScroll :jsonData='jsonData' :nowSubIndex='nowSubIndex' />
+
     <div class="container">
       <div class="overview bottom-80" id="anchor-overview">
         <h3>
@@ -81,7 +81,6 @@ import Scroll from "@/components/Scroll.vue";
 import BackTop from "@/components/BackTop.vue";
 // import imgUrl from "@/assets/img_make_header.png";
 import ColorPanel from "@/components/ColorPanel.vue";
-import AnchorScroll from "@/components/AnchorScroll.vue";
 
 export default {
   name: "Make",
@@ -96,26 +95,7 @@ export default {
         gray: "#566D97;",
         blueLight: "#26B9FF;",
         yellow: "#FFCA55;"
-      },
-      jsonData: [
-        {
-          english: "overview",
-          chinese: "品牌概述"
-        },
-        {
-          english: "logo",
-          chinese: "品牌标志"
-        },
-        {
-          english: "geetee",
-          chinese: "Gee Tee"
-        },
-        {
-          english: "others",
-          chinese: "其他产品"
-        }
-      ],
-      nowSubIndex: 0
+      }
     };
   },
   components: {
@@ -123,65 +103,7 @@ export default {
     Scroll,
     BackTop,
     ColorPanel,
-    AnchorScroll
   }
-  // mounted() {
-  //   window.addEventListener("scroll", this.handleScroll); // 监听 scroll 事件
-  // },
-  // methods: {
-  //   handleScroll() {
-  //     let _scrollTop =
-  //         document.documentElement.scrollTop || document.body.scrollTop,
-  //       // _innerHeight = window.innerHeight / 5,
-  //       _article = document.querySelectorAll("h3");
-
-  //     _article.forEach((item, index) => {
-  //       if (_scrollTop >= item.offsetTop) {
-  //         this.nowSubIndex = index;
-  //       }
-  //     });
-  //   },
-  //   goAnchor(selector, index) {
-  //     this.nowSubIndex = index; // 把当前点击时获取的 index 赋值给 nowSubIndex；如果两者相等，则显示高亮
-  //     console.log(selector);
-  //     let anchor = this.$el.querySelector(selector),
-  //       _offsetTop = anchor.offsetTop,
-  //       _scrollTop =
-  //         document.documentElement.scrollTop || document.body.scrollTop,
-  //       step = (_offsetTop / 50) >> 0; // 平滑滚动平均分成 50 份，取整
-
-  //     if (_offsetTop > _scrollTop) {
-  //       anchorDown();
-  //     } else {
-  //       let newOffsetTop = _scrollTop - _offsetTop;
-  //       step = (newOffsetTop / 50) >> 0;
-  //       anchorUp();
-  //     }
-
-  //     function anchorDown() {
-  //       if (_scrollTop < _offsetTop) {
-  //         _scrollTop += step;
-  //         document.body.scrollTop = document.documentElement.scrollTop = _scrollTop;
-  //         setTimeout(anchorDown, 10);
-  //       } else {
-  //         document.body.scrollTop = document.documentElement.scrollTop = _offsetTop;
-  //       }
-  //     }
-
-  //     function anchorUp() {
-  //       if (_scrollTop > _offsetTop) {
-  //         _scrollTop -= step;
-  //         document.body.scrollTop = document.documentElement.scrollTop = _scrollTop;
-  //         setTimeout(anchorUp, 10);
-  //       } else {
-  //         document.body.scrollTop = document.documentElement.scrollTop = _offsetTop;
-  //       }
-  //     }
-  //   }
-  // },
-  // destroyed() {
-  //   window.removeEventListener("scroll", this.handleScroll); // 销毁 scroll 事件
-  // }
 };
 </script>
 

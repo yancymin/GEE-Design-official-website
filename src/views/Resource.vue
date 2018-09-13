@@ -3,12 +3,12 @@
         <Header title="资源下载" des="Download" />
         <div class="container">
             <div class="des">
-            <p class="bottom-40">这里提供极验品牌、产品标识等资源下载。请按照极验品牌的规范来使用相关标志。</p>
+            <p class="bottom-40">这里提供极验品牌标志、产品标志等资源下载。请按照极验品牌的规范来使用相关标志。</p>
             </div>
             <div class="card card-1 bottom-40">
                 <img src="../assets/Resource/cover1.png" alt="" class="cover">
                 <div class="card-content">
-                    <h3>极验品牌标识</h3>
+                    <h3>极验品牌标志</h3>
                     <h4>Geetest brand identity</h4>
                     <div class="icon-wrap">
                         <a class="psd" href="">
@@ -38,7 +38,7 @@
             <div class="card card-2 bottom-40">
                 <img src="../assets/Resource/cover2.png" alt="" class="cover">
                 <div class="card-content">
-                    <h3>极验产品矩阵标识</h3>
+                    <h3>极验产品矩阵标志</h3>
                     <h4>Geetest product matrix identification</h4>
                     <div class="icon-wrap" id="icon-wrap">
                         <a class="psd" href="">

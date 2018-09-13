@@ -33,7 +33,7 @@
                 <div class="links">
                     <a target="_blank" href="https://geetest.com">极验官网</a>
                     <a target="_blank" href="https://dribbble.com/geetest">Dribbble</a>
-                    <a target="_blank" href="https://github.com/GeeTeam">Github</a>
+                    <!-- <a target="_blank" href="https://github.com/GeeTeam">Github</a> -->
                 </div>
             </div>
             <div class="footer">

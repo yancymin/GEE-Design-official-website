@@ -1,13 +1,13 @@
 <template>
   <div class="brand main" id="main">
     <Header title='极验品牌' des='Geetest Brand VI' :style="bgc" />
-    <div class="anchor-wrap">
+    <!-- <div class="anchor-wrap">
       <ul class="ul scroll">
         <li v-for="(subItem, subIndex) in jsonData" :key="subIndex">
           <a href="javascript:void(0)" @click="goAnchor('#anchor-' + subItem.english, subIndex)" :class="{active: subIndex === nowSubIndex}">{{ subItem.chinese }}</a>
         </li>
       </ul>
-    </div>
+    </div> -->
     <div class="container">
 
       <div class="overview bottom-80" id="anchor-overview">

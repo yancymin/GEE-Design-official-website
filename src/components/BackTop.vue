@@ -1,6 +1,6 @@
 <template>
-  <div class="Back-top" @click="scrollTop">
-    <a><img src="../assets/icon_toparrow.svg" alt=""></a>
+  <div class="Back-top">
+    <a href="#main"><img src="../assets/icon_toparrow.svg" alt=""></a>
   </div>
 </template>
 
@@ -8,11 +8,6 @@
 export default {
   name: "BackTop",
   props: {},
-  methods: {
-    scrollTop() {
-      window.scrollTo(0, 0);
-    }
-  },
   created() {
     window.onscroll = function() {
       var backTop = document.querySelector(".Back-top");
@@ -21,7 +16,7 @@ export default {
       } else {
         backTop.style.display = "none";
       }
-    }
+    };
   }
 };
 </script>
@@ -40,10 +35,10 @@ export default {
     box-sizing: border-box;
     height: 34px;
     width: 34px;
-    border: 1px solid rgba(225, 227, 232, 0.4);
     border-radius: 3px;
     background-color: #ffffff;
-    box-shadow: 0 2px 2px 0 rgba(44, 71, 146, 0.17);
+    box-shadow: 0 2px 2px 0 rgba(44, 71, 146, 0.17),
+      0 -1px 1px rgba(44, 71, 146, 0.08);
     transition: all 0.18s ease-out;
 
     &:hover {
@@ -57,8 +52,8 @@ export default {
     }
 
     img {
-      width: 40%;
-      opacity: 0.7;
+      width: 38%;
+      opacity: 0.6;
       transition: all 0.18s;
     }
   }
