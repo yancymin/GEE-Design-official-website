@@ -1,18 +1,34 @@
 <template>
-    <div class="Back-top">
-        <a href="#body"><img src="../assets/icon_toparrow.svg" alt=""></a>
-    </div>
+  <div class="Back-top" @click="scrollTop">
+    <a><img src="../assets/icon_toparrow.svg" alt=""></a>
+  </div>
 </template>
 
 <script>
 export default {
   name: "BackTop",
-  props: {}
+  props: {},
+  methods: {
+    scrollTop() {
+      window.scrollTo(0, 0);
+    }
+  },
+  created() {
+    window.onscroll = function() {
+      var backTop = document.querySelector(".Back-top");
+      if (document.documentElement.scrollTop + document.body.scrollTop > 100) {
+        backTop.style.display = "block";
+      } else {
+        backTop.style.display = "none";
+      }
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .Back-top {
+  display: none;
   position: fixed;
   bottom: 24px;
   right: 24px;
@@ -36,7 +52,7 @@ export default {
       border: none;
 
       img {
-          opacity: 1;
+        opacity: 1;
       }
     }
 
