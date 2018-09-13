@@ -2,6 +2,9 @@
     <div class="resource" id="main">
         <Header title="资源下载" des="Download" />
         <div class="container">
+            <div class="des">
+            <p class="bottom-40">这里提供极验品牌、产品标识等资源下载。请按照极验品牌的规范来使用相关标志。</p>
+            </div>
             <div class="card card-1 bottom-40">
                 <img src="../assets/Resource/cover1.png" alt="" class="cover">
                 <div class="card-content">
@@ -33,7 +36,7 @@
                 </div>
             </div>
             <div class="card card-2 bottom-40">
-                <img src="../assets/Resource/cover1.png" alt="" class="cover">
+                <img src="../assets/Resource/cover2.png" alt="" class="cover">
                 <div class="card-content">
                     <h3>极验产品矩阵标识</h3>
                     <h4>Geetest product matrix identification</h4>
@@ -96,6 +99,10 @@ export default {
   .container {
     border: 0;
 
+    .des {
+        width: 100%;
+    }
+
     .card {
       display: flex;
       justify-content: space-between;
@@ -137,8 +144,8 @@ export default {
           a {
             display: block;
 
-            &:hover p{
-                color: #464E73;
+            &:hover p {
+              color: #464e73;
             }
 
             &:nth-of-type(2)::before {

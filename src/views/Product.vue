@@ -4,9 +4,9 @@
         <div class="container">
             <div class="product-matrix bottom-80">
                 <h3>产品矩阵</h3>
-                <p class="bottom-40">Geetest 产品矩阵我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是 我是文案我是文案我是文案我是文案我是文案我是文案文案。</p>
+                <p class="bottom-40 linshi">文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是 我是文案我是文案我是文案我是文案我是文案我是文案文案。</p>
                 <img class="bottom-40" src="../assets/Product/product1.png" alt="">
-                <p class="bottom-40">Geetest 产品矩阵我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是 我是文案我是文案我是文案我是文案我是文案我是文案文案。</p>
+                <p class="linshi">我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是 我是文案我是文案我是文案我是文案我是文案我是文案文案。</p>
             </div>
 
             <div class="product-color bottom-80">
@@ -26,7 +26,7 @@
 
             <div class="typeface bottom-80">
                 <h3>产品标志字体</h3>
-                <p class="bottom-40">品牌专用字体是品牌视觉识别的重要部分。品牌专用字体风格有助于建立品 牌独特的美感。方正兰亭黑做为腾讯云的中文品牌专用字体，被用于品牌产 品及品牌视觉传达中。我们需要遵循右页所述的品牌字体运用示例，以确保 品牌视觉传达的一致性。</p>
+                <p class="bottom-40">思源黑体 (SourceHanSansSc) 做为极验的中英文品牌专用字体，被用于极验产品及视觉传达中。我们需要遵循下图所述的品牌字体运用示例，以确保极验品牌视觉设计传达的一致性。</p>
                 <img class="box-border" src="../assets/Product/product8.png" alt="">
             </div>
 
@@ -35,23 +35,23 @@
                 <p class="bottom-80">目前产品标志的主要应用场景为官网，配合官网设计标志尺寸定为两种，24px 和 20px，与文字间隔尺寸 统一为 10px；后续会有印刷尺寸的规范持续更新。</p>
                 <div class="pic-box">
                     <div>
-                        <img src="../assets/Product/product4.png" alt="">
+                        <img class="box-border" src="../assets/Product/product4.png" alt="">
                     </div>
                     <div>
-                        <img src="../assets/Product/product5.png" alt="">
+                        <img class="box-border" src="../assets/Product/product5.png" alt="">
                     </div>
                 </div>
             </div>
 
-            <div class="logo-alignment">
-                <h3>徽标对齐</h3>
-                <p class="bottom-30">在水平行中使用完整徽标时，底部对齐到徽标中文本的基线。在堆叠的垂直列中，左对齐标识中最左侧的文 字，徽标采用中轴对齐。</p>
-                <img class="bottom-40" src="../assets/Product/product6.png" alt="">
+            <div class="logo-alignment bottom-80">
+                <h3>标志对齐</h3>
+                <p class="bottom-30">在水平行中使用完整徽标时，底部对齐到徽标中文本的基线。在堆叠的垂直列中，左对齐标志中最左侧的文 字，徽标采用中轴对齐。</p>
+                <img class="box-border" src="../assets/Product/product6.png" alt="">
             </div>
 
             <div class="limited-use">
                 <h3>使用限制</h3>
-                <p class="bottom-40">为了保持产品矩阵标识的完整性，促进品牌的一致性，请不要滥用它。下面列出了一些徽标错误使用方法</p>
+                <p class="bottom-40">为了保持产品矩阵标志的完整性，促进品牌的一致性，请不要滥用它。下面列出了一些徽标错误使用方法</p>
                 <img src="../assets/Product/product7.png" alt="">
             </div>
             <span class="timestamp">更新于 2018.9.1</span>
@@ -92,6 +92,9 @@ export default {
 <style lang="scss" scoped>
 .product {
   .container {
+      .linshi {
+          color: red;
+      }
     .product-matrix {
       width: 100%;
     }

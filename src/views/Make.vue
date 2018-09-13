@@ -20,10 +20,10 @@
       </div>
       <div class="brand-logo bottom-80 " id="anchor-logo">
         <h3>
-          品牌标识
+          品牌标志
         </h3>
         <p class="bottom-40">
-          极验制造的标识由图形“g”和文字标志“MAKE”组成，其元素间的相对大小和位置是固定的，不能重新绘制或者擅自组合。文字标志不能单独使用，但图形标志可以单独使用。
+          极验制造的标志由图形 “g” 和文字标志 “MAKE” 组成，其元素间的相对大小和位置是固定的，不能重新绘制或者擅自组合。文字标志不能单独使用，但图形标志可以单独使用。
         </p>
         <img class="box-border bottom-30" src="../assets/Make/content_make1.png" alt="">
         <img class="bottom-30" src="../assets/Make/content_make2.png" alt="">
@@ -35,7 +35,7 @@
       </div>
       <div class="brand-color bottom-80">
         <h3>品牌标准色</h3>
-        <p class="bottom-40">极验制造的标准色延续了极验品牌，由极验蓝和极验蓝黑作为标识配色、极验白和极验铬黄等作为视觉延展。以下颜色可以运用在任何有关衍生物料中。极验制造品牌的极验蓝作为品牌主色，搭配极验白一起应用，保持干净、干练的形象。极验蓝黑和极验金作为辅色进行品牌的视觉延展。Web 色以 RGB 色值为准，平面物料以四色印刷 CMYK 色值为准。</p>
+        <p class="bottom-40">极验制造的标准色延续了极验品牌，由极验蓝和极验蓝黑作为标志配色、极验白和极验铬黄等作为视觉延展。以下颜色可以运用在任何有关衍生物料中。极验制造品牌的极验蓝作为品牌主色，搭配极验白一起应用，保持干净、干练的形象。极验蓝黑和极验金作为辅色进行品牌的视觉延展。Web 色以 RGB 色值为准，平面物料以四色印刷 CMYK 色值为准。</p>
         <div class="color-wrap">
           <ColorPanel :color='color.blue' colorName='极验蓝' hexVal='#3873FF' rgbVal='56, 115, 255' cmykVal='100, 23, 10, 0' />
           <ColorPanel :color='color.white' colorName='极验白' hexVal='#FFFFFF' rgbVal='255, 255, 255' cmykVal='0, 0, 0, 0' />
@@ -104,7 +104,7 @@ export default {
         },
         {
           english: "logo",
-          chinese: "品牌标识"
+          chinese: "品牌标志"
         },
         {
           english: "geetee",
