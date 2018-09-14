@@ -80,18 +80,18 @@
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
-import Scroll from "@/components/Scroll.vue";
-import BackTop from "@/components/BackTop.vue";
+import Header from '@/components/Header.vue'
+import Scroll from '@/components/Scroll.vue'
+import BackTop from '@/components/BackTop.vue'
 
 export default {
-  name: "about",
+  name: 'about',
   components: {
     Header,
     Scroll,
     BackTop
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

@@ -1,21 +1,8 @@
 <template>
   <div class="make main" id="main">
     <Header title="极验制造" des="G-MAKE" :bgc="bgc" />
-    <!-- <div class="anchor-wrap">
-      <div>
-        <Scroll id="high1" href="#anchor-overview" des="品牌概述" />
-        <Scroll id="high2" href="#anchor-logo" des="品牌标识" />
-        <Scroll title="title-gift" href="#anchor-geetee" des="Gee Tee" />
-        <Scroll title="title-gift" href="#anchor-others" des="其他产品" />
-      </div>
-    </div> -->
-    <div class="dingwei">
-      <a href="" id="high1">11111</a>
-      <a href="" id="high2">22222</a>
-      <a href="" id="high1">33333</a>
-    </div>
     <div class="container">
-      <div class="overview bottom-80" id="sec1">
+      <div class="overview bottom-80">
         <h3>
           属于极验小伙伴的礼物
         </h3>
@@ -23,7 +10,7 @@
           极验制造 G－MAKE 是极验内部孵化的全新品牌，由极验用户体验设计中心的设计部负责。G－MAKE 在极验统一的品牌视觉识别系统下，衍生出更具创新、新颖、个性的一个有趣形象。在“极验制造”这个品牌下，我们输出了一系列文化周边产品，发放给公司员工、合作伙伴、活动嘉宾以及特邀访客，希望给他们传递出我们充满活力、创造力的形象。
         </p>
       </div>
-      <div class="brand-logo bottom-80 " id="sec2">
+      <div class="brand-logo bottom-80 article" :id="'anchor-' + jsonData[0].id">
         <h3>
           品牌标志
         </h3>
@@ -38,7 +25,7 @@
           <div><img src="../assets/Make/content_make5.png" alt=""></div>
         </div>
       </div>
-      <div class="brand-color bottom-80">
+      <div class="brand-color bottom-80 article" :id="'anchor-' + jsonData[1].id">
         <h3>品牌标准色</h3>
         <p class="bottom-40">极验制造的标准色延续了极验品牌，由极验蓝和极验蓝黑作为标志配色、极验白和极验铬黄等作为视觉延展。以下颜色可以运用在任何有关衍生物料中。极验制造品牌的极验蓝作为品牌主色，搭配极验白一起应用，保持干净、干练的形象。极验蓝黑和极验金作为辅色进行品牌的视觉延展。Web 色以 RGB 色值为准，平面物料以四色印刷 CMYK 色值为准。</p>
         <div class="color-wrap">
@@ -51,18 +38,18 @@
         </div>
 
       </div>
-      <div class="brand-application bottom-80">
+      <div class="brand-application bottom-80 article" :id="'anchor-' + jsonData[2].id">
         <h3>品牌应用</h3>
         <p class="bottom-40">将极验制造的视觉品牌形象应用在各产品中，以统一的设计方式建立完整的一套系统。</p>
         <img class="bottom-30" src="../assets/Make/content_make6.png" alt="">
         <img class="box-border bottom-30" src="../assets/Make/content_make7.png" alt="">
       </div>
-      <div class="gee-tee bottom-80" id="anchor-geetee">
+      <div class="gee-tee bottom-80 article" :id="'anchor-' + jsonData[3].id">
         <h3>GEE Tee</h3>
         <p class="bottom-40">GEE Tee 是极验制造的文化服装系列产品。极验每年都会制作主题衫、节日衫和卫衣，用于发放给公司员工或赠送给合作伙伴等。GEE Tee 是极验的一个窗口，希望能传递给穿着者和周围人充满活力、富有创造力的形象。</p>
         <img class="bottom-30" src="../assets/Make/content_make8.png" alt="">
       </div>
-      <div class="others" id="anchor-others">
+      <div class="others article" :id="'anchor-' + jsonData[4].id">
         <h3>其它产品</h3>
         <p class="bottom-40">极验制造除了 GEE Tee 外，还有更多周边产品。</p>
         <div>
@@ -75,6 +62,7 @@
         </div>
       </div>
       <span class="timestamp">更新于 2018.9.1</span>
+      <AnchorScroll :jsonData="jsonData" />
       <Back-top />
     </div>
   </div>
@@ -85,6 +73,7 @@ import Header from "@/components/Header.vue";
 import Scroll from "@/components/Scroll.vue";
 import BackTop from "@/components/BackTop.vue";
 import ColorPanel from "@/components/ColorPanel.vue";
+import AnchorScroll from "@/components/AnchorScroll";
 
 export default {
   name: "Make",
@@ -98,43 +87,28 @@ export default {
         gray: "#566D97;",
         blueLight: "#26B9FF;",
         yellow: "#FFCA55;"
-      }
+      },
+      jsonData: [
+        { title: "品牌标志", id: "logo" },
+        { title: "品牌标准色", id: "color" },
+        { title: "品牌应用", id: "app" },
+        { title: "GEE Tee", id: "geetee" },
+        { title: "其他", id: "others" },
+      ]
     };
   },
   components: {
     Header,
     Scroll,
     BackTop,
-    ColorPanel
-  },
-  created() {
-    var controller = new ScrollMagic.Controller({
-      globalSceneOptions: { duration: 100 }
-    });
-    new ScrollMagic.Scene({ triggerElement: "#sec1" })
-      .setClassToggle("#high1", "active") // add class toggle
-      .addIndicators() // add indicators (requires plugin)
-      .addTo(controller);
-    new ScrollMagic.Scene({ triggerElement: "#sec2" })
-      .setClassToggle("#high2", "active") // add class toggle
-      .addIndicators() // add indicators (requires plugin)
-      .addTo(controller);
+    ColorPanel,
+    AnchorScroll
   }
 };
 </script>
 
 <style lang="scss" scoped>
 .make {
-  .anchor-wrap {
-    position: fixed;
-    width: 200px;
-    top: 40vh;
-    & > div {
-      position: absolute;
-      width: 100%;
-      left: 500px;
-    }
-  }
   .overview {
     width: 100%;
   }

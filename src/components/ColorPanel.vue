@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: "ColorPanel",
+  name: 'ColorPanel',
   props: {
     color: String,
     colorName: String,
@@ -31,7 +31,7 @@ export default {
     rgbVal: String,
     cmykVal: String
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

@@ -3,7 +3,7 @@
     <Header title="用户界面设计" des="User Interface Design" :style="bgc" />
     <div class="container">
 
-      <div class="overview bottom-80" id="anchor-overview">
+      <div class="overview bottom-80 article" :id="'anchor-' + jsonData[0].id">
         <h3>
           行为验证产品概述
         </h3>
@@ -14,7 +14,7 @@
         <img class="bottom-30" src="../assets/Interface/interface1.png" alt="">
       </div>
 
-      <div class="ui-base bottom-80">
+      <div class="ui-base bottom-80 article" :id="'anchor-' + jsonData[1].id">
         <h3>UI 基础</h3>
         <p class="bottom-40">
           “行为验证”验证产品的 UI 基础：验证按钮(Test-Button)、验证面板(Test-Card)
@@ -33,7 +33,7 @@
         <img src="../assets/Interface/interface5.png" alt="" class="box-border">
       </div>
 
-      <div class="ui-element">
+      <div class="ui-element article" :id="'anchor-' + jsonData[2].id">
         <h3>UI 元素</h3>
         <p class="bottom-30">“行为验证”验证产品的 UI 元素：
           <strong>验证控件(Controls)、功能组件(Insert Group)、反馈条(Check Bar)</strong>
@@ -51,6 +51,7 @@
         <img src="../assets/Interface/interface9.png" alt="" class="box-border">
       </div>
       <span class="timestamp">更新于 2018.9.1</span>
+      <AnchorScroll :jsonData="jsonData"/>
       <Back-top />
     </div>
   </div>
@@ -61,6 +62,7 @@ import Header from "@/components/Header.vue";
 import Scroll from "@/components/Scroll.vue";
 import BackTop from "@/components/BackTop.vue";
 import ColorPanel from "@/components/ColorPanel.vue";
+import AnchorScroll from "@/components/AnchorScroll";
 
 export default {
   name: "interface",
@@ -69,14 +71,20 @@ export default {
       bgc: "background-color: #292F3A;",
       color: {
         bilibili: "#EF5C8C;"
-      }
+      },
+      jsonData: [
+        { title: "产品概述", id: "overview" },
+        { title: "UI 基础", id: "base" },
+        { title: "UI 元素", id: "element" },
+      ]
     };
   },
   components: {
     Header,
     Scroll,
     BackTop,
-    ColorPanel
+    ColorPanel,
+    AnchorScroll
   },
   mounted: function() {
     let cmyk = document.querySelector("#cmyk");

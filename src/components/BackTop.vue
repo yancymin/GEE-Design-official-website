@@ -6,19 +6,19 @@
 
 <script>
 export default {
-  name: "BackTop",
+  name: 'BackTop',
   props: {},
-  created() {
-    window.onscroll = function() {
-      var backTop = document.querySelector(".Back-top");
+  created () {
+    window.onscroll = function () {
+      var backTop = document.querySelector('.Back-top')
       if (document.documentElement.scrollTop + document.body.scrollTop > 100) {
-        backTop.style.display = "block";
+        backTop.style.display = 'block'
       } else {
-        backTop.style.display = "none";
+        backTop.style.display = 'none'
       }
-    };
+    }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

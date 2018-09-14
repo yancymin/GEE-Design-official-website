@@ -33,29 +33,29 @@
   </div>
 </template>
 <script>
-import Header from "@/components/Header.vue";
-import Scroll from "@/components/Scroll.vue";
-import BackTop from "@/components/BackTop.vue";
-import Avatar from "@/components/Avatar.vue";
+import Header from '@/components/Header.vue'
+import Scroll from '@/components/Scroll.vue'
+import BackTop from '@/components/BackTop.vue'
+import Avatar from '@/components/Avatar.vue'
 
-import York from "@/assets/About/avatarPic1.png";
-import Yancy from "@/assets/About/avatarPic2.png";
-import Liuchang from "@/assets/About/avatarPic3.png";
-import Baoxiaohan from "@/assets/About/avatarPic4.png";
-import Chenguoqing from "@/assets/About/avatarPic5.png";
-import Wangzhiyong from "@/assets/About/avatarPic6.png";
-import Renhuaxiang from "@/assets/About/avatarPic7.png";
-import Xuwei from "@/assets/About/avatarPic8.png";
-import Chenyu from "@/assets/About/avatarPic9.png";
-import Liuzhongyu from "@/assets/About/avatarPic10.png";
-import Shiqi from "@/assets/About/avatarPic11.png";
+import York from '@/assets/About/avatarPic1.png'
+import Yancy from '@/assets/About/avatarPic2.png'
+import Liuchang from '@/assets/About/avatarPic3.png'
+import Baoxiaohan from '@/assets/About/avatarPic4.png'
+import Chenguoqing from '@/assets/About/avatarPic5.png'
+import Wangzhiyong from '@/assets/About/avatarPic6.png'
+import Renhuaxiang from '@/assets/About/avatarPic7.png'
+import Xuwei from '@/assets/About/avatarPic8.png'
+import Chenyu from '@/assets/About/avatarPic9.png'
+import Liuzhongyu from '@/assets/About/avatarPic10.png'
+import Shiqi from '@/assets/About/avatarPic11.png'
 
-import Website from "@/assets/About/website.svg";
-import Dribbble from "@/assets/About/dribbble.svg";
+import Website from '@/assets/About/website.svg'
+import Dribbble from '@/assets/About/dribbble.svg'
 
 export default {
-  name: "about",
-  data() {
+  name: 'about',
+  data () {
     return {
       imgSrc: {
         york: York,
@@ -72,26 +72,26 @@ export default {
       },
       href: {
         york: {
-          website: "http://yorkun.com",
-          dribbble: "https://dribbble.com/yorkun"
+          website: 'http://yorkun.com',
+          dribbble: 'https://dribbble.com/yorkun'
         },
         yancy: {
-          website: "https://yancymin.design",
-          dribbble: "https://dribbble.com/YancyMin"
+          website: 'https://yancymin.design',
+          dribbble: 'https://dribbble.com/YancyMin'
         },
         liuchang: {
-          website: "http://liuchangyi.com",
-          dribbble: "https://dribbble.com/DCharlie"
+          website: 'http://liuchangyi.com',
+          dribbble: 'https://dribbble.com/DCharlie'
         },
         baoxiaohan: {
-          dribbble: "https://dribbble.com/Bhippo"
+          dribbble: 'https://dribbble.com/Bhippo'
         }
       },
       iconSrc: {
         website: Website,
         dribbble: Dribbble
       }
-    };
+    }
   },
   components: {
     Header,
@@ -99,7 +99,7 @@ export default {
     BackTop,
     Avatar
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
