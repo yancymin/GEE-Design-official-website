@@ -24,7 +24,7 @@
           <Avatar jobName="IOS engineer" name="许伟" :imgSrc="imgSrc.xuwei" />
           <Avatar jobName="Python engineer" name="陈禹" :imgSrc="imgSrc.chenyu" />
           <Avatar jobName="Machine Learning" name="刘忠雨" :imgSrc="imgSrc.liuzhongyu" />
-          <Avatar jobName="Central China business" name="石琪" :imgSrc="imgSrc.shiqi" />
+          <Avatar jobName="Central China business" name="石旗" :imgSrc="imgSrc.shiqi" />
         </div>
       </div>
       <Back-top />

@@ -2,15 +2,20 @@
   <div class="make main" id="main">
     <Header title="极验制造" des="G-MAKE" :bgc="bgc" />
     <!-- <div class="anchor-wrap">
-      <ul class="ul scroll">
-        <li v-for="(subItem, subIndex) in jsonData" :key="subIndex">
-          <a href="javascript:void(0)" @click="goAnchor('#anchor-' + subItem.english, subIndex)" :class="{active: subIndex === nowSubIndex}">{{ subItem.chinese }}</a>
-        </li>
-      </ul>
+      <div>
+        <Scroll id="high1" href="#anchor-overview" des="品牌概述" />
+        <Scroll id="high2" href="#anchor-logo" des="品牌标识" />
+        <Scroll title="title-gift" href="#anchor-geetee" des="Gee Tee" />
+        <Scroll title="title-gift" href="#anchor-others" des="其他产品" />
+      </div>
     </div> -->
-
+    <div class="dingwei">
+      <a href="" id="high1">11111</a>
+      <a href="" id="high2">22222</a>
+      <a href="" id="high1">33333</a>
+    </div>
     <div class="container">
-      <div class="overview bottom-80" id="anchor-overview">
+      <div class="overview bottom-80" id="sec1">
         <h3>
           属于极验小伙伴的礼物
         </h3>
@@ -18,7 +23,7 @@
           极验制造 G－MAKE 是极验内部孵化的全新品牌，由极验用户体验设计中心的设计部负责。G－MAKE 在极验统一的品牌视觉识别系统下，衍生出更具创新、新颖、个性的一个有趣形象。在“极验制造”这个品牌下，我们输出了一系列文化周边产品，发放给公司员工、合作伙伴、活动嘉宾以及特邀访客，希望给他们传递出我们充满活力、创造力的形象。
         </p>
       </div>
-      <div class="brand-logo bottom-80 " id="anchor-logo">
+      <div class="brand-logo bottom-80 " id="sec2">
         <h3>
           品牌标志
         </h3>
@@ -79,14 +84,12 @@
 import Header from "@/components/Header.vue";
 import Scroll from "@/components/Scroll.vue";
 import BackTop from "@/components/BackTop.vue";
-// import imgUrl from "@/assets/img_make_header.png";
 import ColorPanel from "@/components/ColorPanel.vue";
 
 export default {
   name: "Make",
   data() {
     return {
-      // imgSrc: imgUrl,
       bgc: "#292F3A",
       color: {
         blue: "#3873FF;",
@@ -102,16 +105,39 @@ export default {
     Header,
     Scroll,
     BackTop,
-    ColorPanel,
+    ColorPanel
+  },
+  created() {
+    var controller = new ScrollMagic.Controller({
+      globalSceneOptions: { duration: 100 }
+    });
+    new ScrollMagic.Scene({ triggerElement: "#sec1" })
+      .setClassToggle("#high1", "active") // add class toggle
+      .addIndicators() // add indicators (requires plugin)
+      .addTo(controller);
+    new ScrollMagic.Scene({ triggerElement: "#sec2" })
+      .setClassToggle("#high2", "active") // add class toggle
+      .addIndicators() // add indicators (requires plugin)
+      .addTo(controller);
   }
 };
 </script>
 
 <style lang="scss" scoped>
 .make {
-   .overview {
-     width: 100%;
-   } 
+  .anchor-wrap {
+    position: fixed;
+    width: 200px;
+    top: 40vh;
+    & > div {
+      position: absolute;
+      width: 100%;
+      left: 500px;
+    }
+  }
+  .overview {
+    width: 100%;
+  }
 
   .brand-logo {
     width: 100%;
@@ -120,19 +146,13 @@ export default {
         margin: 0 30px;
       }
       width: 100%;
-      // height: 230px;
       display: flex;
       justify-content: space-between;
       align-items: center;
 
       & > div {
-        // flex: 0 0 30%;
         width: calc(100% - 60px);
       }
-
-      // & > img {
-      //   width: 220px;
-      // }
     }
   }
   .brand-color {
@@ -218,6 +238,11 @@ export default {
       }
     }
   }
+}
+
+.active {
+  background-color: rgb(30, 105, 53);
+  opacity: 0.2;
 }
 
 span {

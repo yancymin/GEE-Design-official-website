@@ -28,10 +28,9 @@
         <p class="bottom-40">
           由于用户风险等级、群体架构、语言、以及交互习惯的不同，我们精心设计了多种验证形式，在保证网站安全的同时，提供给 C 端用户较好的验证体验。
         </p>
-        <img src="../assets/Interface/interface4.png" alt="" class="bottom-40">
-        <p>为了保证验证形式视觉和交互的一致性，我们设计了一套通用的验证面板，实现了
-          <strong>（这里谈一下方便调用、灵活、适应性高的文案）</strong>
-        </p>
+        <img src="../assets/Interface/interface4.png" alt="" class="bottom-40 box-border">
+        <p class="bottom-40">为了保证验证形式视觉和交互的一致性，我们设计了一套通用的验证面板，实现了同类型验证码的快速开发，不同设备的适配，规范定制化 UI 需求，提高了灵活性和开发效率。</p>
+        <img src="../assets/Interface/interface5.png" alt="" class="box-border">
       </div>
 
       <div class="ui-element">

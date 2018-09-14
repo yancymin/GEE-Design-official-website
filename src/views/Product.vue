@@ -5,6 +5,7 @@
             <div class="product-matrix bottom-80">
                 <h3>安全产品矩阵</h3>
                 <p class="bottom-40">随着业务规模的不断扩大，以及客户需求趋于多样化。为了提供更加优质的服务，极验立足于 “AI + 交互安全”，在验证产品外，还推出了包括：深知、身份验证、漏洞监控、DDoS 高防等一系列的安全产品，进行了交互安全线多产品的布局。</p>
+                <img class="bottom-40" src="../assets/Product/product0.jpg" alt="">
                 <img src="../assets/Product/product1.png" alt="">
             </div>
 
