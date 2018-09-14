@@ -2,7 +2,7 @@
     <div class="anchor-wrap">
         <ul class="ul scroll">
             <li v-for="(subItem, subIndex) in jsonData" :key="subIndex">
-                <a href="javascript:void(0)" @click="goAnchor('#anchor-' + subItem.english, subIndex)" :class="{active: subIndex === nowSubIndex}">{{ subItem.chinese }}</a>
+                <a href="javascript:void(0)" @click="goAnchor('#anchor-' + subItem.id, subIndex)" :class="{active: subIndex === nowSubIndex}">{{ subItem.title }}</a>
             </li>
         </ul>
     </div>
@@ -11,9 +11,13 @@
 <script>
 export default {
   name: 'AnchorScroll',
+  data () {
+    return {
+      nowSubIndex: 0
+    }
+  },
   props: {
-    jsonData: Array,
-    nowSubIndex: Number
+    jsonData: Array
   },
   mounted () {
     window.addEventListener('scroll', this.handleScroll) // 监听 scroll 事件
@@ -22,18 +26,18 @@ export default {
     handleScroll () {
       let _scrollTop =
           document.documentElement.scrollTop || document.body.scrollTop
-      let _article = document.querySelectorAll('h3')
+      let _article = document.querySelectorAll('.article')
 
       _article.forEach((item, index) => {
-        if (_scrollTop >= item.offsetTop) {
+        if (_scrollTop >= item.offsetTop - 40) {
           this.nowSubIndex = index
         }
       })
     },
     goAnchor (selector, index) {
       this.nowSubIndex = index // 把当前点击时获取的 index 赋值给 nowSubIndex；如果两者相等，则显示高亮
-      console.log(this.$el.querySelector(selector))
-      let anchor = this.$el.querySelector(selector)
+      console.log(selector)
+      let anchor = document.querySelector(selector)
 
       let _offsetTop = anchor.offsetTop
       let _scrollTop =

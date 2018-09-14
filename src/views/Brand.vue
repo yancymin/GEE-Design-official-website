@@ -10,7 +10,7 @@
     </div> -->
     <div class="container">
 
-      <div class="overview bottom-80" id="anchor-overview">
+      <div class="overview bottom-80 article" :id="'anchor-'+jsonData[0].id">
         <h3>
           品牌概述
         </h3>
@@ -20,7 +20,7 @@
         <img src="../assets/Brand/brand1.png" alt="">
       </div>
 
-      <div class="logo bottom-80">
+      <div class="logo bottom-80 article" :id="'anchor-'+jsonData[1].id">
         <h3>标志</h3>
         <p class="bottom-30">
           极验 (Geetest) 标志由两元素组成：图形标志、文字标志。其元素间的相对大小和位置是固定的，并且文字标志不能单独使用。极验的标志只能从设计软件文件中直接拷贝使用，而不是重新绘制或者擅自组合。本规范的各种电子格式文件可在极验用户体验设计中心的资源下载页面进行下载。
@@ -40,7 +40,7 @@
         <img src="../assets/Brand/brand6.png" alt="">
       </div>
 
-      <div class="color bottom-80">
+      <div class="color bottom-80 article" :id="'anchor-'+jsonData[2].id">
         <h3>品牌色</h3>
         <p class="bottom-40">
           下图所示为极验品牌的规范颜色色板，这些颜色可以运用在任何品牌有关的产品设计和衍生物料中。极验标识由极验蓝、极验蓝黑构成；极验产品由极验蓝、极验青、极验淡紫和极验橘红色构成；极验视觉的延展由极验白、极验浅灰等构成。Web 色以 RGB 色值为准，平面物料以四色印刷 CMYK 色值为准。
@@ -61,7 +61,7 @@
         <img src="../assets/Brand/brand7.png" alt="">
       </div>
 
-      <div class="fontface">
+      <div class="fontface article" :id="'anchor-'+jsonData[3].id">
         <h3>品牌专用字体</h3>
         <p class="bottom-40">
          思源黑体 (SourceHanSansSc) 做为极验的中英文品牌专用字体，被用于极验产品及视觉传达中。我们需要遵循下图所述的品牌字体运用示例，以确保极验品牌视觉设计传达的一致性。
@@ -70,6 +70,12 @@
         <img class="box-border" src="../assets/Brand/brand9.png" alt="">
       </div>
       <span class="timestamp">更新于 2018.9.1</span>
+      <!-- <ul class="fixed-panel">
+        <li v-for="(subItem, subIndex) in jsonData" :key="subItem.id">
+          <a href="javascript:void(0)" @click="goAnchor('#anchor-' + subItem.id, subIndex)" :class="{active: subIndex === nowSubIndex}">{{ subItem.title }}</a>
+        </li>
+      </ul> -->
+      <AnchorScroll :jsonData="jsonData"/>
       <Back-top />
     </div>
   </div>
@@ -77,9 +83,10 @@
 
 <script>
 import Header from '@/components/Header.vue'
-import Scroll from '@/components/Scroll.vue'
+// import Scroll from '@/components/Scroll.vue'
 import BackTop from '@/components/BackTop.vue'
 import ColorPanel from '@/components/ColorPanel.vue'
+import AnchorScroll from '@/components/AnchorScroll'
 
 export default {
   name: 'brand',
@@ -95,76 +102,110 @@ export default {
         orange: '#FD6F2A;',
         black: '#292F3A;',
         gray: '#D8DDE6;'
-      }
+      },
+      jsonData: [
+        { title: '品牌概述', id: 'overview' },
+        { title: '标志', id: 'sign' },
+        { title: '品牌色', id: 'color' },
+        { title: '品牌专用字体', id: 'fonts' }
+      ],
+      nowSubIndex: '1'
     }
   },
   components: {
     Header,
-    Scroll,
+    // Scroll,
+    AnchorScroll,
     BackTop,
     ColorPanel
+  },
+  methods: {
+  },
+  mounted () {
+    window.addEventListener('scroll', this.handleScroll) // 监听 scroll 事件
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll) // 销毁 scroll 事件
   }
 }
 </script>
 
 <style lang="scss" scoped>
 .brand {
-  .container {
-    .overview {
-      width: 100%;
-    }
-
-    .logo {
-      width: 100%;
-
-      .pic-wrap {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-
-        & > div {
-          width: calc(50% - 10px);
-          height: calc(50% - 10px);
-          img {
+    .container {
+        .overview {
             width: 100%;
-          }
+        }
+
+        .logo {
+            width: 100%;
+
+            .pic-wrap {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                & > div {
+                    width: calc(50% - 10px);
+                    height: calc(50% - 10px);
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+
+            .colorpanel-wrap {
+                width: 100%;
+            }
+
+            img {
+                width: 480px;
+                align-self: center;
+            }
+        }
+    }
+    .fixed-panel{
+      position: fixed;
+      right: 0;
+      top: 50%;
+      li{
+        list-style: none;
+        a{
+          font-size: 15px;
+          color: #5f6591;
+          line-height: 32px;
+          transition: all .2s;
+        }
+        a.active{
+          color: #fff;
+          background-color: blue;
         }
       }
     }
-    .color {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-
-      .colorpanel-wrap {
-        width: 100%;
-      }
-
-      img {
-        width: 480px;
-        align-self: center;
-      }
-    }
-  }
 }
 
 span {
-  position: relative;
-  bottom: -76px;
-  left: -308px;
-  color: #bcc2de;
-  font-size: 12px;
-  line-height: 17px;
+    position: relative;
+    bottom: -76px;
+    left: -308px;
+    color: #bcc2de;
+    font-size: 12px;
+    line-height: 17px;
 }
 
 @media screen and (max-width: 414px) {
-  #main {
-    .color {
-      img {
-        width: 100%;
-      }
+    #main {
+        .color {
+            img {
+                width: 100%;
+            }
+        }
     }
-  }
 }
 </style>
