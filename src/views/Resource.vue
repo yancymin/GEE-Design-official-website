@@ -1,6 +1,6 @@
 <template>
     <div class="resource" id="main">
-        <Header title="资源下载" des="Download" />
+        <Header title="资源下载" des="Download" :imageSrc= 'imageSrc' />
         <div class="container">
             <div class="des">
             <p class="bottom-40">这里提供极验品牌标志、产品标志等资源下载。请按照极验品牌的规范来使用相关标志。</p>
@@ -84,8 +84,16 @@ import Header from '@/components/Header.vue'
 import Scroll from '@/components/Scroll.vue'
 import BackTop from '@/components/BackTop.vue'
 
+import HeaderImage from "@/assets/Header/5.jpg";
+
+
 export default {
   name: 'about',
+  data() {
+   return {
+       imageSrc: HeaderImage
+   }
+  },
   components: {
     Header,
     Scroll,

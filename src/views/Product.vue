@@ -1,6 +1,6 @@
 <template>
     <div class="product" id="main">
-        <Header title="安全产品矩阵" des="Geetest Product matrix" />
+        <Header title="安全产品矩阵" des="Geetest Product matrix" :imageSrc='imageSrc' />
         <div class="container">
             <div class="product-matrix bottom-80" :id="'anchor-' + jsonData[0].id">
                 <h3>安全产品矩阵</h3>
@@ -67,6 +67,8 @@ import BackTop from "@/components/BackTop.vue";
 import ColorPanel from "@/components/ColorPanel.vue";
 import AnchorScroll from "@/components/AnchorScroll.vue";
 
+import HeaderImage from "@/assets/Header/4.jpg";
+
 export default {
   name: "product",
   components: {
@@ -78,6 +80,7 @@ export default {
   },
   data() {
     return {
+      imageSrc: HeaderImage,
       color: {
         blue1: "#3873FF;",
         blue2: "#0052CC;",
@@ -90,7 +93,7 @@ export default {
         { title: "产品标志字体", id: "logo-font" },
         { title: "尺寸与排列", id: "layout" },
         { title: "产品标志版式", id: "alige" },
-        { title: "使用限制", id: "limited" },
+        { title: "使用限制", id: "limited" }
       ]
     };
   }

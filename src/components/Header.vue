@@ -1,5 +1,5 @@
 <template>
-  <div class="header" id="header">
+  <div class="header" id="header" :style="'background-image:' + 'url(' + imageSrc +')'">
     <div class="text-box">
       <h1>{{ title }}</h1>
       <p>{{ des }}</p>
@@ -12,7 +12,8 @@ export default {
   name: 'Header',
   props: {
     title: String,
-    des: String
+    des: String,
+    imageSrc: String
   }
 }
 </script>
@@ -24,8 +25,7 @@ export default {
   display: flex;
   align-content: center;
   justify-content: center;
-  background-color: #292f3a;
-  background-image: url(../assets/header_bg.png);
+  background-color: #153261;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

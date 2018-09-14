@@ -1,6 +1,6 @@
 <template>
   <div class="make main" id="main">
-    <Header title="极验制造" des="G-MAKE" :bgc="bgc" />
+    <Header title="极验制造" des="G-MAKE" :imageSrc= 'imageSrc' />
     <div class="container">
       <div class="overview bottom-80">
         <h3>
@@ -75,11 +75,13 @@ import BackTop from "@/components/BackTop.vue";
 import ColorPanel from "@/components/ColorPanel.vue";
 import AnchorScroll from "@/components/AnchorScroll";
 
+import HeaderImage from "@/assets/Header/2.jpg";
+
 export default {
   name: "Make",
   data() {
     return {
-      bgc: "#292F3A",
+      imageSrc: HeaderImage,
       color: {
         blue: "#3873FF;",
         white: "#fff; border: 1px solid #F1F3F4;",
@@ -93,7 +95,7 @@ export default {
         { title: "品牌标准色", id: "color" },
         { title: "品牌应用", id: "app" },
         { title: "GEE Tee", id: "geetee" },
-        { title: "其他", id: "others" },
+        { title: "其他", id: "others" }
       ]
     };
   },

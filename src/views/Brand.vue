@@ -1,6 +1,6 @@
 <template>
   <div class="brand main" id="main">
-    <Header title='极验品牌' des='Geetest Brand VI' :style="bgc" />
+    <Header title='极验品牌' des='Geetest Brand VI' :imageSrc= 'imageSrc' />
     <div class="container">
       <div class="overview bottom-80 article" :id="'anchor-'+jsonData[0].id">
         <h3>
@@ -74,11 +74,13 @@ import BackTop from '@/components/BackTop.vue'
 import ColorPanel from '@/components/ColorPanel.vue'
 import AnchorScroll from '@/components/AnchorScroll'
 
+import HeaderImage from '@/assets/Header/1.jpg'
+
 export default {
   name: 'brand',
   data () {
     return {
-      bgc: 'background-color: #292F3A;',
+      imageSrc: HeaderImage,
       color: {
         blue: '#3873FF;',
         blueLight: '#26B9FF;',

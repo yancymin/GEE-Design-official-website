@@ -1,6 +1,6 @@
 <template>
   <div class="interface main" id="main">
-    <Header title="用户界面设计" des="User Interface Design" :style="bgc" />
+    <Header title="用户界面设计" des="User Interface Design" :imageSrc= 'imageSrc' />
     <div class="container">
 
       <div class="overview bottom-80 article" :id="'anchor-' + jsonData[0].id">
@@ -64,11 +64,13 @@ import BackTop from "@/components/BackTop.vue";
 import ColorPanel from "@/components/ColorPanel.vue";
 import AnchorScroll from "@/components/AnchorScroll";
 
+import HeaderImage from "@/assets/Header/3.jpg";
+
 export default {
   name: "interface",
   data() {
     return {
-      bgc: "background-color: #292F3A;",
+      imageSrc: HeaderImage,
       color: {
         bilibili: "#EF5C8C;"
       },
