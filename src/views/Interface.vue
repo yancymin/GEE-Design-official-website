@@ -58,20 +58,20 @@
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
-import Scroll from "@/components/Scroll.vue";
-import BackTop from "@/components/BackTop.vue";
-import ColorPanel from "@/components/ColorPanel.vue";
+import Header from '@/components/Header.vue'
+import Scroll from '@/components/Scroll.vue'
+import BackTop from '@/components/BackTop.vue'
+import ColorPanel from '@/components/ColorPanel.vue'
 
 export default {
-  name: "interface",
-  data() {
+  name: 'interface',
+  data () {
     return {
-      bgc: "background-color: #292F3A;",
+      bgc: 'background-color: #292F3A;',
       color: {
-        bilibili: "#EF5C8C;"
+        bilibili: '#EF5C8C;'
       }
-    };
+    }
   },
   components: {
     Header,
@@ -79,11 +79,11 @@ export default {
     BackTop,
     ColorPanel
   },
-  mounted: function() {
-    let cmyk = document.querySelector("#cmyk");
-    cmyk.style.display = "none";
+  mounted: function () {
+    let cmyk = document.querySelector('#cmyk')
+    cmyk.style.display = 'none'
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

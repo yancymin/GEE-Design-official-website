@@ -55,24 +55,24 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       active: 0
-    };
+    }
   },
   methods: {
-    showMenu() {
-      let menu = document.querySelector("#menu");
-      menu.style.display = "flex";
-      menu.style.zIndex = "1000";
+    showMenu () {
+      let menu = document.querySelector('#menu')
+      menu.style.display = 'flex'
+      menu.style.zIndex = '1000'
     },
-    closeMenu() {
-      let menu = document.querySelector("#menu");
-      menu.style.display = "none";
-      menu.style.zIndex = "-1";
+    closeMenu () {
+      let menu = document.querySelector('#menu')
+      menu.style.display = 'none'
+      menu.style.zIndex = '-1'
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

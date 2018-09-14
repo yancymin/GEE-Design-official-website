@@ -76,42 +76,42 @@
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
-import Scroll from "@/components/Scroll.vue";
-import BackTop from "@/components/BackTop.vue";
+import Header from '@/components/Header.vue'
+import Scroll from '@/components/Scroll.vue'
+import BackTop from '@/components/BackTop.vue'
 // import imgUrl from "@/assets/img_make_header.png";
-import ColorPanel from "@/components/ColorPanel.vue";
+import ColorPanel from '@/components/ColorPanel.vue'
 
 export default {
-  name: "Make",
-  data() {
+  name: 'Make',
+  data () {
     return {
       // imgSrc: imgUrl,
-      bgc: "#292F3A",
+      bgc: '#292F3A',
       color: {
-        blue: "#3873FF;",
-        white: "#fff; border: 1px solid #F1F3F4;",
-        black: "#292F3A;",
-        gray: "#566D97;",
-        blueLight: "#26B9FF;",
-        yellow: "#FFCA55;"
+        blue: '#3873FF;',
+        white: '#fff; border: 1px solid #F1F3F4;',
+        black: '#292F3A;',
+        gray: '#566D97;',
+        blueLight: '#26B9FF;',
+        yellow: '#FFCA55;'
       }
-    };
+    }
   },
   components: {
     Header,
     Scroll,
     BackTop,
-    ColorPanel,
+    ColorPanel
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
 .make {
    .overview {
      width: 100%;
-   } 
+   }
 
   .brand-logo {
     width: 100%;

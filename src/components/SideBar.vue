@@ -44,12 +44,12 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       active: 0
-    };
+    }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

@@ -6,13 +6,13 @@
 
 <script>
 export default {
-  name: "Scroll",
+  name: 'Scroll',
   props: {
     title: String,
     href: String,
     des: String
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

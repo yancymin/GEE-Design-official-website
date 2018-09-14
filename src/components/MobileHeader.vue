@@ -10,16 +10,16 @@
 
 <script>
 export default {
-  name: "MobileHeader",
+  name: 'MobileHeader',
   props: {},
   methods: {
-    closeHader() {
+    closeHader () {
       //   let iconClos = document.querySelector("#icon-close");
-      let headerClose = document.querySelector("#header");
-      headerClose.style.display = "none";
+      let headerClose = document.querySelector('#header')
+      headerClose.style.display = 'none'
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
@@ -50,4 +50,3 @@ export default {
   }
 }
 </style>
-

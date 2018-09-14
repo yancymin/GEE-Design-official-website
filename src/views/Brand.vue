@@ -56,7 +56,7 @@
           <ColorPanel :color='color.gray' colorName='极验浅灰' hexVal='#D8DDE6' rgbVal='216, 221, 230' cmykVal='18, 11, 7, 0' />
         </div>
         <p class="bottom-40">
-          合适恰当的颜色比例使用可确保所有用户正确认知极验品牌。使用极验品牌色时，极验蓝 (01) 应做为品牌主色；极验蓝 (01) 与大面积的极验白 (03) 一起使用，可体现清新干净的极验品牌形象；极验白 (03)和极验蓝黑 (07) 一起使用会有利于浏览的高对比性；其它的辅色则有助于极验产品和平面应用的使用和延展。	
+          合适恰当的颜色比例使用可确保所有用户正确认知极验品牌。使用极验品牌色时，极验蓝 (01) 应做为品牌主色；极验蓝 (01) 与大面积的极验白 (03) 一起使用，可体现清新干净的极验品牌形象；极验白 (03)和极验蓝黑 (07) 一起使用会有利于浏览的高对比性；其它的辅色则有助于极验产品和平面应用的使用和延展。
         </p>
         <img src="../assets/Brand/brand7.png" alt="">
       </div>
@@ -76,27 +76,27 @@
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
-import Scroll from "@/components/Scroll.vue";
-import BackTop from "@/components/BackTop.vue";
-import ColorPanel from "@/components/ColorPanel.vue";
+import Header from '@/components/Header.vue'
+import Scroll from '@/components/Scroll.vue'
+import BackTop from '@/components/BackTop.vue'
+import ColorPanel from '@/components/ColorPanel.vue'
 
 export default {
-  name: "brand",
-  data() {
+  name: 'brand',
+  data () {
     return {
-      bgc: "background-color: #292F3A;",
+      bgc: 'background-color: #292F3A;',
       color: {
-        blue: "#3873FF;",
-        blueLight: "#26B9FF;",
-        white: "#fff; border: 1px solid #F1F3F4;",
-        green: "#35D2A2;",
-        purpel: "#9B5CF5;",
-        orange: "#FD6F2A;",
-        black: "#292F3A;",
-        gray: "#D8DDE6;"
+        blue: '#3873FF;',
+        blueLight: '#26B9FF;',
+        white: '#fff; border: 1px solid #F1F3F4;',
+        green: '#35D2A2;',
+        purpel: '#9B5CF5;',
+        orange: '#FD6F2A;',
+        black: '#292F3A;',
+        gray: '#D8DDE6;'
       }
-    };
+    }
   },
   components: {
     Header,
@@ -104,7 +104,7 @@ export default {
     BackTop,
     ColorPanel
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

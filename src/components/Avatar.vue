@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: "Avatar",
+  name: 'Avatar',
   props: {
     imgSrc: String,
     name: String,
@@ -28,7 +28,7 @@ export default {
     iconSrc1: String,
     iconSrc2: String
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

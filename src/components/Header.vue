@@ -9,12 +9,12 @@
 
 <script>
 export default {
-  name: "Header",
+  name: 'Header',
   props: {
     title: String,
-    des: String,
+    des: String
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
@@ -65,4 +65,3 @@ export default {
   }
 }
 </style>
-

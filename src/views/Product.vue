@@ -59,14 +59,14 @@
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
-import Scroll from "@/components/Scroll.vue";
-import BackTop from "@/components/BackTop.vue";
-import ColorPanel from "@/components/ColorPanel.vue";
-import AnchorScroll from "@/components/AnchorScroll.vue";
+import Header from '@/components/Header.vue'
+import Scroll from '@/components/Scroll.vue'
+import BackTop from '@/components/BackTop.vue'
+import ColorPanel from '@/components/ColorPanel.vue'
+import AnchorScroll from '@/components/AnchorScroll.vue'
 
 export default {
-  name: "product",
+  name: 'product',
   components: {
     Header,
     Scroll,
@@ -74,17 +74,17 @@ export default {
     ColorPanel,
     AnchorScroll
   },
-  data() {
+  data () {
     return {
       color: {
-        blue1: "#3873FF;",
-        blue2: "#0052CC;",
-        white: "#fff; border: 1px solid #F1F3F4;",
-        gray: "#9099A8"
+        blue1: '#3873FF;',
+        blue2: '#0052CC;',
+        white: '#fff; border: 1px solid #F1F3F4;',
+        gray: '#9099A8'
       }
-    };
+    }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
