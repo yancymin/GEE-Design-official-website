@@ -1,19 +1,19 @@
 <template>
-    <div class="avatar">
-        <div class="pic-wrap">
-            <div class="pic" :style="'background-image:' + 'url(' + imgSrc +')'"></div>
-            <div class="social-icons">
-                <a :href='href1' target="blank" :style="'background-image:' + 'url(' + iconSrc1 +')'"></a>
-                <a :href='href2' target="blank" :style="'background-image:' + 'url(' + iconSrc2 +')'"></a>
-            </div>
-        </div>
-        <div class="job-title">
-            <span>
-            </span>
-            <p>{{ jobName }}</p>
-        </div>
-        <div class="name">{{ name }}</div>
+  <div class="avatar">
+    <div class="pic-wrap">
+      <div class="pic" :style="'background-image:' + 'url(' + imgSrc +')'"></div>
+      <div class="social-icons">
+        <a :href='href1' target="blank" :style="'background-image:' + 'url(' + iconSrc1 +')'"></a>
+        <a :href='href2' target="blank" :style="'background-image:' + 'url(' + iconSrc2 +')'"></a>
+      </div>
     </div>
+    <div class="job-title">
+      <span>
+      </span>
+      <p>{{ jobName }}</p>
+    </div>
+    <div class="name">{{ name }}</div>
+  </div>
 </template>
 
 <script>
@@ -87,7 +87,7 @@ export default {
       //   transition-delay: 0.08s;
 
       &::before {
-        content: "";
+        content: '';
         display: block;
         opacity: 0;
         width: 110px;
@@ -136,7 +136,7 @@ export default {
   }
 
   .name {
-      font-size: 15px;
+    font-size: 15px;
     align-self: center;
     margin-top: 20px;
     cursor: default;

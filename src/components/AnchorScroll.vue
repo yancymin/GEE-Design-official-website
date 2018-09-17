@@ -1,17 +1,17 @@
 <template>
-    <div class="anchor-wrap">
-        <ul class="ul scroll">
-            <li v-for="(subItem, subIndex) in jsonData" :key="subIndex">
-                <a href="javascript:void(0)" @click="goAnchor('#anchor-' + subItem.id, subIndex)" :class="{active: subIndex === nowSubIndex}">{{ subItem.title }}</a>
-            </li>
-        </ul>
-    </div>
+  <div class="anchor-wrap">
+    <ul class="ul scroll">
+      <li v-for="(subItem, subIndex) in jsonData" :key="subIndex">
+        <a href="javascript:void(0)" @click="goAnchor('#anchor-' + subItem.id, subIndex)" :class="{active: subIndex === nowSubIndex}">{{ subItem.title }}</a>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'AnchorScroll',
-  data () {
+  data() {
     return {
       nowSubIndex: 0
     }
@@ -19,13 +19,13 @@ export default {
   props: {
     jsonData: Array
   },
-  mounted () {
+  mounted() {
     window.addEventListener('scroll', this.handleScroll) // 监听 scroll 事件
   },
   methods: {
-    handleScroll () {
+    handleScroll() {
       let _scrollTop =
-          document.documentElement.scrollTop || document.body.scrollTop
+        document.documentElement.scrollTop || document.body.scrollTop
       let _article = document.querySelectorAll('.article')
 
       _article.forEach((item, index) => {
@@ -34,14 +34,14 @@ export default {
         }
       })
     },
-    goAnchor (selector, index) {
+    goAnchor(selector, index) {
       this.nowSubIndex = index // 把当前点击时获取的 index 赋值给 nowSubIndex；如果两者相等，则显示高亮
       console.log(selector)
       let anchor = document.querySelector(selector)
 
       let _offsetTop = anchor.offsetTop
       let _scrollTop =
-          document.documentElement.scrollTop || document.body.scrollTop
+        document.documentElement.scrollTop || document.body.scrollTop
       let step = (_offsetTop / 50) >> 0 // 平滑滚动平均分成 50 份，取整
 
       if (_offsetTop > _scrollTop) {
@@ -52,7 +52,7 @@ export default {
         anchorUp()
       }
 
-      function anchorDown () {
+      function anchorDown() {
         if (_scrollTop < _offsetTop) {
           _scrollTop += step
           document.body.scrollTop = document.documentElement.scrollTop = _scrollTop
@@ -62,7 +62,7 @@ export default {
         }
       }
 
-      function anchorUp () {
+      function anchorUp() {
         if (_scrollTop > _offsetTop) {
           _scrollTop -= step
           document.body.scrollTop = document.documentElement.scrollTop = _scrollTop
@@ -73,7 +73,7 @@ export default {
       }
     }
   },
-  destroyed () {
+  destroyed() {
     window.removeEventListener('scroll', this.handleScroll) // 销毁 scroll 事件
   }
 }

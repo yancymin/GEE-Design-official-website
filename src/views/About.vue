@@ -1,6 +1,6 @@
 <template>
   <div class="about" id="main">
-    <Header title="极验用户体验设计" des="GEE Design" :imageSrc= 'imageSrc' />
+    <Header title="极验用户体验设计" des="GEE Design" :imageSrc='imageSrc' />
     <div class="container">
       <div class="about-us bottom-80">
         <h3>极验用户体验设计中心</h3>
@@ -53,12 +53,11 @@ import Shiqi from '@/assets/About/avatarPic11.png'
 import Website from '@/assets/About/website.svg'
 import Dribbble from '@/assets/About/dribbble.svg'
 
-import HeaderImage from "@/assets/Header/6.jpg";
-
+import HeaderImage from '@/assets/Header/5.jpg'
 
 export default {
   name: 'about',
-  data () {
+  data() {
     return {
       imageSrc: HeaderImage,
       imgSrc: {

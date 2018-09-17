@@ -56,7 +56,7 @@
       <div class="fontface article" :id="'anchor-'+jsonData[3].id">
         <h3>品牌专用字体</h3>
         <p class="bottom-40">
-         思源黑体 (SourceHanSansSc) 做为极验的中英文品牌专用字体，被用于极验产品及视觉传达中。我们需要遵循下图所述的品牌字体运用示例，以确保极验品牌视觉设计传达的一致性。
+         思源黑体 (SourceHanSansSc) 做为极验的中文品牌专用字体，被用于极验产品及视觉传达中。我们需要遵循下图所述的品牌字体运用示例，以确保极验品牌视觉设计传达的一致性。
         </p>
         <img class="bottom-30  box-border" src="../assets/Brand/brand8.png" alt="">
         <img class="box-border" src="../assets/Brand/brand9.png" alt="">
@@ -74,7 +74,7 @@ import BackTop from '@/components/BackTop.vue'
 import ColorPanel from '@/components/ColorPanel.vue'
 import AnchorScroll from '@/components/AnchorScroll'
 
-import HeaderImage from '@/assets/Header/1.jpg'
+import HeaderImage from '@/assets/Header/6.jpg'
 
 export default {
   name: 'brand',

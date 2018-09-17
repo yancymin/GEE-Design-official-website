@@ -75,7 +75,7 @@ import BackTop from "@/components/BackTop.vue";
 import ColorPanel from "@/components/ColorPanel.vue";
 import AnchorScroll from "@/components/AnchorScroll";
 
-import HeaderImage from "@/assets/Header/2.jpg";
+import HeaderImage from "@/assets/Header/4.jpg";
 
 export default {
   name: "Make",

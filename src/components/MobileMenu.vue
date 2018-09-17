@@ -1,72 +1,72 @@
 <template>
-    <div class="wrap-box">
-        <div class="mobile-menu" id="menu">
-            <img id="icon-close" class="icon-close" src="../assets/close.svg" alt="" @click="closeMenu">
-            <div class="logo">
-                <img src="../assets/logo.svg" alt="">
-            </div>
-            <div class="wrap" @click="closeMenu">
-                <router-link to="/brand">
-                    <span>极验品牌</span>
-                    <i></i>
-                </router-link>
-                <router-link to="/make">
-                    <span>极验制造</span>
-                    <i></i>
-                </router-link>
-                <router-link to="/interface">
-                    <span>用户界面</span>
-                    <i></i>
-                </router-link>
-                <router-link to="/product">
-                    <span>安全矩阵</span>
-                    <i></i>
-                </router-link>
-                <router-link to="/resource">
-                    <span>资源下载</span>
-                    <i></i>
-                </router-link>
-                <router-link to="/about">
-                    <span>关于我们</span>
-                    <i></i>
-                </router-link>
-                <div class="links">
-                    <a target="_blank" href="https://geetest.com">极验官网</a>
-                    <a target="_blank" href="https://dribbble.com/geetest">Dribbble</a>
-                    <!-- <a target="_blank" href="https://github.com/GeeTeam">Github</a> -->
-                </div>
-            </div>
-            <div class="footer">
-                <img src="../assets/logo_watermask.svg" alt="">
-                <p>Copyright © 2018 GEETEST</p>
-            </div>
+  <div class="wrap-box">
+    <div class="mobile-menu" id="menu">
+      <img id="icon-close" class="icon-close" src="../assets/close.svg" alt="" @click="closeMenu">
+      <div class="logo">
+        <img src="../assets/logo.svg" alt="">
+      </div>
+      <div class="wrap" @click="closeMenu">
+        <router-link to="/brand">
+          <span>极验品牌</span>
+          <i></i>
+        </router-link>
+        <router-link to="/make">
+          <span>极验制造</span>
+          <i></i>
+        </router-link>
+        <router-link to="/interface">
+          <span>用户界面</span>
+          <i></i>
+        </router-link>
+        <router-link to="/product">
+          <span>安全矩阵</span>
+          <i></i>
+        </router-link>
+        <router-link to="/resource">
+          <span>资源下载</span>
+          <i></i>
+        </router-link>
+        <router-link to="/about">
+          <span>关于我们</span>
+          <i></i>
+        </router-link>
+        <div class="links">
+          <a target="_blank" href="https://geetest.com">极验官网</a>
+          <a target="_blank" href="https://dribbble.com/geetest">Dribbble</a>
+          <!-- <a target="_blank" href="https://github.com/GeeTeam">Github</a> -->
         </div>
-
-        <div class="mobile-header" id="mobile-header">
-            <div @click="showMenu" class="touch-box">
-                <img id="icon-menu" class="icon-menu" src="../assets/icon-menu.svg" alt="">
-            </div>
-            <div class="logo">
-                <img src="../assets/logo.svg" alt="">
-            </div>
-        </div>
+      </div>
+      <div class="footer">
+        <img src="../assets/logo_watermask.svg" alt="">
+        <p>Copyright © 2018 GEETEST</p>
+      </div>
     </div>
+
+    <div class="mobile-header" id="mobile-header">
+      <div @click="showMenu" class="touch-box">
+        <img id="icon-menu" class="icon-menu" src="../assets/icon-menu.svg" alt="">
+      </div>
+      <div class="logo">
+        <img src="../assets/logo.svg" alt="">
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       active: 0
     }
   },
   methods: {
-    showMenu () {
+    showMenu() {
       let menu = document.querySelector('#menu')
       menu.style.display = 'flex'
       menu.style.zIndex = '1000'
     },
-    closeMenu () {
+    closeMenu() {
       let menu = document.querySelector('#menu')
       menu.style.display = 'none'
       menu.style.zIndex = '-1'
@@ -132,7 +132,7 @@ $transition-normal: all 0.2s ease;
       }
 
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         left: 0;
         z-index: -99;
