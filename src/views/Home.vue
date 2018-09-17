@@ -1,7 +1,5 @@
 <template>
   <div class="home">
-    <SideBar/>
-    <MobileMenu/>
     <router-view/>
   </div>
 </template>
