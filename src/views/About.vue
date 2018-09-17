@@ -12,7 +12,7 @@
       </div>
       <div class="avatar-team">
         <h3>关于我们</h3>
-        <p class="bottom-40">我们关注用户体验的各个层面，功能、安全、交互、视觉…</p>
+        <p class="bottom-40">我们关注用户体验的各个层面，从不同视角看待问题，功能、安全、交互、视觉... 我们是一个富有活力、不断创新的团队。</p>
         <div class="avatar-wrap">
           <Avatar jobName="Designer" name="YorKun" :imgSrc="imgSrc.york" :href1="href.york.website" :iconSrc1="iconSrc.website" :href2="href.york.dribbble" :iconSrc2="iconSrc.dribbble" />
           <Avatar jobName="Designer" name="Yancy Min" :imgSrc="imgSrc.yancy" :href1="href.yancy.website" :iconSrc1="iconSrc.website" :href2="href.yancy.dribbble" :iconSrc2="iconSrc.dribbble" />
@@ -138,6 +138,7 @@ export default {
           &:nth-of-type(11) /deep/ p {
             top: -34px;
             line-height: 10px;
+            transform: scale(0.88);
           }
 
           &:nth-of-type(4) {

@@ -66,11 +66,11 @@ export default {
         background-repeat: no-repeat;
         background-size: 20px 20px;
         margin: 0 6px;
-        transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
         will-change: transition;
 
         &:hover {
-          transform: scale(1.1);
+          transform: scale(1.2);
         }
       }
     }

@@ -13,7 +13,7 @@
       </div>
 
       <div class="logo bottom-80 article" :id="'anchor-'+jsonData[1].id">
-        <h3>标志</h3>
+        <h3>品牌标志</h3>
         <p class="bottom-30">
           极验 (Geetest) 标志由两元素组成：图形标志、文字标志。其元素间的相对大小和位置是固定的，并且文字标志不能单独使用。极验的标志只能从设计软件文件中直接拷贝使用，而不是重新绘制或者擅自组合。本规范的各种电子格式文件可在极验用户体验设计中心的资源下载页面进行下载。
         </p>
@@ -33,7 +33,7 @@
       </div>
 
       <div class="color bottom-80 article" :id="'anchor-'+jsonData[2].id">
-        <h3>品牌色</h3>
+        <h3>品牌标准色</h3>
         <p class="bottom-40">
           下图所示为极验品牌的规范颜色色板，这些颜色可以运用在任何品牌有关的产品设计和衍生物料中。极验标识由极验蓝、极验蓝黑构成；极验产品由极验蓝、极验青、极验淡紫和极验橘红色构成；极验视觉的延展由极验白、极验浅灰等构成。Web 色以 RGB 色值为准，平面物料以四色印刷 CMYK 色值为准。
         </p>
@@ -93,8 +93,8 @@ export default {
       },
       jsonData: [
         { title: '品牌概述', id: 'overview' },
-        { title: '标志', id: 'sign' },
-        { title: '品牌色', id: 'color' },
+        { title: '品牌标志', id: 'sign' },
+        { title: '品牌标准色', id: 'color' },
         { title: '品牌专用字体', id: 'fonts' }
       ],
     }

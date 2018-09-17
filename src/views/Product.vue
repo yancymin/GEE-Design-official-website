@@ -88,7 +88,7 @@ export default {
         gray: "#9099A8"
       },
       jsonData: [
-        { title: "安全产品矩阵", id: "matrix" },
+        { title: "产品矩阵概述", id: "matrix" },
         { title: "产品标志颜色", id: "logo-color" },
         { title: "产品标志字体", id: "logo-font" },
         { title: "尺寸与排列", id: "layout" },

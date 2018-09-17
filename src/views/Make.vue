@@ -53,6 +53,7 @@
         <h3>其它产品</h3>
         <p class="bottom-40">极验制造除了 GEE Tee 外，还有更多周边产品。</p>
         <div>
+          <div class="bottom-30"><img src="../assets/Make/content_make9-1.jpg" alt=""></div>
           <div class="bottom-30"><img src="../assets/Make/content_make9.png" alt=""></div>
           <div class="box-row bottom-30"><img src="../assets/Make/content_make10.png" alt=""><img src="../assets/Make/content_make11.png" alt=""></div>
           <div class="bottom-30"><img src="../assets/Make/content_make12.png" alt=""></div>
