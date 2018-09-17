@@ -25,10 +25,19 @@
 
         .container {
             width: 100%;
-            margin: 20px 0 100px 0;
+            margin: 20px 0;
+            padding: 48px 0 0 0;
 
-            .timestamp {
+            .footer-info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 left: 0;
+                margin-bottom: 24px;
+
+                span:nth-child(1) {
+                    margin-bottom: 2px;
+                }
             }
         }
 

@@ -1,6 +1,6 @@
 <template>
   <div class="make main" id="main">
-    <Header title="极验制造" des="G-MAKE" :imageSrc= 'imageSrc' />
+    <Header title="极验制造" des="G-MAKE" :imageSrc='imageSrc' />
     <div class="container">
       <div class="overview bottom-80">
         <h3>
@@ -62,7 +62,10 @@
           <div class="box-row"><img src="../assets/Make/content_make16.png" alt=""><img src="../assets/Make/content_make17.png" alt=""></div>
         </div>
       </div>
-      <span class="timestamp">更新于 2018.9.1</span>
+      <div class="footer-info">
+        <span class="timestamp bottom-info">更新于 2018.9.1</span>
+        <span class="copyright bottom-info">Copyright © 2018 Geetest Inc. All Rights Reserved.</span>
+      </div>
       <AnchorScroll :jsonData="jsonData" />
       <Back-top />
     </div>
@@ -220,15 +223,6 @@ export default {
 .active {
   background-color: rgb(30, 105, 53);
   opacity: 0.2;
-}
-
-span {
-  position: relative;
-  bottom: -76px;
-  left: -308px;
-  color: #bcc2de;
-  font-size: 12px;
-  line-height: 17px;
 }
 
 @media screen and (max-width: 414px) {

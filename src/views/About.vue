@@ -109,6 +109,7 @@ export default {
 .about {
   .container {
     border: 0;
+    margin: 60px 0;
     .about-us {
       width: 100%;
     }

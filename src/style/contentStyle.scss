@@ -43,4 +43,16 @@
     .box-shadow {
         box-shadow: 0 1px 2px 0 rgba(200, 202, 222, 0.4), 0 -1px 1px 0 rgba(200, 202, 222, 0.06);
     }
+    .footer-info {
+        position: relative;
+        bottom: -76px;
+        left: -154px;
+        color: #bcc2de;
+        font-size: 12px;
+        line-height: 17px;
+      
+        span:nth-child(1) {
+          margin-right: 20px;
+        }
+      }
 }

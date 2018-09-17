@@ -1,6 +1,6 @@
 <template>
   <div class="brand main" id="main">
-    <Header title='极验品牌' des='Geetest Brand VI' :imageSrc= 'imageSrc' />
+    <Header title='极验品牌' des='Geetest Brand VI' :imageSrc='imageSrc' />
     <div class="container">
       <div class="overview bottom-80 article" :id="'anchor-'+jsonData[0].id">
         <h3>
@@ -18,7 +18,7 @@
           极验 (Geetest) 标志由两元素组成：图形标志、文字标志。其元素间的相对大小和位置是固定的，并且文字标志不能单独使用。极验的标志只能从设计软件文件中直接拷贝使用，而不是重新绘制或者擅自组合。本规范的各种电子格式文件可在极验用户体验设计中心的资源下载页面进行下载。
         </p>
         <p class="bottom-40">
-         极验标志的组合形式有四种：1. 标准标识；2. 带有 Slogan 的标识；3. 中文标识；4. 单独的图形。这四种组合的标识根据不同的场景来使用，除此以外，不允许擅自组合。
+          极验标志的组合形式有四种：1. 标准标识；2. 带有 Slogan 的标识；3. 中文标识；4. 单独的图形。这四种组合的标识根据不同的场景来使用，除此以外，不允许擅自组合。
         </p>
         <img class="bottom-30  box-border" src="../assets/Brand/brand2.png" alt="">
         <div class="pic-wrap bottom-30">
@@ -56,13 +56,16 @@
       <div class="fontface article" :id="'anchor-'+jsonData[3].id">
         <h3>品牌专用字体</h3>
         <p class="bottom-40">
-         思源黑体 (SourceHanSansSc) 做为极验的中文品牌专用字体，被用于极验产品及视觉传达中。我们需要遵循下图所述的品牌字体运用示例，以确保极验品牌视觉设计传达的一致性。
+          思源黑体 (SourceHanSansSc) 做为极验的中文品牌专用字体，被用于极验产品及视觉传达中。我们需要遵循下图所述的品牌字体运用示例，以确保极验品牌视觉设计传达的一致性。
         </p>
         <img class="bottom-30  box-border" src="../assets/Brand/brand8.png" alt="">
         <img class="box-border" src="../assets/Brand/brand9.png" alt="">
       </div>
-      <span class="timestamp">更新于 2018.9.1</span>
-      <AnchorScroll :jsonData="jsonData"/>
+      <div class="footer-info">
+        <span class="timestamp bottom-info">更新于 2018.9.1</span>
+        <span class="copyright bottom-info">Copyright © 2018 Geetest Inc. All Rights Reserved.</span>
+      </div>
+      <AnchorScroll :jsonData="jsonData" />
       <Back-top />
     </div>
   </div>
@@ -111,80 +114,71 @@ export default {
 
 <style lang="scss" scoped>
 .brand {
-    .container {
-        .overview {
-            width: 100%;
-        }
-
-        .logo {
-            width: 100%;
-
-            .pic-wrap {
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
-
-                & > div {
-                    width: calc(50% - 10px);
-                    height: calc(50% - 10px);
-                    img {
-                        width: 100%;
-                    }
-                }
-            }
-        }
-        .color {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-
-            .colorpanel-wrap {
-                width: 100%;
-            }
-
-            img {
-                width: 480px;
-                align-self: center;
-            }
-        }
+  .container {
+    .overview {
+      width: 100%;
     }
-    .fixed-panel{
-      position: fixed;
-      right: 0;
-      top: 50%;
-      li{
-        list-style: none;
-        a{
-          font-size: 15px;
-          color: #5f6591;
-          line-height: 32px;
-          transition: all .2s;
-        }
-        a.active{
-          color: #fff;
-          background-color: blue;
+
+    .logo {
+      width: 100%;
+
+      .pic-wrap {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        & > div {
+          width: calc(50% - 10px);
+          height: calc(50% - 10px);
+          img {
+            width: 100%;
+          }
         }
       }
     }
-}
+    .color {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
 
-span {
-    position: relative;
-    bottom: -76px;
-    left: -308px;
-    color: #bcc2de;
-    font-size: 12px;
-    line-height: 17px;
+      .colorpanel-wrap {
+        width: 100%;
+      }
+
+      img {
+        width: 480px;
+        align-self: center;
+      }
+    }
+  }
+  .fixed-panel {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    li {
+      list-style: none;
+      a {
+        font-size: 15px;
+        color: #5f6591;
+        line-height: 32px;
+        transition: all 0.2s;
+      }
+      a.active {
+        color: #fff;
+        background-color: blue;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 414px) {
-    #main {
-        .color {
-            img {
-                width: 100%;
-            }
-        }
+  #main {
+    .color {
+      img {
+        width: 90%;
+      }
     }
+  }
 }
 </style>

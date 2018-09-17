@@ -1,6 +1,6 @@
 <template>
   <div class="interface main" id="main">
-    <Header title="用户界面设计" des="User Interface Design" :imageSrc= 'imageSrc' />
+    <Header title="用户界面设计" des="User Interface Design" :imageSrc='imageSrc' />
     <div class="container">
 
       <div class="overview bottom-80 article" :id="'anchor-' + jsonData[0].id">
@@ -50,8 +50,11 @@
         </div>
         <img src="../assets/Interface/interface9.png" alt="" class="box-border">
       </div>
-      <span class="timestamp">更新于 2018.9.1</span>
-      <AnchorScroll :jsonData="jsonData"/>
+      <div class="footer-info">
+        <span class="timestamp bottom-info">更新于 2018.9.1</span>
+        <span class="copyright bottom-info">Copyright © 2018 Geetest Inc. All Rights Reserved.</span>
+      </div>
+      <AnchorScroll :jsonData="jsonData" />
       <Back-top />
     </div>
   </div>
@@ -117,15 +120,6 @@ export default {
   .ui-element {
     width: 100%;
   }
-}
-
-span {
-  position: relative;
-  bottom: -76px;
-  left: -308px;
-  color: #bcc2de;
-  font-size: 12px;
-  line-height: 17px;
 }
 
 @media screen and (max-width: 414px) {
