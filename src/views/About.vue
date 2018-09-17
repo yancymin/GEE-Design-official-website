@@ -57,7 +57,7 @@ import HeaderImage from '@/assets/Header/5.jpg'
 
 export default {
   name: 'about',
-  data() {
+  data () {
     return {
       imageSrc: HeaderImage,
       imgSrc: {

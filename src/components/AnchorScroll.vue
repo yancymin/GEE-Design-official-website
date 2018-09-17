@@ -11,7 +11,7 @@
 <script>
 export default {
   name: 'AnchorScroll',
-  data() {
+  data () {
     return {
       nowSubIndex: 0
     }
@@ -19,11 +19,11 @@ export default {
   props: {
     jsonData: Array
   },
-  mounted() {
+  mounted () {
     window.addEventListener('scroll', this.handleScroll) // 监听 scroll 事件
   },
   methods: {
-    handleScroll() {
+    handleScroll () {
       let _scrollTop =
         document.documentElement.scrollTop || document.body.scrollTop
       let _article = document.querySelectorAll('.article')
@@ -34,7 +34,7 @@ export default {
         }
       })
     },
-    goAnchor(selector, index) {
+    goAnchor (selector, index) {
       this.nowSubIndex = index // 把当前点击时获取的 index 赋值给 nowSubIndex；如果两者相等，则显示高亮
       console.log(selector)
       let anchor = document.querySelector(selector)
@@ -52,7 +52,7 @@ export default {
         anchorUp()
       }
 
-      function anchorDown() {
+      function anchorDown () {
         if (_scrollTop < _offsetTop) {
           _scrollTop += step
           document.body.scrollTop = document.documentElement.scrollTop = _scrollTop
@@ -62,7 +62,7 @@ export default {
         }
       }
 
-      function anchorUp() {
+      function anchorUp () {
         if (_scrollTop > _offsetTop) {
           _scrollTop -= step
           document.body.scrollTop = document.documentElement.scrollTop = _scrollTop
@@ -73,7 +73,7 @@ export default {
       }
     }
   },
-  destroyed() {
+  destroyed () {
     window.removeEventListener('scroll', this.handleScroll) // 销毁 scroll 事件
   }
 }

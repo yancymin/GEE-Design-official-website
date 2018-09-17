@@ -55,18 +55,18 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       active: 0
     }
   },
   methods: {
-    showMenu() {
+    showMenu () {
       let menu = document.querySelector('#menu')
       menu.style.display = 'flex'
       menu.style.zIndex = '1000'
     },
-    closeMenu() {
+    closeMenu () {
       let menu = document.querySelector('#menu')
       menu.style.display = 'none'
       menu.style.zIndex = '-1'

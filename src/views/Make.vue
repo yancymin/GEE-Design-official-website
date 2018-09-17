@@ -70,35 +70,35 @@
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
-import Scroll from "@/components/Scroll.vue";
-import BackTop from "@/components/BackTop.vue";
-import ColorPanel from "@/components/ColorPanel.vue";
-import AnchorScroll from "@/components/AnchorScroll";
+import Header from '@/components/Header.vue'
+import Scroll from '@/components/Scroll.vue'
+import BackTop from '@/components/BackTop.vue'
+import ColorPanel from '@/components/ColorPanel.vue'
+import AnchorScroll from '@/components/AnchorScroll'
 
-import HeaderImage from "@/assets/Header/4.jpg";
+import HeaderImage from '@/assets/Header/4.jpg'
 
 export default {
-  name: "Make",
-  data() {
+  name: 'Make',
+  data () {
     return {
       imageSrc: HeaderImage,
       color: {
-        blue: "#3873FF;",
-        white: "#fff; border: 1px solid #F1F3F4;",
-        black: "#292F3A;",
-        gray: "#566D97;",
-        blueLight: "#26B9FF;",
-        yellow: "#FFCA55;"
+        blue: '#3873FF;',
+        white: '#fff; border: 1px solid #F1F3F4;',
+        black: '#292F3A;',
+        gray: '#566D97;',
+        blueLight: '#26B9FF;',
+        yellow: '#FFCA55;'
       },
       jsonData: [
-        { title: "品牌标志", id: "logo" },
-        { title: "品牌标准色", id: "color" },
-        { title: "品牌应用", id: "app" },
-        { title: "GEE Tee", id: "geetee" },
-        { title: "其他", id: "others" }
+        { title: '品牌标志', id: 'logo' },
+        { title: '标准色', id: 'color' },
+        { title: '应用', id: 'app' },
+        { title: 'GEE Tee', id: 'geetee' },
+        { title: '其它', id: 'others' }
       ]
-    };
+    }
   },
   components: {
     Header,
@@ -107,7 +107,7 @@ export default {
     ColorPanel,
     AnchorScroll
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

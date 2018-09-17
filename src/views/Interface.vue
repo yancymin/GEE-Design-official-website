@@ -58,28 +58,28 @@
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
-import Scroll from "@/components/Scroll.vue";
-import BackTop from "@/components/BackTop.vue";
-import ColorPanel from "@/components/ColorPanel.vue";
-import AnchorScroll from "@/components/AnchorScroll";
+import Header from '@/components/Header.vue'
+import Scroll from '@/components/Scroll.vue'
+import BackTop from '@/components/BackTop.vue'
+import ColorPanel from '@/components/ColorPanel.vue'
+import AnchorScroll from '@/components/AnchorScroll'
 
-import HeaderImage from "@/assets/Header/3.jpg";
+import HeaderImage from '@/assets/Header/3.jpg'
 
 export default {
-  name: "interface",
-  data() {
+  name: 'interface',
+  data () {
     return {
       imageSrc: HeaderImage,
       color: {
-        bilibili: "#EF5C8C;"
+        bilibili: '#EF5C8C;'
       },
       jsonData: [
-        { title: "产品概述", id: "overview" },
-        { title: "UI 基础", id: "base" },
-        { title: "UI 元素", id: "element" },
+        { title: '产品概述', id: 'overview' },
+        { title: 'UI 基础', id: 'base' },
+        { title: 'UI 元素', id: 'element' }
       ]
-    };
+    }
   },
   components: {
     Header,
@@ -88,11 +88,11 @@ export default {
     ColorPanel,
     AnchorScroll
   },
-  mounted: function() {
-    let cmyk = document.querySelector("#cmyk");
-    cmyk.style.display = "none";
+  mounted: function () {
+    let cmyk = document.querySelector('#cmyk')
+    cmyk.style.display = 'none'
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

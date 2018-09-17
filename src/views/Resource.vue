@@ -84,15 +84,14 @@ import Header from '@/components/Header.vue'
 import Scroll from '@/components/Scroll.vue'
 import BackTop from '@/components/BackTop.vue'
 
-import HeaderImage from "@/assets/Header/1.jpg";
-
+import HeaderImage from '@/assets/Header/1.jpg'
 
 export default {
   name: 'about',
-  data() {
-   return {
-       imageSrc: HeaderImage
-   }
+  data () {
+    return {
+      imageSrc: HeaderImage
+    }
   },
   components: {
     Header,

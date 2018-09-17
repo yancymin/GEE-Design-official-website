@@ -94,9 +94,9 @@ export default {
       jsonData: [
         { title: '品牌概述', id: 'overview' },
         { title: '品牌标志', id: 'sign' },
-        { title: '品牌标准色', id: 'color' },
-        { title: '品牌专用字体', id: 'fonts' }
-      ],
+        { title: '标准色', id: 'color' },
+        { title: '字体', id: 'fonts' }
+      ]
     }
   },
   components: {
@@ -105,7 +105,7 @@ export default {
     AnchorScroll,
     BackTop,
     ColorPanel
-  },
+  }
 }
 </script>
 

@@ -48,7 +48,7 @@
                 <img class="box-border" src="../assets/Product/product6.png" alt="">
             </div>
 
-            <div class="limited-use article" :id="'anchor-' + jsonData[5].id">
+            <div class="limited-use">
                 <h3>使用限制</h3>
                 <p class="bottom-40">为了保持产品矩阵标志的完整性，促进品牌的一致性，要避免不规范的使用样式。下面列出了一些徽标错误使用方法。</p>
                 <img src="../assets/Product/product7.png" alt="">
@@ -61,16 +61,16 @@
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
-import Scroll from "@/components/Scroll.vue";
-import BackTop from "@/components/BackTop.vue";
-import ColorPanel from "@/components/ColorPanel.vue";
-import AnchorScroll from "@/components/AnchorScroll.vue";
+import Header from '@/components/Header.vue'
+import Scroll from '@/components/Scroll.vue'
+import BackTop from '@/components/BackTop.vue'
+import ColorPanel from '@/components/ColorPanel.vue'
+import AnchorScroll from '@/components/AnchorScroll.vue'
 
-import HeaderImage from "@/assets/Header/2.jpg";
+import HeaderImage from '@/assets/Header/2.jpg'
 
 export default {
-  name: "product",
+  name: 'product',
   components: {
     Header,
     Scroll,
@@ -78,26 +78,25 @@ export default {
     ColorPanel,
     AnchorScroll
   },
-  data() {
+  data () {
     return {
       imageSrc: HeaderImage,
       color: {
-        blue1: "#3873FF;",
-        blue2: "#0052CC;",
-        white: "#fff; border: 1px solid #F1F3F4;",
-        gray: "#9099A8"
+        blue1: '#3873FF;',
+        blue2: '#0052CC;',
+        white: '#fff; border: 1px solid #F1F3F4;',
+        gray: '#9099A8'
       },
       jsonData: [
-        { title: "产品矩阵概述", id: "matrix" },
-        { title: "产品标志颜色", id: "logo-color" },
-        { title: "产品标志字体", id: "logo-font" },
-        { title: "尺寸与排列", id: "layout" },
-        { title: "产品标志版式", id: "alige" },
-        { title: "使用限制", id: "limited" }
+        { title: '产品概述', id: 'matrix' },
+        { title: '标准色', id: 'logo-color' },
+        { title: '字体', id: 'logo-font' },
+        { title: '尺寸', id: 'layout' },
+        { title: '版式', id: 'alige' }
       ]
-    };
+    }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
