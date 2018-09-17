@@ -11,7 +11,7 @@
                     <h3>极验品牌标志</h3>
                     <h4>Geetest brand identity</h4>
                     <div class="icon-wrap">
-                        <a class="psd" href="http://localhost:8888/img/cover1.6e370748.png" target="blank">
+                        <a class="psd" href="src/assets/Resource/极验品牌标志.psd" target="blank">
                             <div>
                                 <img src="../assets/Resource/psd.svg" alt="">
                                 <p>PSD 格式</p>
