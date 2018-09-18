@@ -11,21 +11,21 @@
           <h3>极验品牌标志</h3>
           <h4>Geetest brand identity</h4>
           <div class="icon-wrap">
-            <a class="psd" href="https://github.com/yancymin/gt-design-ued/raw/master/src/assets/Resource/%E6%9E%81%E9%AA%8C%E5%93%81%E7%89%8C%E6%A0%87%E5%BF%97.psd" target="blank" download="极验品牌标志.psd">
+            <a class="psd" href="https://github.com/yancymin/GEE-Design-Resource/raw/master/%E6%9E%81%E9%AA%8C%E5%93%81%E7%89%8C%E6%A0%87%E5%BF%97.psd" target="blank" download="极验品牌标志.psd">
               <div>
                 <img src="../assets/Download/psd.svg" alt="">
                 <p>PSD 格式</p>
               </div>
               <span></span>
             </a>
-            <a class="ai" href="https://github.com/yancymin/gt-design-ued/raw/master/src/assets/Resource/%E6%9E%81%E9%AA%8C%E5%93%81%E7%89%8C%E6%A0%87%E5%BF%97.ai" target="blank" download="极验品牌标志.ai">
+            <a class="ai" href="https://github.com/yancymin/GEE-Design-Resource/raw/master/%E6%9E%81%E9%AA%8C%E5%93%81%E7%89%8C%E6%A0%87%E5%BF%97.ai" target="blank" download="极验品牌标志.ai">
               <div>
                 <img src="../assets/Download/ai.svg" alt="">
                 <p>AI 格式</p>
               </div>
               <span></span>
             </a>
-            <a class="pdf" href="https://github.com/yancymin/gt-design-ued/raw/master/src/assets/Resource/%E6%9E%81%E9%AA%8C%E5%93%81%E7%89%8C%E6%A0%87%E5%BF%97.pdf" target="blank" download="极验品牌标志.pdf">
+            <a class="pdf" href="https://github.com/yancymin/GEE-Design-Resource/raw/master/%E6%9E%81%E9%AA%8C%E5%93%81%E7%89%8C%E6%A0%87%E5%BF%97.pdf" target="blank" download="极验品牌标志.pdf">
               <div>
                 <img src="../assets/Download/pdf.svg" alt="">
                 <p>PDF 格式</p>
@@ -41,14 +41,14 @@
           <h3>极验产品矩阵标志</h3>
           <h4>Geetest product matrix identification</h4>
           <div class="icon-wrap" id="icon-wrap">
-            <a class="psd" href="https://github.com/yancymin/gt-design-ued/raw/master/src/assets/Resource/%E6%9E%81%E9%AA%8C%E4%BA%A7%E5%93%81%E7%9F%A9%E9%98%B5%E6%A0%87%E5%BF%97.psd" target="blank" download="极验产品矩阵标志.psd">
+            <a class="psd" href="https://github.com/yancymin/GEE-Design-Resource/raw/master/%E6%9E%81%E9%AA%8C%E4%BA%A7%E5%93%81%E7%9F%A9%E9%98%B5%E6%A0%87%E5%BF%97.psd" target="blank" download="极验产品矩阵标志.psd">
               <div>
                 <img src="../assets/Download/psd.svg" alt="">
                 <p>PSD 格式</p>
               </div>
               <span></span>
             </a>
-            <a class="ai" href="https://github.com/yancymin/gt-design-ued/raw/master/src/assets/Resource/%E6%9E%81%E9%AA%8C%E4%BA%A7%E5%93%81%E7%9F%A9%E9%98%B5%E6%A0%87%E5%BF%97.ai" target="blank" download="极验产品矩阵标志.ai">
+            <a class="ai" href="https://github.com/yancymin/GEE-Design-Resource/raw/master/%E6%9E%81%E9%AA%8C%E4%BA%A7%E5%93%81%E7%9F%A9%E9%98%B5%E6%A0%87%E5%BF%97.ai" target="blank" download="极验产品矩阵标志.ai">
               <div>
                 <img src="../assets/Download/ai.svg" alt="">
                 <p>AI 格式</p>
@@ -64,7 +64,7 @@
           <h3>图像／图标资源</h3>
           <h4>Image / icon resource</h4>
           <div class="icon-wrap">
-            <a class="psd" href="https://github.com/yancymin/gt-design-ued/raw/master/src/assets/Resource/%E6%9E%81%E9%AA%8C%EF%BC%8D%E5%9B%BE%E5%83%8F%E4%B8%8E%E5%9B%BE%E6%A0%87%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB.sketch" id="sketch" target="blank" download="图像与图标资源分享.sketch">
+            <a class="psd" href="https://github.com/yancymin/GEE-Design-Resource/raw/master/%E6%9E%81%E9%AA%8C%E5%9B%BE%E5%83%8F%E4%B8%8E%E5%9B%BE%E6%A0%87%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB.sketch" id="sketch" target="blank" download="图像与图标资源分享.sketch">
               <div>
                 <img src="../assets/Download/sketch.svg" alt="">
                 <p>Sketch 格式</p>
