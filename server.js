@@ -12,7 +12,8 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use(Express.static('./dist'))
 
-app.use('/', Express.static(path.join(__dirname, 'dist')))
+// app.use('/', Express.static(path.join(__dirname, 'dist')))
+app.use('/*', Express.static(path.join(__dirname, 'dist')))
 
 app.all('*', function (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*')
