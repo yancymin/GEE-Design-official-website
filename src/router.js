@@ -33,9 +33,9 @@ export default new Router({
       component: () => import('./views/Product.vue')
     },
     {
-      path: '/resource',
-      name: 'resource',
-      component: () => import('./views/Resource.vue')
+      path: '/download',
+      name: 'download',
+      component: () => import('./views/Download.vue')
     },
     {
       path: '/about',

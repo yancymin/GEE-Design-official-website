@@ -22,7 +22,7 @@
           <span>安全矩阵</span>
           <i></i>
         </router-link>
-        <router-link to="/resource">
+        <router-link to="/download">
           <span>资源下载</span>
           <i></i>
         </router-link>
