@@ -36,7 +36,7 @@ export default {
     },
     goAnchor (selector, index) {
       this.nowSubIndex = index // 把当前点击时获取的 index 赋值给 nowSubIndex；如果两者相等，则显示高亮
-      console.log(selector)
+      // console.log(selector)
       let anchor = document.querySelector(selector)
 
       let _offsetTop = anchor.offsetTop
