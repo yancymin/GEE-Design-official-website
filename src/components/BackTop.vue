@@ -1,6 +1,6 @@
 <template>
   <div class="Back-top">
-    <a href="#main"><img src="../assets/icon_toparrow.svg" alt=""></a>
+    <a href="#body"><img src="../assets/icon_toparrow.svg" alt=""></a>
   </div>
 </template>
 

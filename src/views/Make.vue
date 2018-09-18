@@ -52,7 +52,7 @@
       <div class="others article" :id="'anchor-' + jsonData[4].id">
         <h3>其它产品</h3>
         <p class="bottom-40">极验制造除了 GEE Tee 外，还有更多周边产品。</p>
-        <div>
+        <div class="others-content">
           <div class="bottom-30"><img src="../assets/Make/content_make9-1.jpg" alt=""></div>
           <div class="bottom-30"><img src="../assets/Make/content_make9.png" alt=""></div>
           <div class="box-row bottom-30"><img src="../assets/Make/content_make10.png" alt=""><img src="../assets/Make/content_make11.png" alt=""></div>
@@ -202,11 +202,14 @@ export default {
 
 .others {
   width: 100%;
-  div {
+  .others-content {
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
+
+    div {
+      height: 100%;
+    }
     .box-row {
       width: 700px;
       display: flex;
@@ -232,7 +235,7 @@ export default {
     }
   }
   .others {
-    div {
+    .others-content {
       .box-row {
         width: 100%;
         flex-direction: column;
