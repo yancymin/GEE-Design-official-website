@@ -102,7 +102,26 @@ export default {
   }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 1220px) {
+    .colorpanel {
+    width: 100%;
+    height: 140px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px 32px 22px 32px;
+    white-space: nowrap;
+
+    .tag-wrap {
+      width: 100%;
+      justify-content: space-between;
+      .color-tag {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
   .colorpanel {
     width: auto;
     height: 140px;

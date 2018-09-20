@@ -163,7 +163,31 @@ export default {
   }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 1220px) {
+    #main {
+    .avatar-team {
+      .avatar-wrap {
+        justify-content: center;
+        margin-left: 13px;
+
+        .avatar {
+          padding: 0 44px 0 0;
+          &:nth-of-type(4) {
+            padding-right: 44px;
+          }
+          &:nth-of-type(8) {
+            padding-right: 44px;
+          }
+          &:nth-of-type(11) {
+            // left: -76px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
   #main {
     .avatar-team {
       .avatar-wrap {
@@ -179,7 +203,7 @@ export default {
             padding-right: 44px;
           }
           &:nth-of-type(11) {
-            left: -76px;
+            // left: -76px;
           }
         }
       }

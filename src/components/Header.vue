@@ -29,6 +29,7 @@ export default {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  transition: all 0.2s;
 
   .text-box {
     z-index: 2;
@@ -51,10 +52,7 @@ export default {
   }
 }
 
-@media screen and (max-width: 1220px) {
-}
-
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 540px) {
   .header {
     width: calc(100% + 40px);
     height: 200px;

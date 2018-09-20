@@ -8,19 +8,46 @@
     align-items: center;
 }
 
+// @keyframes onloadScale {
+//     0% {
+//         // transform: scale(1.2);
+//         background-size: 120%;
+//     }
+//     100% {
+//         // transform: scale(1);
+//         background-size: 100%;
+//     }
+//   }
+
 @media screen and (max-width: 1220px) {
     #main {
         width: calc(100vw - 100px);
         margin-left: 100px;
+
+        .header {
+            .text-box {
+                width: 80%;
+            }
+        }
+
+        .container {
+            width: 80%;
+        }
     }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 540px) {
     #main {
         width: auto;
         margin-left: 0;
         padding: 0 20px;
         margin-top: 72px;
+
+        .header {
+            .text-box {
+                width: 100%;
+            }
+        }
         .container {
             width: 100%;
             margin: 20px 0;

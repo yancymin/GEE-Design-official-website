@@ -122,6 +122,14 @@ export default {
   }
 }
 
+@media screen and (max-width: 1220px) {
+  #main {
+    .colorpanel {
+      width: auto;
+    }
+  }
+}
+
 @media screen and (max-width: 414px) {
   .interface .overview img {
     width: 100%;

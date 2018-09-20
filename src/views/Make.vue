@@ -228,7 +228,26 @@ export default {
   opacity: 0.2;
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 1220px) {
+    .others {
+    .others-content {
+      .box-row {
+        width: 100%;
+        flex-direction: column;
+
+        img {
+          width: 100%;
+
+          &:first-of-type {
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
   .color-wrap {
     .colorpanel {
       width: 100%;

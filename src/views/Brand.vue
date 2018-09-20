@@ -109,6 +109,10 @@ export default {
     BackTop,
     ColorPanel
   }
+  // mounted() {
+  //   let headerBg = document.querySelector('#header');
+  //   headerBg.style.animation = "1s onloadScale";
+  // }
 }
 </script>
 
@@ -167,6 +171,19 @@ export default {
       a.active {
         color: #fff;
         background-color: blue;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  #main {
+    .colorpanel {
+      width: auto;
+    }
+    .color {
+      img {
+        width: 90%;
       }
     }
   }
