@@ -12,12 +12,12 @@
         <span>极验制造</span>
         <i></i>
       </router-link>
-      <router-link to="/interface">
-        <span>用户界面</span>
-        <i></i>
-      </router-link>
       <router-link to="/product">
         <span>安全矩阵</span>
+        <i></i>
+      </router-link>
+      <router-link to="/interface">
+        <span>用户界面</span>
         <i></i>
       </router-link>
       <router-link to="/download">

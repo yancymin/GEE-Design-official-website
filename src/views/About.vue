@@ -178,9 +178,9 @@ export default {
           &:nth-of-type(8) {
             padding-right: 44px;
           }
-          &:nth-of-type(11) {
-            // left: -76px;
-          }
+          // &:nth-of-type(11) {
+          //   // left: -76px;
+          // }
         }
       }
     }
@@ -202,9 +202,9 @@ export default {
           &:nth-of-type(8) {
             padding-right: 44px;
           }
-          &:nth-of-type(11) {
-            // left: -76px;
-          }
+          // &:nth-of-type(11) {
+
+          // }
         }
       }
     }

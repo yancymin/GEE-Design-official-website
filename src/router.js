@@ -23,15 +23,16 @@ export default new Router({
       component: () => import('./views/Make.vue')
     },
     {
-      path: '/interface',
-      name: 'interface',
-      component: () => import('./views/Interface.vue')
-    },
-    {
       path: '/product',
       name: 'product',
       component: () => import('./views/Product.vue')
     },
+    {
+      path: '/interface',
+      name: 'interface',
+      component: () => import('./views/Interface.vue')
+    },
+
     {
       path: '/download',
       name: 'download',
