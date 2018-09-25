@@ -6,30 +6,30 @@
         <img src="../assets/logo.svg" alt="">
       </div>
       <div class="wrap" @click="closeMenu">
-        <router-link to="/brand">
-          <span>极验品牌</span>
-          <i></i>
-        </router-link>
-        <router-link to="/make">
-          <span>极验制造</span>
-          <i></i>
-        </router-link>
-        <router-link to="/product">
-          <span>安全矩阵</span>
-          <i></i>
-        </router-link>
-        <router-link to="/interface">
-          <span>用户界面</span>
-          <i></i>
-        </router-link>
-        <router-link to="/download">
-          <span>资源下载</span>
-          <i></i>
-        </router-link>
-        <router-link to="/about">
-          <span>关于我们</span>
-          <i></i>
-        </router-link>
+      <router-link to="/brand" class="brand-active">
+        <i></i>
+        <span>极验品牌</span>
+      </router-link>
+      <router-link to="/make" class="make-active">
+        <i></i>
+        <span>极验制造</span>
+      </router-link>
+      <router-link to="/product" class="product-active">
+        <i></i>
+        <span>安全矩阵</span>
+      </router-link>
+      <router-link to="/interface" class="interface-active">
+        <i></i>
+        <span>用户界面</span>
+      </router-link>
+      <router-link to="/download" class="download-active">
+        <i></i>
+        <span>资源下载</span>
+      </router-link>
+      <router-link to="/about" class="about-active">
+        <i></i>
+        <span>关于我们</span>
+      </router-link>
         <div class="links">
           <a target="_blank" href="https://geetest.com">极验官网</a>
           <a target="_blank" href="https://dribbble.com/geetest">Dribbble</a>
@@ -77,6 +77,18 @@ export default {
 
 <style lang="scss" scoped>
 $transition-normal: all 0.2s ease;
+
+@mixin icon {
+  display: inline-block;
+  z-index: 100;
+  width: 16px;
+  height: 16px;
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  margin-right: 18px;
+  margin-bottom: -2px;
+}
+
 .mobile-menu {
   z-index: 100;
   position: fixed;
@@ -118,16 +130,90 @@ $transition-normal: all 0.2s ease;
     text-align: center;
     line-height: 45px;
     width: 100%;
-    
+
+    .brand-active.router-link-active {
+      i {
+        @include icon;
+        background-image: url('../assets/SideBar/a.png');
+      }
+    }
+    .make-active.router-link-active {
+      i {
+        @include icon;
+        background-image: url('../assets/SideBar/b.png');
+      }
+    }
+    .product-active.router-link-active {
+      i {
+        @include icon;
+        background-image: url('../assets/SideBar/c.png');
+      }
+    }
+    .interface-active.router-link-active {
+      i {
+        @include icon;
+        background-image: url('../assets/SideBar/d.png');
+      }
+    }
+    .download-active.router-link-active {
+      i {
+        @include icon;
+        background-image: url('../assets/SideBar/e.png');
+      }
+    }
+    .about-active.router-link-active {
+      i {
+        @include icon;
+        background-image: url('../assets/SideBar/f.png');
+      }
+    }
+
     & > a {
       width: calc(100% - 40px);
       height: 46px;
       display: block;
-      margin-bottom: 6px;
+      margin-bottom: 12px;
       border-radius: 3px;
       transition: $transition-normal;
       will-change: all;
       font-size: 18px;
+
+      &:nth-of-type(1) {
+        i {
+          @include icon;
+          background-image: url('../assets/SideBar/1.png');
+        }
+      }
+      &:nth-of-type(2) {
+        i {
+          @include icon;
+          background-image: url('../assets/SideBar/2.png');
+        }
+      }
+      &:nth-of-type(3) {
+        i {
+          @include icon;
+          background-image: url('../assets/SideBar/3.png');
+        }
+      }
+      &:nth-of-type(4) {
+        i {
+          @include icon;
+          background-image: url('../assets/SideBar/4.png');
+        }
+      }
+      &:nth-of-type(5) {
+        i {
+          @include icon;
+          background-image: url('../assets/SideBar/5.png');
+        }
+      }
+      &:nth-of-type(6) {
+        i {
+          @include icon;
+          background-image: url('../assets/SideBar/6.png');
+        }
+      }
 
       &:hover {
         font-weight: 600;

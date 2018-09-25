@@ -44,7 +44,7 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       active: 0
     }
@@ -66,7 +66,7 @@ $transition-normal: all 0.2s ease;
   margin-bottom: -2px;
 }
 
-#sidebar {
+.sidebar {
   z-index: 99;
   position: fixed;
   top: 0;
@@ -304,10 +304,17 @@ $transition-normal: all 0.2s ease;
 
     .wrap {
       & > a {
-        width: 80px;
+        width: 100px;
         overflow: hidden;
         margin-bottom: 8px;
-        font-size: 13px;
+        border-radius: 0;
+        font-size: 12px;
+        font-weight: 500;
+
+        i {
+          margin-bottom: -3px;
+          margin-right: 10px;
+        }
 
         &::before {
           content: '';
@@ -315,7 +322,7 @@ $transition-normal: all 0.2s ease;
           left: 0;
           z-index: -99;
           opacity: 0;
-          width: 80px;
+          width: 100px;
           height: 40px;
           margin-bottom: 2px;
           border-radius: 3px;
@@ -323,11 +330,17 @@ $transition-normal: all 0.2s ease;
           transition: $transition-normal;
           transform: scale(0.93);
         }
+
+        &:hover::before {
+          transition-delay: 0.06s;
+          transform: scale(1);
+          opacity: 1;
+        }
       }
 
       .links {
         a {
-          font-size: 13px;
+          font-size: 12px;
         }
 
         span {
