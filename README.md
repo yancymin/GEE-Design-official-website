@@ -1,4 +1,12 @@
-# 极验用户体验设计中心
+<p align="center">
+  <a href="https://next.gatsbyjs.org">
+    <img alt="Gatsby" src="https://upload-images.jianshu.io/upload_images/1800196-81e2b39ca137a8ae.gif?imageMogr2/auto-orient/strip" width="140" />
+  </a>
+</p>
+<h1 align="center">
+  极验用户体验设计中心
+</h1>
+
 
 [![vue](https://img.shields.io/badge/vue--cli-3.0.3-brightgreen.svg)](https://github.com/vuejs/vue-cli)
 ![version](https://img.shields.io/badge/Version-1.0-blue.svg)
