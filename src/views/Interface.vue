@@ -17,7 +17,7 @@
       <div class="ui-base bottom-80 article" :id="'anchor-' + jsonData[1].id">
         <h3>UI 基础</h3>
         <p class="bottom-40">
-          “行为验证”验证产品的 UI 基础：<strong>验证按钮(Test-Button)、验证面板(Test-Card)</strong>
+          “行为验证”验证产品的 UI 基础：<strong>验证按钮(Test-Button)、验证面板(Test-Card)</strong>0000000
         </p>
         <img src="../assets/Interface/interface2.gif" alt="" class="bottom-40">
         <p class="bottom-40">我们设计了一个全新而独特的验证按钮，它作为网站与用户的交互控件，提供了安全检验的触发和状态的显示作用。通过前端个性化样式的设置，验证按钮可以很好的放置在客户网站表单中，用户可以清楚的了解到目前的验证状态。相比传统的字符验证码，验证按钮在视觉和交互体验上都要更友好。</p>
