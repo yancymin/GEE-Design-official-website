@@ -11,7 +11,6 @@ import SideBar from '@/components/SideBar.vue'
 import Header from '@/components/Header.vue'
 import MobileMenu from '@/components/MobileMenu.vue'
 
-
 export default {
   name: 'home',
   components: {

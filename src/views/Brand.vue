@@ -77,12 +77,11 @@ import BackTop from '@/components/BackTop.vue'
 import ColorPanel from '@/components/ColorPanel.vue'
 import AnchorScroll from '@/components/AnchorScroll'
 
-
 import HeaderImage from '@/assets/Header/6.jpg'
 
 export default {
   name: 'brand',
-  data() {
+  data () {
     return {
       imageSrc: HeaderImage,
       color: {
