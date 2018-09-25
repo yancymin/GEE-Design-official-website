@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+// import VueContentPlaceholders from 'vue-content-placeholders'
 
+// Vue.use(VueContentPlaceholders)
 Vue.config.productionTip = false
 
 new Vue({

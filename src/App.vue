@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <SideBar/>
-    <MobileMenu/>
-    <router-view/>
+    <SideBar />
+    <MobileMenu />
+    <router-view />
   </div>
 </template>
 
@@ -11,10 +11,13 @@ import SideBar from '@/components/SideBar.vue'
 import Header from '@/components/Header.vue'
 import MobileMenu from '@/components/MobileMenu.vue'
 
+
 export default {
   name: 'home',
   components: {
-    SideBar, Header, MobileMenu
+    SideBar,
+    Header,
+    MobileMenu
   }
 }
 </script>
