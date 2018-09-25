@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://next.gatsbyjs.org">
+  <a href="https://design.geetest.com">
     <img alt="Gatsby" src="https://upload-images.jianshu.io/upload_images/1800196-81e2b39ca137a8ae.gif?imageMogr2/auto-orient/strip" width="140" />
   </a>
 </p>
