@@ -1,5 +1,5 @@
 #main {
-    width: calc(100vw - 250px);
+    width: calc(100% - 250px);
     transition: all 0.3s ease;
     margin-left: 250px;
     position: relative;
@@ -21,7 +21,7 @@
 
 @media screen and (max-width: 1220px) {
     #main {
-        width: calc(100vw - 100px);
+        width: calc(100% - 100px);
         margin-left: 100px;
 
         .header {

@@ -117,8 +117,10 @@ $transition-normal: all 0.2s ease;
     margin-top: 120px;
     text-align: center;
     line-height: 45px;
+    width: 100%;
+    
     & > a {
-      width: calc(100vw - 40px);
+      width: calc(100% - 40px);
       height: 46px;
       display: block;
       margin-bottom: 6px;

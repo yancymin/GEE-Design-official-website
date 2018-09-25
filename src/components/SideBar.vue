@@ -4,29 +4,29 @@
       <a href="/brand"><img src="../assets/logo.svg" alt=""></a>
     </div>
     <div class="wrap">
-      <router-link to="/brand">
+      <router-link to="/brand" class="brand-active">
+        <i></i>
         <span>极验品牌</span>
-        <i></i>
       </router-link>
-      <router-link to="/make">
+      <router-link to="/make" class="make-active">
+        <i></i>
         <span>极验制造</span>
-        <i></i>
       </router-link>
-      <router-link to="/product">
+      <router-link to="/product" class="product-active">
+        <i></i>
         <span>安全矩阵</span>
-        <i></i>
       </router-link>
-      <router-link to="/interface">
+      <router-link to="/interface" class="interface-active">
+        <i></i>
         <span>用户界面</span>
-        <i></i>
       </router-link>
-      <router-link to="/download">
+      <router-link to="/download" class="download-active">
+        <i></i>
         <span>资源下载</span>
-        <i></i>
       </router-link>
-      <router-link to="/about">
-        <span>关于我们</span>
+      <router-link to="/about" class="about-active">
         <i></i>
+        <span>关于我们</span>
       </router-link>
       <div class="links">
         <span></span>
@@ -44,7 +44,7 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       active: 0
     }
@@ -54,6 +54,18 @@ export default {
 
 <style lang="scss" scoped>
 $transition-normal: all 0.2s ease;
+
+@mixin icon {
+  display: inline-block;
+  z-index: 100;
+  width: 16px;
+  height: 16px;
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  margin-right: 12px;
+  margin-bottom: -2px;
+}
+
 #sidebar {
   z-index: 99;
   position: fixed;
@@ -79,6 +91,44 @@ $transition-normal: all 0.2s ease;
     margin-top: 50px;
     text-align: center;
     line-height: 40px;
+
+    .brand-active.router-link-active {
+      i {
+        @include icon;
+        background-image: url('../assets/SideBar/a.png');
+      }
+    }
+    .make-active.router-link-active {
+      i {
+        @include icon;
+        background-image: url('../assets/SideBar/b.png');
+      }
+    }
+    .product-active.router-link-active {
+      i {
+        @include icon;
+        background-image: url('../assets/SideBar/c.png');
+      }
+    }
+    .interface-active.router-link-active {
+      i {
+        @include icon;
+        background-image: url('../assets/SideBar/d.png');
+      }
+    }
+    .download-active.router-link-active {
+      i {
+        @include icon;
+        background-image: url('../assets/SideBar/e.png');
+      }
+    }
+    .about-active.router-link-active {
+      i {
+        @include icon;
+        background-image: url('../assets/SideBar/f.png');
+      }
+    }
+
     & > a {
       width: 230px;
       height: 40px;
@@ -88,6 +138,43 @@ $transition-normal: all 0.2s ease;
       font-size: 14px;
       transition: $transition-normal;
       will-change: transform;
+
+      &:nth-of-type(1) {
+        i {
+          @include icon;
+          background-image: url('../assets/SideBar/1.png');
+        }
+      }
+      &:nth-of-type(2) {
+        i {
+          @include icon;
+          background-image: url('../assets/SideBar/2.png');
+        }
+      }
+      &:nth-of-type(3) {
+        i {
+          @include icon;
+          background-image: url('../assets/SideBar/3.png');
+        }
+      }
+      &:nth-of-type(4) {
+        i {
+          @include icon;
+          background-image: url('../assets/SideBar/4.png');
+        }
+      }
+      &:nth-of-type(5) {
+        i {
+          @include icon;
+          background-image: url('../assets/SideBar/5.png');
+        }
+      }
+      &:nth-of-type(6) {
+        i {
+          @include icon;
+          background-image: url('../assets/SideBar/6.png');
+        }
+      }
 
       span {
         opacity: 0.85;
@@ -102,7 +189,7 @@ $transition-normal: all 0.2s ease;
       }
 
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         left: 0;
         z-index: -99;
@@ -128,6 +215,11 @@ $transition-normal: all 0.2s ease;
         font-weight: 600;
         animation: sidebarActive 0.2s ease-in;
         will-change: animation;
+
+        // i {
+        //   @include icon;
+        //   background-image: url('../assets/SideBar/a.png');
+        // }
 
         span {
           opacity: 1 !important;
@@ -159,7 +251,7 @@ $transition-normal: all 0.2s ease;
       }
 
       & > a::after {
-        content: "";
+        content: '';
         opacity: 0;
         position: relative;
         left: 8px;
@@ -171,7 +263,7 @@ $transition-normal: all 0.2s ease;
         transition: $transition-normal;
       }
       & > a:hover::after {
-        content: "";
+        content: '';
         opacity: 1;
       }
     }
@@ -218,7 +310,7 @@ $transition-normal: all 0.2s ease;
         font-size: 13px;
 
         &::before {
-          content: "";
+          content: '';
           position: absolute;
           left: 0;
           z-index: -99;
@@ -234,9 +326,8 @@ $transition-normal: all 0.2s ease;
       }
 
       .links {
-
         a {
-        font-size: 13px;
+          font-size: 13px;
         }
 
         span {
