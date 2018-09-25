@@ -1,7 +1,8 @@
 # 极验用户体验设计中心
 
-[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/yancymin/GEE-Design-official-website/blob/master/LICENSE)
+[![vue](https://img.shields.io/badge/vue--cli-3.0.3-brightgreen.svg)](https://github.com/vuejs/vue-cli)
 ![version](https://img.shields.io/badge/Version-1.0-blue.svg)
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/yancymin/GEE-Design-official-website/blob/master/LICENSE)
 
 ![heropic](https://github.com/yancymin/GEE-Design-official-website/blob/master/src/assets/About/about1.png?raw=true)
 
