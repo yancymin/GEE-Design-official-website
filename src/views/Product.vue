@@ -1,5 +1,6 @@
 <template>
   <div class="product" id="main">
+    <Loading />
     <Header title="安全产品矩阵" des="Geetest Product matrix" :imageSrc='imageSrc' />
     <div class="container">
       <div class="product-matrix bottom-80 article" :id="'anchor-' + jsonData[0].id">
@@ -69,6 +70,7 @@ import Scroll from '@/components/Scroll.vue'
 import BackTop from '@/components/BackTop.vue'
 import ColorPanel from '@/components/ColorPanel.vue'
 import AnchorScroll from '@/components/AnchorScroll.vue'
+import Loading from '@/components/Loading'
 
 import HeaderImage from '@/assets/Header/2.jpg'
 
@@ -79,7 +81,8 @@ export default {
     Scroll,
     BackTop,
     ColorPanel,
-    AnchorScroll
+    AnchorScroll,
+    Loading
   },
   data () {
     return {

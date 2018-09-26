@@ -1,5 +1,6 @@
 <template>
   <div class="brand main" id="main">
+    <loading />
     <Header title='极验品牌' des='Geetest Brand VI' :imageSrc='imageSrc' />
     <div class="container">
       <div class="overview bottom-80 article" :id="'anchor-'+jsonData[0].id">
@@ -76,6 +77,7 @@ import Header from '@/components/Header.vue'
 import BackTop from '@/components/BackTop.vue'
 import ColorPanel from '@/components/ColorPanel.vue'
 import AnchorScroll from '@/components/AnchorScroll'
+import Loading from '@/components/Loading'
 
 import HeaderImage from '@/assets/Header/6.jpg'
 
@@ -107,7 +109,8 @@ export default {
     // Scroll,
     AnchorScroll,
     BackTop,
-    ColorPanel
+    ColorPanel,
+    Loading
   }
   // mounted() {
   //   let headerBg = document.querySelector('#header');

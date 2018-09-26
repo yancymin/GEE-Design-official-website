@@ -1,5 +1,6 @@
 <template>
   <div class="download" id="main">
+    <Loading />
     <Header title="资源下载" des="Download" :imageSrc='imageSrc' />
     <div class="container">
       <div class="des">
@@ -85,6 +86,7 @@
 import Header from '@/components/Header.vue'
 import Scroll from '@/components/Scroll.vue'
 import BackTop from '@/components/BackTop.vue'
+import Loading from '@/components/Loading'
 
 import HeaderImage from '@/assets/Header/1.jpg'
 
@@ -98,7 +100,8 @@ export default {
   components: {
     Header,
     Scroll,
-    BackTop
+    BackTop,
+    Loading
   }
 }
 </script>
