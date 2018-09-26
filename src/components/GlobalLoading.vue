@@ -12,6 +12,7 @@ export default {
 
 <style lang="scss" scoped>
 .global_loading {
+  pointer-events: none;
   position: fixed;
   display: flex;
   justify-content: center;

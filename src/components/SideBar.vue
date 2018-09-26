@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar" id="sidebar">
     <div class="logo">
-      <a href="/brand"><img src="../assets/logo.svg" alt=""></a>
+      <router-link to="/brand"><img src="../assets/logo.svg" alt=""></router-link>
     </div>
     <div class="wrap">
       <router-link to="/brand" class="brand-active">
@@ -62,7 +62,7 @@ $transition-normal: all 0.2s ease;
   height: 16px;
   background-size: 16px 16px;
   background-repeat: no-repeat;
-  margin-right: 12px;
+  margin-right: 16px;
   margin-bottom: -2px;
 }
 

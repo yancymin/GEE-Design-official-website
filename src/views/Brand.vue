@@ -111,9 +111,6 @@ export default {
     BackTop,
     ColorPanel,
     Loading
-  },
-  mounted () {
-    this.$progress.done()
   }
 }
 </script>
