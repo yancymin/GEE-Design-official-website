@@ -111,11 +111,10 @@ export default {
     BackTop,
     ColorPanel,
     Loading
+  },
+  mounted () {
+    this.$progress.done()
   }
-  // mounted() {
-  //   let headerBg = document.querySelector('#header');
-  //   headerBg.style.animation = "1s onloadScale";
-  // }
 }
 </script>
 

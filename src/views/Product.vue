@@ -101,6 +101,9 @@ export default {
         { title: '版式', id: 'alige' }
       ]
     }
+  },
+  mounted () {
+    this.$progress.done()
   }
 }
 </script>

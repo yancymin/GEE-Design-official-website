@@ -104,6 +104,9 @@ export default {
     BackTop,
     Avatar,
     Loading
+  },
+  mounted () {
+    this.$progress.done()
   }
 }
 </script>

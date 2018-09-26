@@ -20,13 +20,13 @@ export default {
   width: 100vw;
   height: 100vh;
   background-color: #3973ff;
-  animation: loadingLoop 2.2s;
+  animation: loadingLoop 2.4s;
   animation-fill-mode: forwards;
   transition: all 0.3s;
   opacity: 0;
 
   img {
-      height: 80px;
+    height: 90px;
   }
 }
 
@@ -39,7 +39,8 @@ export default {
   }
   100% {
     opacity: 0;
-    z-index: -999;
+    // z-index: -999;
+    visibility: hidden;
   }
 }
 </style>

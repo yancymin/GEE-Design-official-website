@@ -112,6 +112,9 @@ export default {
     ColorPanel,
     AnchorScroll,
     Loading
+  },
+  mounted () {
+    this.$progress.done()
   }
 }
 </script>

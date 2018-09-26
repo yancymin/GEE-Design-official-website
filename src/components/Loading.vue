@@ -19,9 +19,9 @@ export default {
   created () {
     this.$progress.start()
   },
-  mounted () {
-    this.$progress.done()
-  }
+//   mounted () {
+//     this.$progress.done()
+//   }
 }
 </script>
 

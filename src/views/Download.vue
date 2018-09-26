@@ -102,6 +102,9 @@ export default {
     Scroll,
     BackTop,
     Loading
+  },
+  mounted () {
+    this.$progress.done()
   }
 }
 </script>
