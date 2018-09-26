@@ -18,6 +18,8 @@ Vue.use(MuseUIProgress, {
 export default {
   created () {
     this.$progress.start()
+  },
+  mounted () {
     this.$progress.done()
   }
 }
