@@ -40,7 +40,6 @@ export default {
   }
   100% {
     opacity: 0;
-    // z-index: -999;
     visibility: hidden;
   }
 }

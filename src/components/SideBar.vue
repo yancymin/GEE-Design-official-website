@@ -239,6 +239,7 @@ $transition-normal: all 0.2s ease;
         opacity: 0.4;
         background-color: #fff;
         margin-bottom: 30px;
+        margin-left: 14px;
       }
 
       a {

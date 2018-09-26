@@ -1,7 +1,6 @@
 <template>
     <div class="mobile-header" id="header" @click="closeHader">
         <img id="icon-menu" class="icon-menu" src="../assets/icon-menu.svg" alt="">
-
         <div class="logo">
             <img src="../assets/logo.svg" alt="">
         </div>
