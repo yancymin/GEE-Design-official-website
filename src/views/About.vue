@@ -1,6 +1,5 @@
 <template>
   <div class="about" id="main">
-    <loading />
     <Header title="极验用户体验设计" des="GEE Design" :imageSrc='imageSrc' />
     <div class="container">
       <div class="about-us bottom-80">
@@ -38,7 +37,6 @@ import Header from '@/components/Header.vue'
 import Scroll from '@/components/Scroll.vue'
 import BackTop from '@/components/BackTop.vue'
 import Avatar from '@/components/Avatar.vue'
-import Loading from '@/components/Loading'
 
 import York from '@/assets/About/avatarPic1.png'
 import Yancy from '@/assets/About/avatarPic2.png'
@@ -102,8 +100,7 @@ export default {
     Header,
     Scroll,
     BackTop,
-    Avatar,
-    Loading
+    Avatar
   }
 }
 </script>

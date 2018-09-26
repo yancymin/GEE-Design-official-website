@@ -1,6 +1,5 @@
 <template>
   <div class="interface main" id="main">
-    <Loading />
     <Header title="用户界面设计" des="User Interface Design" :imageSrc='imageSrc' />
     <div class="container">
 
@@ -67,7 +66,6 @@ import Scroll from '@/components/Scroll.vue'
 import BackTop from '@/components/BackTop.vue'
 import ColorPanel from '@/components/ColorPanel.vue'
 import AnchorScroll from '@/components/AnchorScroll'
-import Loading from '@/components/Loading'
 
 import HeaderImage from '@/assets/Header/3.jpg'
 
@@ -91,8 +89,7 @@ export default {
     Scroll,
     BackTop,
     ColorPanel,
-    AnchorScroll,
-    Loading
+    AnchorScroll
   },
   mounted: function () {
     let cmyk = document.querySelector('#cmyk')

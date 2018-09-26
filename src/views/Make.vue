@@ -1,6 +1,5 @@
 <template>
   <div class="make main" id="main">
-    <Loading />
     <Header title="极验制造" des="G-MAKE" :imageSrc='imageSrc' />
     <div class="container">
       <div class="overview bottom-80">
@@ -79,7 +78,6 @@ import Scroll from '@/components/Scroll.vue'
 import BackTop from '@/components/BackTop.vue'
 import ColorPanel from '@/components/ColorPanel.vue'
 import AnchorScroll from '@/components/AnchorScroll'
-import Loading from '@/components/Loading'
 
 import HeaderImage from '@/assets/Header/4.jpg'
 
@@ -110,8 +108,7 @@ export default {
     Scroll,
     BackTop,
     ColorPanel,
-    AnchorScroll,
-    Loading
+    AnchorScroll
   }
 }
 </script>
