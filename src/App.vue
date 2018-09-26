@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <GlobalLoading />
     <SideBar />
     <MobileMenu />
     <router-view />
@@ -10,13 +11,15 @@
 import SideBar from '@/components/SideBar.vue'
 import Header from '@/components/Header.vue'
 import MobileMenu from '@/components/MobileMenu.vue'
+import GlobalLoading from '@/components/GlobalLoading.vue'
 
 export default {
   name: 'home',
   components: {
     SideBar,
     Header,
-    MobileMenu
+    MobileMenu,
+    GlobalLoading
   }
 }
 </script>

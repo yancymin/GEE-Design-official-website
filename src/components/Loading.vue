@@ -9,7 +9,7 @@ import MuseUIProgress from 'muse-ui-progress'
 Vue.use(MuseUIProgress, {
   zIndex: 2000, // progress z-index
   top: 0, // position fixed top
-  speed: 8000, // progress speed
+  speed: 300, // progress speed
   color: '#64F6FF', // color
   size: 3, // progress size
   className: '' // progress custom class
