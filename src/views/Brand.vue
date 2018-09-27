@@ -43,7 +43,7 @@
                   <ColorPanel :color='color.white' colorName='极验白' hexVal='#FFFFFF' rgbVal='255, 255, 255' cmykVal='0, 0, 0, 0' />
                   <ColorPanel :color='color.green' colorName='极验青' hexVal='#35D2A2' rgbVal='53, 210, 162' cmykVal='65, 0, 51, 0' />
                   <ColorPanel :color='color.purpel' colorName='极验淡紫' hexVal='#9B5CF5' rgbVal='155, 92, 245' cmykVal='63, 67, 0, 0' />
-                  <ColorPanel :color='color.orange' colorName='极验橘红' hexVal='#FD6F2A' rgbVal='253, 111, 42' cmykVal='0, 70, 82, 0' />
+                  <ColorPanel :color='color.yellow' colorName='极验铬黄' hexVal='#FFB329' rgbVal='255, 179, 41' cmykVal='0, 30, 83, 1' />
                   <ColorPanel :color='color.black' colorName='极验蓝黑' hexVal='#292F3A' rgbVal='41, 47, 58' cmykVal='85, 79, 65, 42' />
                   <ColorPanel :color='color.gray' colorName='极验浅灰' hexVal='#D8DDE6' rgbVal='216, 221, 230' cmykVal='18, 11, 7, 0' />
                 </div>
@@ -90,7 +90,7 @@ export default {
         white: '#fff; border: 1px solid #F1F3F4;',
         green: '#35D2A2;',
         purpel: '#9B5CF5;',
-        orange: '#FD6F2A;',
+        yellow: '#FFB329;',
         black: '#292F3A;',
         gray: '#D8DDE6;'
       },

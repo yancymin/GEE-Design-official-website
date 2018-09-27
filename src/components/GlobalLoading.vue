@@ -14,6 +14,7 @@ export default {
 .global_loading {
   pointer-events: none;
   position: fixed;
+  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;

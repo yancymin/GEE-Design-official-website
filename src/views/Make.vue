@@ -34,7 +34,7 @@
           <ColorPanel :color='color.black' colorName='极验蓝黑' hexVal='#292F3A' rgbVal='41, 47, 58' cmykVal='85, 79, 65, 42' />
           <ColorPanel :color='color.gray' colorName='极验蓝灰' hexVal='#566D97' rgbVal='89, 109, 151' cmykVal='60, 15, 10, 30' />
           <ColorPanel :color='color.blueLight' colorName='极验水蓝' hexVal='#26B9FF' rgbVal='38, 185, 255' cmykVal='67, 13, 0, 0' />
-          <ColorPanel :color='color.yellow' colorName='极验铬黄' hexVal='#FFCA55' rgbVal='255, 202, 85' cmykVal='0, 20, 100, 0' />
+          <ColorPanel :color='color.yellow' colorName='极验铬黄' hexVal='#FFB329' rgbVal='255, 179, 41' cmykVal='0, 30, 83, 1' />
         </div>
 
       </div>
@@ -92,7 +92,7 @@ export default {
         black: '#292F3A;',
         gray: '#566D97;',
         blueLight: '#26B9FF;',
-        yellow: '#FFCA55;'
+        yellow: '#FFB329;'
       },
       jsonData: [
         { title: '品牌标志', id: 'logo' },
