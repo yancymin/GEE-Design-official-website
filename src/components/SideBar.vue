@@ -4,27 +4,27 @@
       <router-link to="/brand"><img src="../assets/logo.svg" alt=""></router-link>
     </div>
     <div class="wrap">
-      <router-link to="/brand" class="brand-active">
+      <router-link to="./brand" class="brand-active">
         <i></i>
         <span>极验品牌</span>
       </router-link>
-      <router-link to="/make" class="make-active">
+      <router-link to="./make" class="make-active">
         <i></i>
         <span>极验制造</span>
       </router-link>
-      <router-link to="/product" class="product-active">
+      <router-link to="./product" class="product-active">
         <i></i>
         <span>安全矩阵</span>
       </router-link>
-      <router-link to="/interface" class="interface-active">
+      <router-link to="./interface" class="interface-active">
         <i></i>
         <span>用户界面</span>
       </router-link>
-      <router-link to="/download" class="download-active">
+      <router-link to="./download" class="download-active">
         <i></i>
         <span>资源下载</span>
       </router-link>
-      <router-link to="/about" class="about-active">
+      <router-link to="./about" class="about-active">
         <i></i>
         <span>关于我们</span>
       </router-link>
