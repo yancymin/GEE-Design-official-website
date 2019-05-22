@@ -105,7 +105,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .about {
   .container {
     border: 0;
@@ -123,20 +123,20 @@ export default {
         flex-wrap: wrap;
 
         .avatar {
-          &:nth-of-type(-n + 4) /deep/ p {
+          &:nth-of-type(-n + 4) p {
             top: -26px;
             left: 5px;
           }
 
-          &:nth-of-type(n + 5) /deep/ .pic::before {
+          &:nth-of-type(n + 5) .pic::before {
             display: none;
           }
 
-          &:nth-of-type(n + 5) /deep/ a {
+          &:nth-of-type(n + 5)  a {
             display: none;
           }
 
-          &:nth-of-type(11) /deep/ p {
+          &:nth-of-type(11)  p {
             top: -34px;
             line-height: 10px;
             transform: scale(0.88);
@@ -146,11 +146,11 @@ export default {
             padding: 0;
           }
 
-          &:nth-of-type(4) /deep/ .social-icons a:nth-child(1) {
+          &:nth-of-type(4) .social-icons a:nth-child(1) {
             display: none;
           }
 
-          &:nth-of-type(7) /deep/ p {
+          &:nth-of-type(7)  p {
             left: 0;
           }
 
