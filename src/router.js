@@ -10,7 +10,8 @@ export default new Router({
   routes: [
     {
       path: '*',
-      redirect: '/brand'
+      redirect: '/brand',
+      component: Brand
     },
     {
       path: '/brand',
