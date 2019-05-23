@@ -1,7 +1,7 @@
 <template>
   <div class="header" id="header" :style="'background-image:' + 'url(' + imageSrc +')'">
     <div class="text-box">
-      <h1>{{ title }}</h1>
+      <h1><pre>{{title}}</pre></h1>
       <p>{{ des }}</p>
     </div>
   </div>
