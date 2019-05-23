@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Brand from './views/Brand.vue'
+import Article from './views/Article.vue'
 
 Vue.use(Router)
 
@@ -10,13 +10,18 @@ export default new Router({
   routes: [
     {
       path: '*',
-      redirect: '/brand',
-      component: Brand
+      redirect: '/article',
+      component: Article
+    },
+    {
+      path: '/article',
+      name: 'article',
+      component: Article
     },
     {
       path: '/brand',
       name: 'brand',
-      component: Brand
+      component: () => import('./views/Brand.vue')
     },
     {
       path: '/make',

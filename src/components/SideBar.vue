@@ -4,6 +4,10 @@
       <router-link to="/brand"><img src="../assets/logo.svg" alt=""></router-link>
     </div>
     <div class="wrap">
+      <router-link to="/article" class="article-active">
+        <i></i>
+        <span>文章列表</span>
+      </router-link>
       <router-link to="/brand" class="brand-active">
         <i></i>
         <span>极验品牌</span>
@@ -92,6 +96,12 @@ $transition-normal: all 0.2s ease;
     text-align: center;
     line-height: 40px;
 
+    .article-active.router-link-active {
+      i {
+        @include icon;
+        background-image: url('../assets/SideBar/g.png');
+      }
+    }
     .brand-active.router-link-active {
       i {
         @include icon;
@@ -142,34 +152,40 @@ $transition-normal: all 0.2s ease;
       &:nth-of-type(1) {
         i {
           @include icon;
-          background-image: url('../assets/SideBar/1.png');
+          background-image: url('../assets/SideBar/7.png');
         }
       }
       &:nth-of-type(2) {
         i {
           @include icon;
-          background-image: url('../assets/SideBar/2.png');
+          background-image: url('../assets/SideBar/1.png');
         }
       }
       &:nth-of-type(3) {
         i {
           @include icon;
-          background-image: url('../assets/SideBar/3.png');
+          background-image: url('../assets/SideBar/2.png');
         }
       }
       &:nth-of-type(4) {
         i {
           @include icon;
-          background-image: url('../assets/SideBar/4.png');
+          background-image: url('../assets/SideBar/3.png');
         }
       }
       &:nth-of-type(5) {
         i {
           @include icon;
-          background-image: url('../assets/SideBar/5.png');
+          background-image: url('../assets/SideBar/4.png');
         }
       }
       &:nth-of-type(6) {
+        i {
+          @include icon;
+          background-image: url('../assets/SideBar/5.png');
+        }
+      }
+      &:nth-of-type(7) {
         i {
           @include icon;
           background-image: url('../assets/SideBar/6.png');

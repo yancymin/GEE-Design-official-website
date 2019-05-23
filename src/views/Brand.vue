@@ -77,7 +77,7 @@ import BackTop from '@/components/BackTop.vue'
 import ColorPanel from '@/components/ColorPanel.vue'
 import AnchorScroll from '@/components/AnchorScroll'
 
-import HeaderImage from '@/assets/Header/6.jpg'
+import HeaderImage from '@/assets/Header/7.jpg'
 
 export default {
   name: 'brand',
