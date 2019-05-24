@@ -9,11 +9,19 @@
 }
 
 .fade-enter-active, .fade-leave-active {
-    transition: all .3s ease-out;
+    transition: all .2s ease-out;
+    transition-delay: 0.15s;
   }
   .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-    transform:  translateY(6px);
+    transform:  translateY(12px);
     opacity: 0;
+  }
+.headerShow-enter-active, .headerShow-leave-active {
+    transition: all 0.2s linear;
+  }
+  .headerShow-enter, .headerShow-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    transform:  scale(1.03) translateY(-10px);
+    opacity: 0.2;
   }
 
 

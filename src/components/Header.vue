@@ -1,15 +1,16 @@
 <template>
-  <div class="header-wrap">
-    <div class="header" id="header" :style="'background-image:' + 'url(' + imageSrc +')'">
-      <transition name="fade" appear >
-      <div class="text-box">
-        <h1>
-          <pre>{{title}}</pre>
-        </h1>
-        <p>{{ des }}</p>
-      </div>
-     </transition>
+  <div class="header" id="header">
+    <transition name="fade" appear>
+    <div class="text-box">
+      <h1>
+        <pre>{{title}}</pre>
+      </h1>
+      <p>{{ des }}</p>
     </div>
+    </transition>
+    <transition name="headerShow" appear>
+      <span :style="'background-image:' + 'url(' + imageSrc +')'"></span>
+    </transition>
   </div>
 </template>
 
@@ -19,16 +20,15 @@ export default {
   props: {
     title: String,
     des: String,
-    imageSrc: String,
+    imageSrc: String
   }
 };
 </script>
 
 <style lang="scss" scoped>
-.header-wrap {
-  width: 100%
-}
-.header  {
+span {
+  position: absolute ;
+  /* left: -50%; */
   width: 100%;
   height: 250px;
   display: flex;
@@ -38,7 +38,20 @@ export default {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+.header {
+  width: 100%;
+
+  height: 250px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: #153261;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   transition: all 0.2s;
+  overflow: hidden;
 
   .text-box {
     z-index: 2;
