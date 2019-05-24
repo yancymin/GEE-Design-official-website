@@ -1,27 +1,43 @@
 <template>
 <div class="ListItem">
-    <router-link to="/article/2019-5-23">
-    <div class="header">
-        <h2>{{listItems.title}}</h2>
-        <div class="item-info">
-            <span>{{listItems.time}}</span>
-            <span>{{listItems.view}}</span>
+    <transition name="fade" appear mode="out-in">
+    <router-link :to=listItems.link>
+        <div class="header">
+            <h2>{{listItems.title}}</h2>
+            <div class="item-info">
+                <span>{{listItems.time}}</span>
+                <span>{{listItems.view}}</span>
+            </div>
         </div>
-    </div>
-    <img class="cover" :src="listItems.cover"></img>
-    <div class="des">{{listItems.des}}</div>
+        <img class="cover" :src="listItems.cover"></img>
+        <div class="des">{{listItems.des}}</div>
     </router-link>
+    </transition>
 </div>
 </template>
 
 <script>
+// import listItems from "@/assets/Article/list.json";
+
 export default {
     name: "ListItem",
     props: ["listItems"],
+    // data() {
+    //     return {
+    //         listItems: listItems
+    //     }
+    // }
 };
 </script>
 
 <style lang="scss" scoped>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
 .ListItem {
     position: relative;
     width: 100%;
@@ -30,10 +46,14 @@ export default {
     transition: all 0.3s ease;
 
     a {
+        display: inline-block;
         z-index: 999;
+        width: 100%;
+        height: 100%;
+        position: relative;
     }
 
-    /* &:after {
+    &:after {
         z-index: 0;
         opacity: 0;
         position: absolute;
@@ -45,18 +65,23 @@ export default {
         height: 92%;
         border-radius: 3px;
         transition: all 0.3s ease;
-        box-shadow: 0 2px 2px 0 rgba(44, 71, 146, 0.17), 0 -1px 1px 0 rgba(44, 71, 146, 0.08);
-    } */
+        /* box-shadow: 0 2px 2px 0 rgba(44, 71, 146, 0.17), 0 -1px 1px 0 rgba(44, 71, 146, 0.08); */
+        box-shadow: 0 20px 60px rgba(61, 79, 127, 0.17);
+    }
 
     &:hover {
         cursor: pointer;
 
-        /* &:after {
+        &:after {
             opacity: 1;
-        } */
+        }
 
         h2 {
             color: #002059 !important;
+        }
+
+        img {
+            filter: opacity(0.8);
         }
 
     }
@@ -66,13 +91,15 @@ export default {
         overflow: hidden;
         border-radius: 3px;
         margin-bottom: 24px;
+        transition: all 0.3s ease;
+
     }
 
     .header {
         margin-bottom: 24px;
 
         h2 {
-            color: rgba(0, 33, 89, 0.7);
+            color: rgba(0, 33, 89, 1);
             font-size: 22px;
             font-weight: 500;
             line-height: 29px;
@@ -85,6 +112,7 @@ export default {
             color: #BCC2DE;
             font-size: 15px;
             line-height: 25px;
+            transition: all 0.3s ease;
 
             &:nth-of-type(2) {
                 margin-left: 24px;
@@ -96,6 +124,7 @@ export default {
         color: #83879C;
         font-size: 15px;
         line-height: 25px;
+        transition: all 0.3s ease;
     }
 
 }

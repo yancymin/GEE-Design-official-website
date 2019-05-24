@@ -1,25 +1,34 @@
 <template>
-  <div class="header" id="header" :style="'background-image:' + 'url(' + imageSrc +')'">
-    <div class="text-box">
-      <h1><pre>{{title}}</pre></h1>
-      <p>{{ des }}</p>
+  <div class="header-wrap">
+    <div class="header" id="header" :style="'background-image:' + 'url(' + imageSrc +')'">
+      <transition name="fade" appear >
+      <div class="text-box">
+        <h1>
+          <pre>{{title}}</pre>
+        </h1>
+        <p>{{ des }}</p>
+      </div>
+     </transition>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Header',
+  name: "Header",
   props: {
     title: String,
     des: String,
-    imageSrc: String
+    imageSrc: String,
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
-.header {
+.header-wrap {
+  width: 100%
+}
+.header  {
   width: 100%;
   height: 250px;
   display: flex;

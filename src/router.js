@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Article from './views/Article.vue'
-import content from './article/2019-5-23/content.vue'
 
 Vue.use(Router)
 
@@ -51,9 +50,12 @@ export default new Router({
       component: () => import('./views/About.vue')
     },
     {
-      path: '/article/2019-5-23/',
-      name: '2019-5-23',
-      component: content
+      path: '/article/2019-5-23',
+      component: () => import('./article/2019-5-23/content.vue')
+    },
+    {
+      path: '/article/2019-11-06',
+      component: () => import('./article/2019-11-06/content.vue')
     }
   ]
 })
