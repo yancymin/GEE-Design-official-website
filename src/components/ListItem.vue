@@ -77,11 +77,11 @@ export default {
         }
 
         h2 {
-            color: #002059 !important;
+            color: #3873FF !important;
         }
 
         img {
-            filter: opacity(0.8);
+            filter: opacity(0.75);
         }
 
     }
