@@ -77,7 +77,7 @@ export default {
         }
 
         h2 {
-            color: #3873FF !important;
+            /* color: #3873FF !important; */
         }
 
         img {

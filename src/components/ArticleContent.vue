@@ -1,18 +1,18 @@
 <template>
   <div class="ArticleContent">
-    <Header :title="this.title" :imageSrc="this.imageSrc"/>
+    <articleHeader :title="this.title" :imageSrc="this.imageSrc"/>
     <slot></slot>
   </div>
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
+import articleHeader from "@/components/articleHeader.vue";
 
 export default {
   name: "ArticleContent",
   props: { title: String, imageSrc: String },
   components: {
-    Header
+    articleHeader
   },
   data() {
     return {
@@ -30,7 +30,7 @@ export default {
   flex-direction: column;
   align-items: center;
 
-  & .header {
+  & .articleHeader {
     background-blend-mode: soft-light;
     filter: opacity(0.8);
   }
