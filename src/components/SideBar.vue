@@ -6,7 +6,7 @@
     <div class="wrap">
       <router-link to="/article" class="article-active">
         <i></i>
-        <span>文章列表</span>
+        <span>文章</span>
       </router-link>
       <router-link to="/brand" class="brand-active">
         <i></i>
@@ -18,11 +18,11 @@
       </router-link>
       <router-link to="/product" class="product-active">
         <i></i>
-        <span>安全矩阵</span>
+        <span>安全矩阵产品</span>
       </router-link>
       <router-link to="/interface" class="interface-active">
         <i></i>
-        <span>用户界面</span>
+        <span>用户界面设计</span>
       </router-link>
       <router-link to="/download" class="download-active">
         <i></i>
@@ -41,7 +41,7 @@
     </div>
     <div class="footer">
       <img src="../assets/logo_watermask.svg" alt="">
-      <p>Copyright © 2018 GEETEST</p>
+      <p>Copyright © 2019 GEETEST</p>
     </div>
   </div>
 </template>

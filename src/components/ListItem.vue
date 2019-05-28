@@ -5,7 +5,7 @@
             <h2>{{listItems.title}}</h2>
             <div class="item-info">
                 <span>{{listItems.time}}</span>
-                <span>{{listItems.view}}</span>
+                <span>{{viewCount()}} 人阅读</span>
             </div>
         </div>
         <img class="cover" :src="listItems.cover"></img>
@@ -18,7 +18,17 @@
 export default {
     name: "ListItem",
     props: ["listItems"],
-};
+    data() {
+        return {
+            view: this.listItems.view
+        }
+    },
+    methods: {
+        viewCount() {
+            return this.view
+        }
+    }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -45,11 +55,12 @@ export default {
         margin-top: 2px;
         width: 24px;
         height: 24px;
+        right: 0;
         background-image: url("../assets/Article/title_arrow.svg");
         transform: translateX(-100%);
         opacity: 0;
         transition: all 0.2s ease-out;
-            transition-delay: 0.04s;
+        transition-delay: 0.04s;
     }
 
     &:after {
@@ -80,8 +91,8 @@ export default {
             opacity: 1;
         }
 
-        h2{
-            transform: translateX(34px);
+        h2 {
+            /* transform: translateX(34px); */
             /* color: #3873FF !important; */
         }
 
