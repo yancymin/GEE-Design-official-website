@@ -1,6 +1,6 @@
 <template>
   <div id="main">
-       <router-view></router-view>
+       <!-- <router-view></router-view> -->
     <Header title="文章列表" des="Design Article " :imageSrc="imageSrc"/>
     <BackTop/>
     <div class="container">

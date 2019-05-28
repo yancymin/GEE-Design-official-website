@@ -3,7 +3,7 @@
     <transition name="fade" appear>
     <div class="text-box">
       <h1>
-        <pre>{{title}}</pre>
+      {{title}}
       </h1>
       <p>{{ des }}</p>
     </div>
@@ -37,10 +37,20 @@ span {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+  background-color: #070707;
+  opacity: 0.6;
+
+  }
 }
 .articleHeader {
   width: 100%;
-
   height: 250px;
   display: flex;
   align-content: center;

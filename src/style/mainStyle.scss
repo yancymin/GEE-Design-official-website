@@ -8,24 +8,50 @@
     align-items: center;
 }
 
-.fade-enter-active, .fade-leave-active {
+.fade-enter-active,
+.fade-leave-active {
     transition: all .2s ease-out;
     transition-delay: 0.15s;
-  }
-  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-    transform:  translateY(12px);
+}
+
+.fade-enter,
+.fade-leave-to
+
+/* .fade-leave-active below version 2.1.8 */
+    {
+    transform: translateY(12px);
     opacity: 0;
-  }
-.headerShow-enter-active, .headerShow-leave-active {
+}
+
+.headerShow-enter-active,
+.headerShow-leave-active {
     transition: all 0.2s linear;
-  }
-  .headerShow-enter, .headerShow-leave-to /* .fade-leave-active below version 2.1.8 */ {
-    transform:  scale(1.03) translateY(-10px);
+}
+
+.headerShow-enter,
+.headerShow-leave-to
+
+/* .fade-leave-active below version 2.1.8 */
+    {
+    transform: scale(1.03) translateY(-10px);
     opacity: 0.2;
-  }
+}
 
 
+.pageFade-enter-active,
+.pageFade-leave-active {
+    transition: all .3s ease-out;
+    transition-delay: 0.05s;
+}
 
+.pageFade-enter,
+.pageFade-leave-to
+
+/* .fade-leave-active below version 2.1.8 */
+    {
+    transform: translateY(8px);
+    opacity: 0;
+}
 
 // @keyframes onloadScale {
 //     0% {
@@ -62,18 +88,22 @@
         padding: 0 20px;
         margin-top: 72px;
 
-        .header, .articleHeader {
+        .header,
+        .articleHeader {
             span {
                 height: 200px;
             }
+
             .text-box {
                 width: 100%;
             }
         }
+
         .container {
             width: 100%;
             margin: 20px 0;
             padding: 48px 0 0 0;
+
             .footer-info {
                 display: flex;
                 flex-direction: column;
@@ -81,12 +111,14 @@
                 left: 0;
                 top: 56px;
                 margin-bottom: 16px;
+
                 span:nth-child(1) {
                     margin-bottom: 2px;
                     margin-right: 0;
                     position: relative;
                     top: -14px;
                 }
+
                 span:nth-child(2) {
                     display: none;
                 }

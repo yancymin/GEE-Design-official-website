@@ -50,12 +50,12 @@ export default new Router({
       component: () => import('./views/About.vue')
     },
     {
-      path: '/article/2019-5-23',
-      component: () => import('./article/2019-5-23/content.vue')
-    },
-    {
-      path: '/article/2019-11-06',
-      component: () => import('./article/2019-11-06/content.vue')
+      path: '/article/2019-05-23',
+      component: () => import('./article/2019-05-23/2019-05-23.vue')
     }
+    // {
+    //   path: '/article/2019-11-06',
+    //   component: () => import('./article/2019-11-06/content.vue')
+    // }
   ]
 })

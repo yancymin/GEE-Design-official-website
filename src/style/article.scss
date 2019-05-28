@@ -1,0 +1,33 @@
+.container {
+    text-align: left;
+    align-items: flex-start;
+}
+
+
+h1 {
+    // font-size: 20px;
+    margin: 48px 0 10px 0;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 29px;
+
+    color: #3b426b;
+}
+
+h6 {
+    margin-top: -20px;
+    align-self: center;
+    opacity: 0.7;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 24px;
+}
+
+p {
+    width: 100%;
+}
+
+
+img {
+    margin: 40px 0;
+}

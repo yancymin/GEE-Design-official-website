@@ -1,6 +1,5 @@
 <template>
 <div class="ListItem">
-    <transition name="fade" appear mode="out-in">
     <router-link :to=listItems.link>
         <div class="header">
             <h2>{{listItems.title}}</h2>
@@ -12,32 +11,17 @@
         <img class="cover" :src="listItems.cover"></img>
         <div class="des">{{listItems.des}}</div>
     </router-link>
-    </transition>
 </div>
 </template>
 
 <script>
-// import listItems from "@/assets/Article/list.json";
-
 export default {
     name: "ListItem",
     props: ["listItems"],
-    // data() {
-    //     return {
-    //         listItems: listItems
-    //     }
-    // }
 };
 </script>
 
 <style lang="scss" scoped>
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  transform: translateX(10px);
-  opacity: 0;
-}
 .ListItem {
     position: relative;
     width: 100%;
@@ -53,6 +37,21 @@ export default {
         position: relative;
     }
 
+    &::before {
+        content: "";
+        z-index: 999;
+        display: block;
+        position: absolute;
+        margin-top: 2px;
+        width: 24px;
+        height: 24px;
+        background-image: url("../assets/Article/title_arrow.svg");
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: all 0.2s ease-out;
+            transition-delay: 0.04s;
+    }
+
     &:after {
         z-index: 0;
         opacity: 0;
@@ -65,23 +64,31 @@ export default {
         height: 92%;
         border-radius: 3px;
         transition: all 0.3s ease;
-        /* box-shadow: 0 2px 2px 0 rgba(44, 71, 146, 0.17), 0 -1px 1px 0 rgba(44, 71, 146, 0.08); */
-        box-shadow: 0 20px 60px rgba(61, 79, 127, 0.17);
+        /* box-shadow: 0 20px 60px rgba(61, 79, 127, 0.17); */
+        /* background-color: #F7F9FC; */
     }
 
     &:hover {
         cursor: pointer;
 
-        &:after {
+        &::before {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        &::after {
             opacity: 1;
         }
 
-        h2 {
+        h2{
+            transform: translateX(34px);
             /* color: #3873FF !important; */
         }
 
         img {
             filter: opacity(0.75);
+            /* transform: scaleX(1.078);
+           border-radius: 0 !important; */
         }
 
     }
@@ -105,7 +112,7 @@ export default {
             line-height: 29px;
             margin-bottom: 6px;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease-out;
         }
 
         span {
