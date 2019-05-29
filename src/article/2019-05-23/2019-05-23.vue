@@ -3,7 +3,7 @@
     <ArticleContentCom title="消灭扰人的验证码
 极验「滑动拼图验证」背后的故事 " imageSrc="/image/list-cover-1.png" />
     <div class="container">
-        <ArticleContentInfo/>
+        <ArticleContentInfo  />
         <p>
             <img src="/articleImg/2019-05-23/image10.png" alt="">
       </p>

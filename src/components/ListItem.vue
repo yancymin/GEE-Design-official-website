@@ -1,6 +1,6 @@
 <template>
 <div class="ListItem">
-    <router-link :to=listItems.link>
+    <router-link :to="{path: listItems.link, query: {itermJson: listItems}}" >
         <div class="header">
             <h2>{{listItems.title}}</h2>
             <div class="item-info">
@@ -20,12 +20,12 @@ export default {
     props: ["listItems"],
     data() {
         return {
-            view: this.listItems.view
+            // listItems: this.listItems
         }
     },
     methods: {
         viewCount() {
-            return this.view
+            return this.listItems.view
         }
     }
 }

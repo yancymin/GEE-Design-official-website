@@ -1,25 +1,62 @@
 <template>
-<div class="ArticleContentInfo">
-    <div class="tags"></div>
-    <div class="info">{{viewCount()}} 人阅读</div>
-</div>
+  <div class="ArticleContentInfo">
+    <div class="tags">{{tags()}}</div>
+    <div class="info">
+      <div class="time">{{listItems.time}}</div>
+      <div class="view">{{viewCount()}} 人阅读</div>
+    </div>
+  </div>
 </template>
 
 <script>
-import listItems from "@/assets/Article/list.json";
-
 export default {
     name: "ArticleContentInfo",
     data() {
         return {
-            listItems : listItems,
-            view: listItems[0].view
-        }
+            listItems: this.$route.query.itermJson
+        };
     },
     methods: {
         viewCount() {
-            return this.view
+            return this.listItems.view;
+        },
+        tags() {
+            let tags = [];
+                tags = this.$route.query.itermJson.tags;
+            for (var i = 0; i < this.listItems.tags.length; i++) {
+                return (
+                     tags[i] +
+                    "/" +
+                    tags[i + 1]
+                );
+            }
         }
     }
-}
+};
 </script>
+
+<style lang="scss" scoped>
+.ArticleContentInfo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #bcc2de;
+  font-size: 15px;
+  line-height: 25px;
+  padding-bottom: 12px;
+  margin-top: -24px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #e1e7ff;
+
+  .info {
+      display: flex;
+      div {
+          display: inline;
+
+          &:first-child {
+              margin-right: 24px;
+          }
+      }
+  }
+}
+</style>

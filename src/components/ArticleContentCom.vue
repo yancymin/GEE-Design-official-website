@@ -1,6 +1,7 @@
 <template>
   <div class="ArticleContentCom">
-    <articleHeader :title="this.title" :imageSrc="this.imageSrc"/>
+    <articleHeader :title="title" :imageSrc="imageSrc"/>
+    <!-- <ArticleContentInfo :listItems="listItems"/> -->
     <BackTop/>
   </div>
 </template>
@@ -8,12 +9,19 @@
 <script>
 import articleHeader from "@/components/articleHeader.vue";
 import BackTop from "@/components/BackTop.vue";
+// import ArticleContentInfo from "@/components/ArticleContentInfo.vue";
+
 
 export default {
   name: "ArticleContentCom",
-  props: { title: String, imageSrc: String },
+  props: ["listItems", "title", "imageSrc"],
   components: {
-    articleHeader,BackTop
+    articleHeader,BackTop,
+  },
+  data() {
+    return {
+      // listItems: this.listItems,
+    }
   }
 };
 </script>
