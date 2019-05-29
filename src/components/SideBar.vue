@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar" id="sidebar">
     <div class="logo">
-      <router-link to="/brand"><img src="../assets/logo.svg" alt=""></router-link>
+      <router-link to="/"><img src="../assets/logo.svg" alt=""></router-link>
     </div>
     <div class="wrap">
       <router-link to="/article" class="article-active">
