@@ -1,6 +1,6 @@
 <template>
 <div class="ListItem">
-    <router-link :to="{path: listItems.link, query: {itermJson: listItems}}" >
+    <router-link :to="{path: listItems.link, query: itermJson}" >
         <div class="header">
             <h2>{{listItems.title}}</h2>
             <div class="item-info">
@@ -19,8 +19,9 @@ export default {
     name: "ListItem",
     props: ["listItems"],
     data() {
+        const {time, tags, view} = this.listItems
         return {
-            // listItems: this.listItems
+            itermJson: {time, tags, view}
         }
     },
     methods: {

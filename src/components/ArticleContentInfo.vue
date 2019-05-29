@@ -13,7 +13,7 @@ export default {
     name: "ArticleContentInfo",
     data() {
         return {
-            listItems: this.$route.query.itermJson
+            listItems: this.$route.query
         };
     },
     methods: {
@@ -22,7 +22,7 @@ export default {
         },
         tags() {
             let tags = [];
-                tags = this.$route.query.itermJson.tags;
+                tags = this.$route.query.tags;
             for (var i = 0; i < this.listItems.tags.length; i++) {
                 return (
                      tags[i] +
