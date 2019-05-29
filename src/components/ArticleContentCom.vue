@@ -9,14 +9,12 @@
 <script>
 import articleHeader from "@/components/articleHeader.vue";
 import BackTop from "@/components/BackTop.vue";
-// import ArticleContentInfo from "@/components/ArticleContentInfo.vue";
-
 
 export default {
   name: "ArticleContentCom",
   props: ["listItems", "title", "imageSrc"],
   components: {
-    articleHeader,BackTop,
+    articleHeader,BackTop
   },
   data() {
     return {
