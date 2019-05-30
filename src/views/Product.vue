@@ -19,7 +19,7 @@
         <div class="color-wrap">
           <ColorPanel :color='color.blue1' colorName='极验蓝' hexVal='#3873FF' rgbVal='56, 115, 255' cmykVal='79, 56, 0, 0' />
           <ColorPanel :color='color.blue2' colorName='极验深蓝' hexVal='#0052CC' rgbVal='0, 82, 204' cmykVal='89, 68, 0, 0' />
-          <ColorPanel :color='color.white' colorName='极验白' hexVal='#FFFFF' rgbVal='255, 255, 255' cmykVal='0, 0, 0, 0' />
+          <ColorPanel :color='color.white' colorName='极验白' hexVal='#FFFFFF' rgbVal='255, 255, 255' cmykVal='0, 0, 0, 0' />
         </div>
       </div>
 
@@ -143,6 +143,12 @@ export default {
           width: calc(50% - 10px);
           height: calc(50% - 10px);
           position: relative;
+
+          &:last-child {
+            &::before {
+              content: "20px";
+            }
+          }
 
           &::before {
             content: '24px';
