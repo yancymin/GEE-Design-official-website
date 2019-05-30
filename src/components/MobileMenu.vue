@@ -1,35 +1,53 @@
 <template>
   <div class="wrap-box">
-    <div class="mobile-menu" id="menu">
-      <img id="icon-close" class="icon-close" src="../assets/close.svg" alt="" @click="closeMenu">
+    <div :class="{MenuShow:isShow}" id="menu" class="mobile-menu">
+      <img id="icon-close" class="icon-close" src="../assets/close.svg" alt @click="closeMenu">
       <div class="logo">
-        <img src="../assets/logo.svg" alt="">
+        <img src="../assets/logo.svg" alt>
       </div>
       <div class="wrap" @click="closeMenu">
-      <router-link to="/brand" class="brand-active">
-        <i></i>
-        <span>极验品牌</span>
-      </router-link>
-      <router-link to="/make" class="make-active">
-        <i></i>
-        <span>极验制造</span>
-      </router-link>
-      <router-link to="/product" class="product-active">
-        <i></i>
-        <span>安全矩阵</span>
-      </router-link>
-      <router-link to="/interface" class="interface-active">
-        <i></i>
-        <span>用户界面</span>
-      </router-link>
-      <router-link to="/download" class="download-active">
-        <i></i>
-        <span>资源下载</span>
-      </router-link>
-      <router-link to="/about" class="about-active">
-        <i></i>
-        <span>关于我们</span>
-      </router-link>
+        <router-link to="/article" class="article-active">
+          <div class="link-wrap">
+            <i></i>
+            <span>文章</span>
+          </div>
+        </router-link>
+        <router-link to="/brand" class="brand-active">
+          <div class="link-wrap">
+            <i></i>
+            <span>极验品牌</span>
+          </div>
+        </router-link>
+        <router-link to="/make" class="make-active">
+          <div class="link-wrap">
+            <i></i>
+            <span>极验制造</span>
+          </div>
+        </router-link>
+        <router-link to="/product" class="product-active">
+          <div class="link-wrap">
+            <i></i>
+            <span>安全矩阵产品</span>
+          </div>
+        </router-link>
+        <router-link to="/interface" class="interface-active">
+          <div class="link-wrap">
+            <i></i>
+            <span>用户界面设计</span>
+          </div>
+        </router-link>
+        <router-link to="/download" class="download-active">
+          <div class="link-wrap">
+            <i></i>
+            <span>资源下载</span>
+          </div>
+        </router-link>
+        <router-link to="/about" class="about-active">
+          <div class="link-wrap">
+            <i></i>
+            <span>关于我们</span>
+          </div>
+        </router-link>
         <div class="links">
           <a target="_blank" href="https://geetest.com">极验官网</a>
           <a target="_blank" href="https://dribbble.com/geetest">Dribbble</a>
@@ -37,17 +55,15 @@
         </div>
       </div>
       <div class="footer">
-        <img src="../assets/logo_watermask.svg" alt="">
+        <img src="../assets/logo_watermask.svg" alt>
         <p>Copyright © 2018 GEETEST</p>
       </div>
     </div>
 
     <div class="mobile-header" id="mobile-header">
-      <div @click="showMenu" class="touch-box">
-        <img id="icon-menu" class="icon-menu" src="../assets/icon-menu.svg" alt="">
-      </div>
+      <img @click="showMenu" id="icon-menu" class="icon-menu" src="../assets/icon-menu.svg" alt>
       <div class="logo">
-        <img src="../assets/logo.svg" alt="">
+        <img src="../assets/logo.svg" alt>
       </div>
     </div>
   </div>
@@ -55,28 +71,75 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      active: 0
-    }
+      active: 0,
+      isShow: false
+    };
   },
   methods: {
-    showMenu () {
-      let menu = document.querySelector('#menu')
-      menu.style.display = 'flex'
-      menu.style.zIndex = '1000'
+    showMenu() {
+      let menu = document.querySelector("#menu");
+      let header = document.querySelector("#mobile-header");
+      header.style.transform = "translateY(-100%)";
+      this.isShow = true;
     },
-    closeMenu () {
-      let menu = document.querySelector('#menu')
-      menu.style.display = 'none'
-      menu.style.zIndex = '-1'
+    closeMenu() {
+      let menu = document.querySelector("#menu");
+      let header = document.querySelector("#mobile-header");
+      this.isShow = false;
+      header.style.transform = "none";
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
 $transition-normal: all 0.2s ease;
+
+.MenuShow {
+  opacity: 1 !important;
+  z-index: 10000 !important;
+  transform: scale(1) !important;
+
+  .wrap {
+    > a {
+      transform: translateY(-8px) scale(1.1);
+      animation: listShow 0.2s ease-out forwards !important;
+      @keyframes listShow {
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+      @mixin delay($time) {
+        animation-delay: $time !important;
+      }
+
+      &:nth-of-type(1) {
+        @include delay(0.1s);
+      }
+      &:nth-of-type(2) {
+        @include delay(0.12);
+      }
+      &:nth-of-type(3) {
+        @include delay(0.14s);
+      }
+      &:nth-of-type(4) {
+        @include delay(0.16s);
+      }
+      &:nth-of-type(5) {
+        @include delay(0.18s);
+      }
+      &:nth-of-type(6) {
+        @include delay(0.20s);
+      }
+      &:nth-of-type(7) {
+        @include delay(0.22s);
+      }
+    }
+  }
+}
 
 @mixin icon {
   display: inline-block;
@@ -90,7 +153,8 @@ $transition-normal: all 0.2s ease;
 }
 
 .mobile-menu {
-  z-index: 100;
+  display: flex;
+  z-index: -1000;
   position: fixed;
   top: 0;
   left: 0;
@@ -100,7 +164,9 @@ $transition-normal: all 0.2s ease;
   align-items: center;
   flex-direction: column;
   background-color: #3873ff;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  opacity: 0;
+  transform: scale(0.98);
 
   .icon-close {
     position: fixed;
@@ -131,40 +197,58 @@ $transition-normal: all 0.2s ease;
     line-height: 45px;
     width: 100%;
 
+    & > a {
+      max-width: 380px;
+      display: flex !important;
+      justify-content: center;
+      opacity: 0;
+    }
+
+    .link-wrap {
+      width: 43%;
+      text-align: left;
+    }
+
+    .article-active.router-link-active {
+      i {
+        @include icon;
+        background-image: url("../assets/SideBar/g.png");
+      }
+    }
     .brand-active.router-link-active {
       i {
         @include icon;
-        background-image: url('../assets/SideBar/a.png');
+        background-image: url("../assets/SideBar/a.png");
       }
     }
     .make-active.router-link-active {
       i {
         @include icon;
-        background-image: url('../assets/SideBar/b.png');
+        background-image: url("../assets/SideBar/b.png");
       }
     }
     .product-active.router-link-active {
       i {
         @include icon;
-        background-image: url('../assets/SideBar/c.png');
+        background-image: url("../assets/SideBar/c.png");
       }
     }
     .interface-active.router-link-active {
       i {
         @include icon;
-        background-image: url('../assets/SideBar/d.png');
+        background-image: url("../assets/SideBar/d.png");
       }
     }
     .download-active.router-link-active {
       i {
         @include icon;
-        background-image: url('../assets/SideBar/e.png');
+        background-image: url("../assets/SideBar/e.png");
       }
     }
     .about-active.router-link-active {
       i {
         @include icon;
-        background-image: url('../assets/SideBar/f.png');
+        background-image: url("../assets/SideBar/f.png");
       }
     }
 
@@ -181,37 +265,43 @@ $transition-normal: all 0.2s ease;
       &:nth-of-type(1) {
         i {
           @include icon;
-          background-image: url('../assets/SideBar/1.png');
+          background-image: url("../assets/SideBar/7.png");
         }
       }
       &:nth-of-type(2) {
         i {
           @include icon;
-          background-image: url('../assets/SideBar/2.png');
+          background-image: url("../assets/SideBar/1.png");
         }
       }
       &:nth-of-type(3) {
         i {
           @include icon;
-          background-image: url('../assets/SideBar/3.png');
+          background-image: url("../assets/SideBar/2.png");
         }
       }
       &:nth-of-type(4) {
         i {
           @include icon;
-          background-image: url('../assets/SideBar/4.png');
+          background-image: url("../assets/SideBar/3.png");
         }
       }
       &:nth-of-type(5) {
         i {
           @include icon;
-          background-image: url('../assets/SideBar/5.png');
+          background-image: url("../assets/SideBar/4.png");
         }
       }
       &:nth-of-type(6) {
         i {
           @include icon;
-          background-image: url('../assets/SideBar/6.png');
+          background-image: url("../assets/SideBar/5.png");
+        }
+      }
+      &:nth-of-type(7) {
+        i {
+          @include icon;
+          background-image: url("../assets/SideBar/6.png");
         }
       }
 
@@ -220,7 +310,7 @@ $transition-normal: all 0.2s ease;
       }
 
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         z-index: -99;
@@ -300,12 +390,13 @@ $transition-normal: all 0.2s ease;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
-  width: 100%;
+  z-index: 999;
+  width: calc(100% - 40px);
   height: 38px;
   background-color: #3973ff;
   padding: 18px 20px;
   box-shadow: 0 2px 4px #0e2b7063;
+  transition: all 0.2s ease-out;
 
   .icon-menu {
     position: fixed;
@@ -326,7 +417,7 @@ $transition-normal: all 0.2s ease;
 
 @media screen and (min-width: 540px) {
   .mobile-menu {
-    display: none;
+    /* display: none; */
   }
 
   .mobile-header {
@@ -336,7 +427,7 @@ $transition-normal: all 0.2s ease;
 
 @media screen and (max-width: 540px) {
   .mobile-menu {
-    display: none;
+    /* display: none; */
   }
 
   .mobile-header {

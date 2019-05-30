@@ -1,6 +1,6 @@
 <template>
 <div class="ListItem">
-    <router-link :to="{path: listItems.link, query: itermJson}" >
+    <router-link :to="{path: listItems.link, query: itermJson}">
         <div class="header">
             <h2>{{listItems.title}}</h2>
             <div class="item-info">
@@ -8,7 +8,7 @@
                 <span>{{viewCount()}} 人阅读</span>
             </div>
         </div>
-        <img class="cover" :src="listItems.cover"></img>
+        <div class="cover-wrap"> <img class="cover" :src="listItems.cover"></img></div>
         <div class="des">{{listItems.des}}</div>
     </router-link>
 </div>
@@ -19,9 +19,17 @@ export default {
     name: "ListItem",
     props: ["listItems"],
     data() {
-        const {time, tags, view} = this.listItems
+        const {
+            time,
+            tags,
+            view
+        } = this.listItems
         return {
-            itermJson: {time, tags, view}
+            itermJson: {
+                time,
+                tags,
+                view
+            }
         }
     },
     methods: {
@@ -40,9 +48,16 @@ export default {
     border-bottom: 1px solid #E1E7FF;
     transition: all 0.3s ease;
 
+    .cover-wrap {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 4px;
+    }
+
     a {
         display: inline-block;
-        z-index: 999;
+        z-index: 998;
         width: 100%;
         height: 100%;
         position: relative;
@@ -50,7 +65,7 @@ export default {
 
     &::before {
         content: "";
-        z-index: 999;
+        z-index: 998;
         display: block;
         position: absolute;
         margin-top: 2px;
@@ -92,15 +107,8 @@ export default {
             opacity: 1;
         }
 
-        h2 {
-            /* transform: translateX(34px); */
-            /* color: #3873FF !important; */
-        }
-
         img {
-            filter: opacity(0.75);
-            /* transform: scaleX(1.078);
-           border-radius: 0 !important; */
+            transform: scale(1.03);
         }
 
     }
@@ -109,9 +117,7 @@ export default {
         width: 100%;
         overflow: hidden;
         border-radius: 3px;
-        margin-bottom: 24px;
-        transition: all 0.3s ease;
-
+        transition: all 0.25s ease-out;
     }
 
     .header {
@@ -144,6 +150,7 @@ export default {
         font-size: 15px;
         line-height: 25px;
         transition: all 0.3s ease;
+        margin-top: 24px;
     }
 
 }

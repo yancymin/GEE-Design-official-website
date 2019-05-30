@@ -1,36 +1,52 @@
 <template>
   <div class="sidebar" id="sidebar">
     <div class="logo">
-      <router-link to="/"><img src="../assets/logo.svg" alt=""></router-link>
+      <router-link to="/">
+        <img src="../assets/logo.svg" alt>
+      </router-link>
     </div>
     <div class="wrap">
       <router-link to="/article" class="article-active">
-        <i></i>
-        <span>文章</span>
+        <div class="link-wrap">
+          <i></i>
+          <span>文章</span>
+        </div>
       </router-link>
       <router-link to="/brand" class="brand-active">
-        <i></i>
-        <span>极验品牌</span>
+        <div class="link-wrap">
+          <i></i>
+          <span>极验品牌</span>
+        </div>
       </router-link>
       <router-link to="/make" class="make-active">
-        <i></i>
-        <span>极验制造</span>
+        <div class="link-wrap">
+          <i></i>
+          <span>极验制造</span>
+        </div>
       </router-link>
       <router-link to="/product" class="product-active">
-        <i></i>
-        <span>安全矩阵产品</span>
+        <div class="link-wrap">
+          <i></i>
+          <span>安全矩阵产品</span>
+        </div>
       </router-link>
       <router-link to="/interface" class="interface-active">
-        <i></i>
-        <span>用户界面设计</span>
+        <div class="link-wrap">
+          <i></i>
+          <span>用户界面设计</span>
+        </div>
       </router-link>
       <router-link to="/download" class="download-active">
-        <i></i>
-        <span>资源下载</span>
+        <div class="link-wrap">
+          <i></i>
+          <span>资源下载</span>
+        </div>
       </router-link>
       <router-link to="/about" class="about-active">
-        <i></i>
-        <span>关于我们</span>
+        <div class="link-wrap">
+          <i></i>
+          <span>关于我们</span>
+        </div>
       </router-link>
       <div class="links">
         <span></span>
@@ -40,7 +56,7 @@
       </div>
     </div>
     <div class="footer">
-      <img src="../assets/logo_watermask.svg" alt="">
+      <img src="../assets/logo_watermask.svg" alt>
       <p>Copyright © 2019 GEETEST</p>
     </div>
   </div>
@@ -48,12 +64,12 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       active: 0
-    }
+    };
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -96,46 +112,57 @@ $transition-normal: all 0.2s ease;
     text-align: center;
     line-height: 40px;
 
+    & > a {
+      display: flex !important;
+     justify-content: center;
+    }
+
+    .link-wrap {
+      width: 55%;
+      text-align: left;
+    }
+
+
     .article-active.router-link-active {
       i {
         @include icon;
-        background-image: url('../assets/SideBar/g.png');
+        background-image: url("../assets/SideBar/g.png");
       }
     }
     .brand-active.router-link-active {
       i {
         @include icon;
-        background-image: url('../assets/SideBar/a.png');
+        background-image: url("../assets/SideBar/a.png");
       }
     }
     .make-active.router-link-active {
       i {
         @include icon;
-        background-image: url('../assets/SideBar/b.png');
+        background-image: url("../assets/SideBar/b.png");
       }
     }
     .product-active.router-link-active {
       i {
         @include icon;
-        background-image: url('../assets/SideBar/c.png');
+        background-image: url("../assets/SideBar/c.png");
       }
     }
     .interface-active.router-link-active {
       i {
         @include icon;
-        background-image: url('../assets/SideBar/d.png');
+        background-image: url("../assets/SideBar/d.png");
       }
     }
     .download-active.router-link-active {
       i {
         @include icon;
-        background-image: url('../assets/SideBar/e.png');
+        background-image: url("../assets/SideBar/e.png");
       }
     }
     .about-active.router-link-active {
       i {
         @include icon;
-        background-image: url('../assets/SideBar/f.png');
+        background-image: url("../assets/SideBar/f.png");
       }
     }
 
@@ -152,43 +179,43 @@ $transition-normal: all 0.2s ease;
       &:nth-of-type(1) {
         i {
           @include icon;
-          background-image: url('../assets/SideBar/7.png');
+          background-image: url("../assets/SideBar/7.png");
         }
       }
       &:nth-of-type(2) {
         i {
           @include icon;
-          background-image: url('../assets/SideBar/1.png');
+          background-image: url("../assets/SideBar/1.png");
         }
       }
       &:nth-of-type(3) {
         i {
           @include icon;
-          background-image: url('../assets/SideBar/2.png');
+          background-image: url("../assets/SideBar/2.png");
         }
       }
       &:nth-of-type(4) {
         i {
           @include icon;
-          background-image: url('../assets/SideBar/3.png');
+          background-image: url("../assets/SideBar/3.png");
         }
       }
       &:nth-of-type(5) {
         i {
           @include icon;
-          background-image: url('../assets/SideBar/4.png');
+          background-image: url("../assets/SideBar/4.png");
         }
       }
       &:nth-of-type(6) {
         i {
           @include icon;
-          background-image: url('../assets/SideBar/5.png');
+          background-image: url("../assets/SideBar/5.png");
         }
       }
       &:nth-of-type(7) {
         i {
           @include icon;
-          background-image: url('../assets/SideBar/6.png');
+          background-image: url("../assets/SideBar/6.png");
         }
       }
 
@@ -205,7 +232,7 @@ $transition-normal: all 0.2s ease;
       }
 
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         z-index: -99;
@@ -268,7 +295,7 @@ $transition-normal: all 0.2s ease;
       }
 
       & > a::after {
-        content: '';
+        content: "";
         opacity: 0;
         position: relative;
         left: 8px;
@@ -280,7 +307,7 @@ $transition-normal: all 0.2s ease;
         transition: $transition-normal;
       }
       & > a:hover::after {
-        content: '';
+        content: "";
         opacity: 1;
       }
     }
@@ -321,25 +348,36 @@ $transition-normal: all 0.2s ease;
 
     .wrap {
       & > a {
-        width: 100px;
+        width: 90%;
         overflow: hidden;
         margin-bottom: 8px;
         border-radius: 0;
         font-size: 12px;
         font-weight: 500;
+        border-radius: 4px;
+
+        span {
+          display: none;
+        }
+
+        .link-wrap {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
 
         i {
-          margin-bottom: -3px;
-          margin-right: 10px;
+          margin: 0;
         }
 
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           left: 0;
           z-index: -99;
           opacity: 0;
-          width: 100px;
+          width: 100%;
           height: 40px;
           margin-bottom: 2px;
           border-radius: 3px;
