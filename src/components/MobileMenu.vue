@@ -60,7 +60,7 @@
       </div>
     </div>
 
-    <div class="mobile-header" id="mobile-header">
+    <div class="mobile-header" id="mobile-header" >
       <img @click="showMenu" id="icon-menu" class="icon-menu" src="../assets/icon-menu.svg" alt>
       <div class="logo">
         <img src="../assets/logo.svg" alt>
@@ -74,21 +74,18 @@ export default {
   data() {
     return {
       active: 0,
-      isShow: false
+      isShow: false,
+      // isLeave: false
     };
   },
   methods: {
     showMenu() {
-      let menu = document.querySelector("#menu");
-      let header = document.querySelector("#mobile-header");
-      header.style.transform = "translateY(-100%)";
       this.isShow = true;
+      // this.isLeave = true;
     },
     closeMenu() {
-      let menu = document.querySelector("#menu");
-      let header = document.querySelector("#mobile-header");
       this.isShow = false;
-      header.style.transform = "none";
+      // this.isLeave = false;
     }
   }
 };
@@ -97,10 +94,15 @@ export default {
 <style lang="scss" scoped>
 $transition-normal: all 0.2s ease;
 
+.headerLeave {
+  transform: translateY(-30%);
+  opacity: 0;
+}
+
 .MenuShow {
   opacity: 1 !important;
   z-index: 10000 !important;
-  transform: scale(1) !important;
+  transform:  translateY(0) !important;
 
   .wrap {
     > a {
@@ -120,22 +122,22 @@ $transition-normal: all 0.2s ease;
         @include delay(0.1s);
       }
       &:nth-of-type(2) {
-        @include delay(0.12);
+        @include delay(0.14);
       }
       &:nth-of-type(3) {
-        @include delay(0.14s);
-      }
-      &:nth-of-type(4) {
-        @include delay(0.16s);
-      }
-      &:nth-of-type(5) {
         @include delay(0.18s);
       }
+      &:nth-of-type(4) {
+        @include delay(0.22s);
+      }
+      &:nth-of-type(5) {
+        @include delay(0.26s);
+      }
       &:nth-of-type(6) {
-        @include delay(0.20s);
+        @include delay(0.3s);
       }
       &:nth-of-type(7) {
-        @include delay(0.22s);
+        @include delay(0.34s);
       }
     }
   }
@@ -166,7 +168,7 @@ $transition-normal: all 0.2s ease;
   background-color: #3873ff;
   transition: all 0.25s ease-in-out;
   opacity: 0;
-  transform: scale(0.98);
+  transform: translateY(-2%);
 
   .icon-close {
     position: fixed;
@@ -202,6 +204,7 @@ $transition-normal: all 0.2s ease;
       display: flex !important;
       justify-content: center;
       opacity: 0;
+      will-change: transform;
     }
 
     .link-wrap {
@@ -415,23 +418,23 @@ $transition-normal: all 0.2s ease;
   }
 }
 
-@media screen and (min-width: 540px) {
+/* @media screen and (min-width: 540px) {
   .mobile-menu {
-    /* display: none; */
+    display: none;
   }
 
   .mobile-header {
     display: none;
   }
-}
+} */
 
-@media screen and (max-width: 540px) {
+@media screen and (min-width: 540px) {
   .mobile-menu {
-    /* display: none; */
+    display: none;
   }
 
   .mobile-header {
-    display: flex;
+    display: none;
   }
 }
 </style>

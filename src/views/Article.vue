@@ -1,12 +1,8 @@
 <template>
   <div id="main">
-       <!-- <router-view></router-view> -->
-    <!-- <Header title="文章列表" des="Design Article " :imageSrc="imageSrc"/> -->
     <BackTop/>
     <div class="container">
-
       <ListItem v-for="(item, i) in listItems" :key="i" :listItems="item"/>
-   
     </div>
   </div>
 </template>
@@ -37,10 +33,13 @@ export default {
 <style lang="scss" scoped>
 .container {
   width: 700px;
-    margin: 62px 0 !important;
-    padding: 0 !important;
-    /* border-top: 1px solid #E1E7FF; */
-    border-bottom: none !important;
-
+  margin: 62px 0;
+  padding: 0 !important;
+  border-bottom: none !important;
+}
+@media screen and (max-width: 540px) {
+  .container {
+    margin-top: 0px !important;
+  }
 }
 </style>

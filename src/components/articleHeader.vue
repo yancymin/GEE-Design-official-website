@@ -1,12 +1,10 @@
 <template>
   <div class="articleHeader" id="header">
     <transition name="fade" appear>
-    <div class="text-box">
-      <h1>
-      {{title}}
-      </h1>
-      <p>{{ des }}</p>
-    </div>
+      <div class="text-box">
+        <h1>{{title}}</h1>
+        <p>{{ des }}</p>
+      </div>
     </transition>
     <transition name="headerShow" appear>
       <span :style="'background-image:' + 'url(' + imageSrc +')'"></span>
@@ -27,7 +25,7 @@ export default {
 
 <style lang="scss" scoped>
 span {
-  position: absolute ;
+  position: absolute;
   width: 100%;
   height: 250px;
   display: flex;
@@ -39,14 +37,13 @@ span {
   background-repeat: no-repeat;
 
   &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-  background-color: #070707;
-  opacity: 0.6;
-
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #070707;
+    opacity: 0.6;
   }
 }
 .articleHeader {
@@ -84,13 +81,23 @@ span {
 }
 
 @media screen and (max-width: 540px) {
-  .header {
+  .articleHeader {
     width: calc(100% + 40px);
     height: 200px;
 
     .text-box {
       margin-left: 20px;
+
+      h1 {
+        font-size: 32px;
+      }
     }
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .articleHeader .text-box {
+    width: 80%;
   }
 }
 </style>
