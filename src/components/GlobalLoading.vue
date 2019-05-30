@@ -22,7 +22,7 @@ export default {
   width: 100vw;
   height: 100vh;
   background-color: #3973ff;
-  animation: loadingLoop 2.4s;
+  animation: loadingLoop 1s;
   animation-fill-mode: forwards;
   transition: all 0.3s;
   opacity: 0;

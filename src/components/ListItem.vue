@@ -1,6 +1,6 @@
 <template>
 <div class="ListItem">
-    <router-link :to="{path: listItems.link, query: itermJson}">
+    <router-link :to="{path: listItems.link, query: itermJson}" target="_blank">
         <div class="header">
             <h2>{{listItems.title}}</h2>
             <div class="item-info">

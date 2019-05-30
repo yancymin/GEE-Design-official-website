@@ -68,8 +68,9 @@ span {
 
     & > h1 {
       color: #fff;
-      font-size: 43px;
+      font-size: 40px;
       font-weight: 500;
+      margin-top: 16px;
     }
 
     & > p {

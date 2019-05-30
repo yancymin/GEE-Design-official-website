@@ -14,21 +14,22 @@ import AnchorScroll from "@/components/AnchorScroll";
 export default {
   name: "ArticleContentCom",
   props: ["listItems", "title", "imageSrc", "jsonData"],
-  // props: {
-  //   listItems: Array,
-  //   title: String,
-  //   image: String,
-  //   jsonData:Array
-  // },
   components: {
     articleHeader,
     BackTop,
     AnchorScroll
+  },
+  beforeCreate() {
+    let global_loading = document.getElementsByClassName("global_loading");
+    global_loading[0].style.opacity = "0";
   }
 };
 </script>
 
 <style lang="scss">
+.global_loading {
+  display: none !important;
+}
 .ArticleContentCom {
   width: 100%;
   display: flex;
@@ -40,4 +41,6 @@ export default {
     filter: opacity(0.8); */
   }
 }
+
+
 </style>

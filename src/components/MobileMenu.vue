@@ -122,7 +122,7 @@ $transition-normal: all 0.2s ease;
         @include delay(0.1s);
       }
       &:nth-of-type(2) {
-        @include delay(0.14);
+        @include delay(0.14s);
       }
       &:nth-of-type(3) {
         @include delay(0.18s);
