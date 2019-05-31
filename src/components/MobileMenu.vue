@@ -168,7 +168,7 @@ $transition-normal: all 0.2s ease;
   background-color: #3873ff;
   transition: all 0.25s ease-in-out;
   opacity: 0;
-  transform: translateY(-2%);
+  /* transform: translateY(-2%); */
 
   .icon-close {
     position: fixed;
@@ -264,6 +264,8 @@ $transition-normal: all 0.2s ease;
       transition: $transition-normal;
       will-change: all;
       font-size: 18px;
+      background-color: #3965ef;
+
 
       &:nth-of-type(1) {
         i {
@@ -312,20 +314,21 @@ $transition-normal: all 0.2s ease;
         font-weight: 600;
       }
 
-      &::before {
+  &::before {
         content: "";
         position: absolute;
         left: 0;
         z-index: -99;
         opacity: 0;
-        width: 230px;
-        height: 40px;
+        width:  100%;
+        height: 100%;
         margin-bottom: 2px;
         border-radius: 3px;
         background-color: #3965ef;
         transition: $transition-normal;
-        transform: scale(0.93);
-      }
+        /* transform: scale(0.93); */
+    } 
+    
 
       &.router-link-active {
         background-color: #ffffff;
