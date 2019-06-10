@@ -44,44 +44,44 @@
 </template>
 
 <script>
-import ArticleContentCom from "@/components/ArticleContentCom.vue";
-import ArticleContentInfo from "@/components/ArticleContentInfo.vue";
+import ArticleContentCom from '@/components/ArticleContentCom.vue'
+import ArticleContentInfo from '@/components/ArticleContentInfo.vue'
 
 export default {
   components: {
     ArticleContentCom,
     ArticleContentInfo
   },
-  data() {
+  data () {
     return {
-            jsonData: [{
-                    title: "项目背景",
-                    id: "项目背景"
-                },
-                {
-                    title: "极验网站页面设计",
-                    id: "极验网站页面设计",
-                },
-                {
-                    title: "动效前端实现",
-                    id: "动效前端实现",
-                },
-                {
-                    title: "产品页面设计",
-                    id: "产品页面设计",
-                },
-                {
-                    title: "网站配色",
-                    id: "网站配色",
-                },
-                {
-                    title: "插画配图",
-                    id: "插画配图",
-                },
-            ]
-        }
+      jsonData: [{
+        title: '项目背景',
+        id: '项目背景'
+      },
+      {
+        title: '极验网站页面设计',
+        id: '极验网站页面设计'
+      },
+      {
+        title: '动效前端实现',
+        id: '动效前端实现'
+      },
+      {
+        title: '产品页面设计',
+        id: '产品页面设计'
+      },
+      {
+        title: '网站配色',
+        id: '网站配色'
+      },
+      {
+        title: '插画配图',
+        id: '插画配图'
+      }
+      ]
+    }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

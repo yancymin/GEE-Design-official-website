@@ -10,29 +10,29 @@
 
 <script>
 export default {
-    name: "ArticleContentInfo",
-    data() {
-        return {
-            listItems: this.$route.query
-        };
-    },
-    methods: {
-        viewCount() {
-            return this.listItems.view;
-        },
-        tags() {
-            let tags = [];
-                tags = this.$route.query.tags;
-            for (var i = 0; i < this.listItems.tags.length; i++) {
-                return (
-                     tags[i] +
-                    "/" +
-                    tags[i + 1]
-                );
-            }
-        }
+  name: 'ArticleContentInfo',
+  data () {
+    return {
+      listItems: this.$route.query
     }
-};
+  },
+  methods: {
+    viewCount () {
+      return this.listItems.view
+    },
+    tags () {
+      let tags = []
+      tags = this.$route.query.tags
+      for (var i = 0; i < this.listItems.tags.length; i++) {
+        return (
+          tags[i] +
+                    '/' +
+                    tags[i + 1]
+        )
+      }
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

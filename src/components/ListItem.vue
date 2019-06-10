@@ -16,27 +16,27 @@
 
 <script>
 export default {
-    name: "ListItem",
-    props: ["listItems"],
-    data() {
-        const {
-            time,
-            tags,
-            view
-        } = this.listItems
-        return {
-            itermJson: {
-                time,
-                tags,
-                view
-            }
-        }
-    },
-    methods: {
-        viewCount() {
-            return this.listItems.view
-        }
+  name: 'ListItem',
+  props: ['listItems'],
+  data () {
+    const {
+      time,
+      tags,
+      view
+    } = this.listItems
+    return {
+      itermJson: {
+        time,
+        tags,
+        view
+      }
     }
+  },
+  methods: {
+    viewCount () {
+      return this.listItems.view
+    }
+  }
 }
 </script>
 

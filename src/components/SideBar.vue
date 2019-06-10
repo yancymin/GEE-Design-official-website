@@ -64,12 +64,12 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       active: 0
-    };
+    }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
@@ -121,7 +121,6 @@ $transition-normal: all 0.2s ease;
       width: 55%;
       text-align: left;
     }
-
 
     .article-active.router-link-active {
       i {
@@ -365,7 +364,6 @@ $transition-normal: all 0.2s ease;
           justify-content: center;
           align-items: center;
         }
-
 
         i {
           margin: 0;

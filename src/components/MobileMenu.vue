@@ -71,24 +71,24 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       active: 0,
-      isShow: false,
+      isShow: false
       // isLeave: false
-    };
+    }
   },
   methods: {
-    showMenu() {
-      this.isShow = true;
+    showMenu () {
+      this.isShow = true
       // this.isLeave = true;
     },
-    closeMenu() {
-      this.isShow = false;
+    closeMenu () {
+      this.isShow = false
       // this.isLeave = false;
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
@@ -266,7 +266,6 @@ $transition-normal: all 0.2s ease;
       font-size: 18px;
       background-color: #3965ef;
 
-
       &:nth-of-type(1) {
         i {
           @include icon;
@@ -327,8 +326,7 @@ $transition-normal: all 0.2s ease;
         background-color: #3965ef;
         transition: $transition-normal;
         /* transform: scale(0.93); */
-    } 
-    
+    }
 
       &.router-link-active {
         background-color: #ffffff;

@@ -16,13 +16,13 @@
 
 <script>
 export default {
-  name: "Header",
+  name: 'Header',
   props: {
     title: String,
     des: String,
     imageSrc: String
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

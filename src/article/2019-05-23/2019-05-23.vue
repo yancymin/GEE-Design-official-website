@@ -116,45 +116,45 @@
 </template>
 
 <script>
-import ArticleContentCom from "@/components/ArticleContentCom.vue";
-import ArticleContentInfo from "@/components/ArticleContentInfo.vue";
+import ArticleContentCom from '@/components/ArticleContentCom.vue'
+import ArticleContentInfo from '@/components/ArticleContentInfo.vue'
 
 export default {
-    components: {
-        ArticleContentCom,
-        ArticleContentInfo
-    },
-    data() {
-        return {
-            jsonData: [{
-                    title: "前言",
-                    id: "前言"
-                },
-                {
-                    title: "验证码真的安全吗？",
-                    id: "验证码真的安全吗？",
-                },
-                {
-                    title: "验证码耗费用户太多时间",
-                    id: "验证码耗费用户太多时间",
-                },
-                {
-                    title: "探索更友好的验证方式",
-                    id: "探索更友好的验证方式",
-                },
-                {
-                    title: "「滑块」和「拼图」的结合",
-                    id: "「滑块」和「拼图」的结合",
-                },
-                {
-                    title: "验证产品设计的思考",
-                    id: "验证产品设计的思考",
-                },
-            ]
-        }
+  components: {
+    ArticleContentCom,
+    ArticleContentInfo
+  },
+  data () {
+    return {
+      jsonData: [{
+        title: '前言',
+        id: '前言'
+      },
+      {
+        title: '验证码真的安全吗？',
+        id: '验证码真的安全吗？'
+      },
+      {
+        title: '验证码耗费用户太多时间',
+        id: '验证码耗费用户太多时间'
+      },
+      {
+        title: '探索更友好的验证方式',
+        id: '探索更友好的验证方式'
+      },
+      {
+        title: '「滑块」和「拼图」的结合',
+        id: '「滑块」和「拼图」的结合'
+      },
+      {
+        title: '验证产品设计的思考',
+        id: '验证产品设计的思考'
+      }
+      ]
     }
+  }
 
-};
+}
 </script>
 
 <style lang="scss" scoped>

@@ -14,13 +14,13 @@
 
 <script>
 export default {
-  name: "articleHeader",
+  name: 'articleHeader',
   props: {
     title: String,
     des: String,
     imageSrc: String
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

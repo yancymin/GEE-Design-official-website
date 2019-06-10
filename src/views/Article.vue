@@ -8,26 +8,26 @@
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
-import ListItem from "@/components/ListItem.vue";
-import BackTop from "@/components/BackTop.vue";
-import HeaderImage from "@/assets/Header/2.jpg";
-import listItems from "@/assets/Article/list.json";
+import Header from '@/components/Header.vue'
+import ListItem from '@/components/ListItem.vue'
+import BackTop from '@/components/BackTop.vue'
+import HeaderImage from '@/assets/Header/2.jpg'
+import listItems from '@/assets/Article/list.json'
 
 export default {
-  name: "articleList",
-  data() {
+  name: 'articleList',
+  data () {
     return {
       imageSrc: HeaderImage,
       listItems: listItems
-    };
+    }
   },
   components: {
     Header,
     BackTop,
     ListItem
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
