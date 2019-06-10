@@ -36,7 +36,7 @@
             </div>
           </div>
         </div>
-        <div class="card card-2 bottom-40">
+        <div class="card card-2 bottom-40" id="card-2">
           <img src="../assets/Download/cover2.png" alt="" class="cover">
           <div class="card-content">
             <h3>极验产品矩阵标志</h3>
@@ -283,5 +283,9 @@ export default {
       }
     }
   }
+}
+
+#card-2 {
+  display: none;
 }
 </style>
