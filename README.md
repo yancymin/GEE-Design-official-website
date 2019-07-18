@@ -11,6 +11,7 @@
 [![vue](https://img.shields.io/badge/vue--cli-3.0.3-brightgreen.svg)](https://github.com/vuejs/vue-cli)
 ![version](https://img.shields.io/badge/Version-1.0-blue.svg)
 [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/yancymin/GEE-Design-official-website/blob/master/LICENSE)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/02ea5e9d-6f73-417d-8f3e-29f87f2d149a/deploy-status)](https://app.netlify.com/sites/gued/deploys)
 
 ![heropic](https://github.com/yancymin/GEE-Design-official-website/blob/master/src/assets/About/about1.png?raw=true)
 
