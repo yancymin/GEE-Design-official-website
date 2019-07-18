@@ -58,10 +58,11 @@ export default new Router({
       path: '/article/2019-02-16',
       component: () => import('./article/2019-02-16/2019-02-16.vue'),
       props: true
+    },
+    {
+      path: '/article/2019-07-18',
+      component: () => import('./article/2019-07-18/2019-07-18.vue'),
+      props: true
     }
-    // {
-    //   path: '/article/2019-11-06',
-    //   component: () => import('./article/2019-11-06/content.vue')
-    // }
   ]
 })

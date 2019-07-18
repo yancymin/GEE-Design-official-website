@@ -10,29 +10,26 @@
 
 <script>
 export default {
-  name: 'ArticleContentInfo',
-  data () {
+  name: "ArticleContentInfo",
+  data() {
     return {
       listItems: this.$route.query
-    }
+    };
   },
   methods: {
-    viewCount () {
-      return this.listItems.view
+    viewCount() {
+      return this.listItems.view;
     },
-    tags () {
-      let tags = []
-      tags = this.$route.query.tags
-      for (var i = 0; i < this.listItems.tags.length; i++) {
-        return (
-          tags[i] +
-                    '/' +
-                    tags[i + 1]
-        )
+    tags() {
+      let tags = [];
+      tags = this.$route.query.tags;
+      for (var i = 0; i <= this.listItems.tags.length; i++) {
+        let tag = tags[i];
+        return tag + " / " + tags[i + 1] + " / " + tags[i + 2];
       }
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -49,14 +46,14 @@ export default {
   border-bottom: 1px solid #e1e7ff;
 
   .info {
-      display: flex;
-      div {
-          display: inline;
+    display: flex;
+    div {
+      display: inline;
 
-          &:first-child {
-              margin-right: 24px;
-          }
+      &:first-child {
+        margin-right: 24px;
       }
+    }
   }
 }
 </style>
