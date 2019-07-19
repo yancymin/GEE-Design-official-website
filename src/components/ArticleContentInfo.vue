@@ -38,7 +38,7 @@ export default {
   display: flex;
   justify-content: space-between;
   color: #bcc2de;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 25px;
   padding-bottom: 12px;
   margin-top: -24px;
@@ -53,6 +53,16 @@ export default {
       &:first-child {
         margin-right: 24px;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 414px){
+  .ArticleContentInfo {
+    flex-direction: column;
+
+    .info {
+      justify-content: space-between;
     }
   }
 }
