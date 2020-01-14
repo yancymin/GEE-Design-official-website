@@ -82,8 +82,8 @@ export default {
           dribbble: 'https://dribbble.com/YancyMin'
         },
         liuchang: {
-          website: 'http://liuchangyi.com',
-          dribbble: 'https://dribbble.com/DCharlie'
+          website: 'https://www.liuchangyi.com/',
+          dribbble: 'https://dribbble.com/Charlie_Liu'
         },
         baoxiaohan: {
           dribbble: 'https://dribbble.com/Bhippo'
