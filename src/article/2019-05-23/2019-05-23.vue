@@ -1,6 +1,6 @@
 <template>
 <div id="main">
-    <ArticleContentCom title="滑动拼图验证背后的故事" imageSrc="/image/list-cover-1.png" :jsonData="jsonData" />
+    <ArticleContentCom title="滑动拼图验证背后的故事" imageSrc="/image/cover-20190523.png" :jsonData="jsonData" />
     <div class="container">
         <ArticleContentInfo />
         <p>

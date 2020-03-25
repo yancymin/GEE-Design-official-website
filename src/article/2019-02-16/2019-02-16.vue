@@ -1,6 +1,6 @@
 <template>
   <div id="main">
-    <ArticleContentCom title="极验官网改版-网页设计" imageSrc="/image/list-cover-2.png" :jsonData="jsonData"/>
+    <ArticleContentCom title="极验官网改版-网页设计" imageSrc="/image/cover-20190216.png" :jsonData="jsonData"/>
     <div class="container">
       <ArticleContentInfo/>
       <h1 :id="'anchor-'+jsonData[0].id">项目背景</h1>

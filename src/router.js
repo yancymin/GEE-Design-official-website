@@ -63,6 +63,11 @@ export default new Router({
       path: '/article/2019-07-18',
       component: () => import('./article/2019-07-18/2019-07-18.vue'),
       props: true
+    },
+    {
+      path: '/article/2020-03-25',
+      component: () => import('./article/2020-03-25/2020-03-25.vue'),
+      props: true
     }
   ]
 })
